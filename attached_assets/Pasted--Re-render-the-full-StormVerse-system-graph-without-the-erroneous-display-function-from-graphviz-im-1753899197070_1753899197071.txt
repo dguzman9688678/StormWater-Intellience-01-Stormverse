@@ -1,0 +1,70 @@
+# Re-render the full StormVerse system graph without the erroneous display function
+from graphviz import Digraph
+
+dot = Digraph(comment='StormVerse Platform - Full System Graph')
+
+# User Interface Layer
+dot.node('UI', 'User Interface\n(React + CesiumJS)')
+dot.node('AdminUI', 'Admin Interface\n(System Control Panel)')
+
+# Routing & Middleware
+dot.node('Router', 'JARVIS Router\n(Command + API Dispatcher)')
+
+# Core AI Agents
+dot.node('MITO', 'MITO\n(Build + Automate)')
+dot.node('ODIN', 'ODIN\n(Security + Defense)')
+dot.node('PHOENIX', 'PHOENIX\n(Memory)')
+dot.node('ULTRON', 'ULTRON\n(Metadata + Validation)')
+dot.node('VADER', 'VADER\n(Surveillance)')
+dot.node('STORM', 'STORM\n(Environment AI)')
+dot.node('ECHO', 'ECHO\n(Voice/UI)')
+dot.node('JARVIS', 'JARVIS\n(Coordinator)')
+
+# Backend Services
+dot.node('API', 'API Layer\n(Express.js + REST)')
+dot.node('DB', 'Database\n(PostgreSQL + Drizzle ORM)')
+dot.node('KMZ', 'KMZ Engine\n(KML/KMZ Processing)')
+dot.node('NOAA', 'NOAA Service\n(Live Weather + Alerts)')
+dot.node('SEC', 'ARCSEC Engine\n(Security + Verification)')
+dot.node('QENGINE', 'Quantum Engine\n(Weather Forecast Logic)')
+
+# Data + Output
+dot.node('EXPORT', 'Export Engine\n(PDF/JSON/Markdown)')
+dot.node('DASH', 'Real-time Dashboard\n(Metrics + AI Status)')
+dot.node('MAP', '3D Map Layer\n(CesiumJS Render)')
+
+# Connections
+dot.edges([
+    ('UI', 'Router'),
+    ('AdminUI', 'Router'),
+    ('Router', 'JARVIS'),
+    ('JARVIS', 'MITO'),
+    ('JARVIS', 'ODIN'),
+    ('JARVIS', 'PHOENIX'),
+    ('JARVIS', 'ULTRON'),
+    ('JARVIS', 'VADER'),
+    ('JARVIS', 'STORM'),
+    ('JARVIS', 'ECHO'),
+    ('Router', 'API'),
+    ('API', 'KMZ'),
+    ('API', 'NOAA'),
+    ('API', 'SEC'),
+    ('API', 'QENGINE'),
+    ('API', 'DB'),
+    ('STORM', 'QENGINE'),
+    ('STORM', 'NOAA'),
+    ('SEC', 'DB'),
+    ('DB', 'EXPORT'),
+    ('EXPORT', 'UI'),
+    ('EXPORT', 'AdminUI'),
+    ('DB', 'DASH'),
+    ('DASH', 'UI'),
+    ('QENGINE', 'MAP'),
+    ('MAP', 'UI'),
+    ('MAP', 'AdminUI')
+])
+
+# Export the graph
+graph_path = '/mnt/data/stormverse_full_graph.png'
+dot.render(graph_path.replace('.png', ''), format='png', cleanup=False)
+graph_path

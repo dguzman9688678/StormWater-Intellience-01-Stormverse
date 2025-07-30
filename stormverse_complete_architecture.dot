@@ -1,0 +1,131 @@
+// StormVerse Environmental Intelligence Platform - Complete System Architecture
+digraph {
+	dpi=300 rankdir=TB size="16,12"
+	node [fontname=Arial shape=box style="rounded,filled"]
+	edge [fontname=Arial fontsize=10]
+	subgraph cluster_ui {
+		color=lightgrey label="User Interface Layer" style=filled
+		UI [label="React Frontend
+(CesiumJS 3D Globe)" fillcolor="#00ffff"]
+		AdminUI [label="Admin Control Panel
+(System Management)" fillcolor="#00ffff"]
+		Dashboard [label="Real-time Dashboard
+(Metrics + Status)" fillcolor="#00ffff"]
+		Map3D [label="3D Earth Visualization
+(Orbital Agents)" fillcolor="#00ffff"]
+	}
+	subgraph cluster_agents {
+		color=lightcoral label="AI Agent Network (8 Agents)" style=filled
+		JARVIS [label="JARVIS
+(Command Router
+& Coordinator)" fillcolor="#ff6b6b"]
+		MITO [label="MITO
+(DevOps Builder
+& Automation)" fillcolor="#ff6b6b"]
+		PHOENIX [label="PHOENIX
+(Historical Archive
+& Memory)" fillcolor="#ff6b6b"]
+		ULTRON [label="ULTRON
+(Validation
+& Metadata)" fillcolor="#ff6b6b"]
+		VADER [label="VADER
+(Surveillance
+& Network Monitor)" fillcolor="#ff6b6b"]
+		ODIN [label="ODIN
+(ARCSEC Enforcement
+& Security)" fillcolor="#ff6b6b"]
+		ECHO [label="ECHO
+(Audio Interface
+& NLP)" fillcolor="#ff6b6b"]
+		STORM [label="STORM
+(Environmental Core
+& Weather AI)" fillcolor="#ff6b6b"]
+	}
+	subgraph cluster_services {
+		color=lightblue label="Backend Services" style=filled
+		MasterController [label="ARCSEC Master Controller
+(Centralized Command)" fillcolor="#a8e6cf"]
+		API [label="Express.js API Layer
+(100+ Endpoints)" fillcolor="#4ecdc4"]
+		WebSocket [label="WebSocket Service
+(Real-time Streams)" fillcolor="#4ecdc4"]
+		MLEngine [label="Machine Learning Engine
+(AI Processing)" fillcolor="#4ecdc4"]
+		QuantumEngine [label="Quantum Analysis Engine
+(4.25 qubits, 19D)" fillcolor="#4ecdc4"]
+	}
+	subgraph cluster_data {
+		color=lightyellow label="Data Processing & External APIs" style=filled
+		NOAA [label="NOAA Weather API
+(Live Data)" fillcolor="#ffe66d"]
+		KMZ [label="KMZ/GeoJSON Processor
+(Spatial Data)" fillcolor="#ffe66d"]
+		TripleStore [label="Triple Store Service
+(Semantic Data)" fillcolor="#ffe66d"]
+		DB [label="PostgreSQL Database
+(7 Tables + Drizzle ORM)" fillcolor="#ffe66d"]
+	}
+	subgraph cluster_security {
+		color=lightgreen label="ARCSEC v3.0X WAR MODE Security" style=filled
+		ARCSEC [label="ARCSEC Universal Handler
+(Digital Signatures)" fillcolor="#a8e6cf"]
+		Monitor [label="System Monitor
+(30s Integrity Checks)" fillcolor="#a8e6cf"]
+		Compliance [label="Compliance Engine
+(EPA/FEMA)" fillcolor="#a8e6cf"]
+	}
+	subgraph cluster_output {
+		color=lightsteelblue label="Output & Visualization" style=filled
+		Export [label="Export Engine
+(PDF/JSON/Reports)" fillcolor="#00ffff"]
+		Visualization [label="Weather Visualization
+(Storm Cones, Hurricanes)" fillcolor="#00ffff"]
+		Diagnostics [label="Diagnostics Panel
+(Loop Detection)" fillcolor="#00ffff"]
+	}
+	UI -> JARVIS
+	AdminUI -> MasterController
+	Dashboard -> API
+	JARVIS -> MITO
+	JARVIS -> PHOENIX
+	JARVIS -> ULTRON
+	JARVIS -> VADER
+	JARVIS -> ODIN
+	JARVIS -> ECHO
+	JARVIS -> STORM
+	MasterController -> JARVIS
+	MasterController -> API
+	MasterController -> ARCSEC
+	MasterController -> Monitor
+	API -> MLEngine
+	API -> QuantumEngine
+	API -> WebSocket
+	API -> DB
+	STORM -> NOAA
+	STORM -> QuantumEngine
+	ULTRON -> KMZ
+	PHOENIX -> TripleStore
+	ODIN -> ARCSEC
+	VADER -> Monitor
+	NOAA -> DB
+	KMZ -> DB
+	TripleStore -> DB
+	ARCSEC -> DB
+	Monitor -> Compliance
+	Compliance -> Export
+	QuantumEngine -> Visualization
+	DB -> Export
+	WebSocket -> Dashboard
+	Monitor -> Diagnostics
+	Export -> UI
+	Visualization -> Map3D
+	Diagnostics -> Dashboard
+	Map3D -> UI
+	Metrics [label="System Metrics:
+• 8 AI Agents Active
+• 13 Protected Files  
+• WAR MODE Security
+• < 15ms API Response
+• 4x Quantum Speedup
+• 99.9% Uptime Target" fillcolor=white shape=note style=filled]
+}
