@@ -1,0 +1,67 @@
+{
+  "podcasts": [
+    {
+      "id": "stormwater-ai",
+      "title": "Stormwater AI: How Artificial Intelligence is Revolutionizing Urban Flood Management",
+      "file": "Stormwater_AI_How_Artificial_Intelligence_is_Revolutionizing_Urban_Flood_Management_1753890890330.mp3",
+      "duration": "Unknown",
+      "category": "Environmental AI",
+      "description": "Explores how AI transforms urban stormwater management"
+    },
+    {
+      "id": "cities-under-siege",
+      "title": "Cities Under Siege: How AI is Reshaping Our Fight for Water",
+      "file": "Cities_Under_Siege_How_AI_is_Reshaping_Our_Fight_for_Water_1753890890330.mp3",
+      "duration": "Unknown",
+      "category": "Environmental AI",
+      "description": "AI's role in urban water management and climate resilience"
+    },
+    {
+      "id": "stormjson-stromverse",
+      "title": "Stormjson and Stromverse: Your Map to Massive Weather Data",
+      "file": "Stormjson_and_Stromverse_Your_Map_to_Massive_Weather_Data_Not_the_Storm_Itself_1753890890329.mp3",
+      "duration": "Unknown",
+      "category": "Technical",
+      "description": "Deep dive into StormVerse data architecture and storm.json"
+    },
+    {
+      "id": "sonic-strategists",
+      "title": "Sonic Strategists: How Audio Shapes Your Story and Experience in Media",
+      "file": "Sonic_Strategists_How_Audio_Shapes_Your_Story_and_Experience_in_Media_1753890890329.mp3",
+      "duration": "Unknown",
+      "category": "Media & Audio",
+      "description": "The role of audio in digital experiences and storytelling"
+    },
+    {
+      "id": "quantum-analysis",
+      "title": "Quantum Podcast Analysis Metadata",
+      "file": "quantum-podcast-analysis-metadata-podcast_1753890890330.mp3",
+      "duration": "Unknown",
+      "category": "Quantum Theory",
+      "description": "Quantum information theory applied to podcast analysis"
+    },
+    {
+      "id": "file-analysis",
+      "title": "File Analysis Podcast",
+      "file": "file-analysis-podcast_1753890890329.mp3",
+      "duration": "Unknown",
+      "category": "Technical",
+      "description": "Technical analysis of StormVerse file systems"
+    },
+    {
+      "id": "new-task",
+      "title": "New Task Podcast",
+      "file": "new-task-podcast_1753890890329.mp3",
+      "duration": "Unknown",
+      "category": "Development",
+      "description": "Development workflow and task management"
+    }
+  ],
+  "metadata": {
+    "creator": "Daniel Guzman",
+    "project": "StormVerse AI Network",
+    "copyright": "© 2025 Daniel Guzman - All Rights Reserved",
+    "total_podcasts": 7,
+    "categories": ["Environmental AI", "Technical", "Media & Audio", "Quantum Theory", "Development"]
+  }
+}

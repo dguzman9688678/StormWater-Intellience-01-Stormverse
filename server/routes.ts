@@ -7,6 +7,10 @@ import { TripleStoreService } from "./services/triple-store-service";
 import { ARCSECService } from "./services/arcsec-security";
 import { stormDataProcessor } from "./services/storm-data-processor";
 import { metadataProcessor } from "./services/metadata-processor";
+import { diagnosticsService } from "./services/diagnostics-service";
+import { quantumService } from "./services/quantum-service";
+import { agentService } from "./services/agent-service";
+import { databaseService } from "./services/database-service";
 
 const noaaService = new NOAAService();
 const kmzProcessor = new KMZProcessor();
@@ -180,6 +184,177 @@ export async function registerRoutes(app: Express): Promise<Server> {
     } catch (error) {
       console.error('ARCSEC status error:', error);
       res.status(500).json({ error: 'Failed to fetch ARCSEC status' });
+    }
+  });
+
+  // System Diagnostics routes
+  app.get('/api/diagnostics', async (req, res) => {
+    try {
+      const diagnostics = await diagnosticsService.getDiagnostics();
+      res.json(diagnostics);
+    } catch (error) {
+      console.error('Diagnostics error:', error);
+      res.status(500).json({ error: 'Failed to fetch diagnostics' });
+    }
+  });
+
+  app.get('/api/diagnostics/health', async (req, res) => {
+    try {
+      const health = await diagnosticsService.getSystemHealth();
+      res.json(health);
+    } catch (error) {
+      console.error('System health error:', error);
+      res.status(500).json({ error: 'Failed to fetch system health' });
+    }
+  });
+
+  // Quantum Analysis routes
+  app.get('/api/quantum/states', async (req, res) => {
+    try {
+      const states = await quantumService.getQuantumStates();
+      res.json(states);
+    } catch (error) {
+      console.error('Quantum states error:', error);
+      res.status(500).json({ error: 'Failed to fetch quantum states' });
+    }
+  });
+
+  app.get('/api/quantum/entanglement', async (req, res) => {
+    try {
+      const entanglement = await quantumService.getEntanglement();
+      res.json(entanglement);
+    } catch (error) {
+      console.error('Entanglement error:', error);
+      res.status(500).json({ error: 'Failed to fetch entanglement data' });
+    }
+  });
+
+  app.get('/api/quantum/metrics', async (req, res) => {
+    try {
+      const metrics = await quantumService.getQuantumMetrics();
+      res.json(metrics);
+    } catch (error) {
+      console.error('Quantum metrics error:', error);
+      res.status(500).json({ error: 'Failed to fetch quantum metrics' });
+    }
+  });
+
+  app.get('/api/quantum/analysis', async (req, res) => {
+    try {
+      const analysis = await quantumService.getQuantumAnalysis();
+      res.json(analysis);
+    } catch (error) {
+      console.error('Quantum analysis error:', error);
+      res.status(500).json({ error: 'Failed to fetch quantum analysis' });
+    }
+  });
+
+  // AI Agent routes
+  app.get('/api/agents', async (req, res) => {
+    try {
+      const agents = await agentService.getAgents();
+      res.json(agents);
+    } catch (error) {
+      console.error('Agents error:', error);
+      res.status(500).json({ error: 'Failed to fetch agents' });
+    }
+  });
+
+  app.get('/api/agents/status', async (req, res) => {
+    try {
+      const status = await agentService.getAgentStatus();
+      res.json(status);
+    } catch (error) {
+      console.error('Agent status error:', error);
+      res.status(500).json({ error: 'Failed to fetch agent status' });
+    }
+  });
+
+  app.get('/api/agents/:id', async (req, res) => {
+    try {
+      const agent = await agentService.getAgent(req.params.id);
+      if (!agent) {
+        res.status(404).json({ error: 'Agent not found' });
+      } else {
+        res.json(agent);
+      }
+    } catch (error) {
+      console.error('Agent fetch error:', error);
+      res.status(500).json({ error: 'Failed to fetch agent' });
+    }
+  });
+
+  app.put('/api/agents/:id/status', async (req, res) => {
+    try {
+      const { status } = req.body;
+      const success = await agentService.updateAgentStatus(req.params.id, status);
+      if (success) {
+        res.json({ success: true });
+      } else {
+        res.status(404).json({ error: 'Agent not found' });
+      }
+    } catch (error) {
+      console.error('Agent update error:', error);
+      res.status(500).json({ error: 'Failed to update agent status' });
+    }
+  });
+
+  // Database Status routes
+  app.get('/api/database/status', async (req, res) => {
+    try {
+      const status = await databaseService.getDatabaseStatus();
+      res.json(status);
+    } catch (error) {
+      console.error('Database status error:', error);
+      res.status(500).json({ error: 'Failed to fetch database status' });
+    }
+  });
+
+  app.get('/api/database/schema/:table', async (req, res) => {
+    try {
+      const schema = await databaseService.getTableSchema(req.params.table);
+      if (!schema) {
+        res.status(404).json({ error: 'Table not found' });
+      } else {
+        res.json(schema);
+      }
+    } catch (error) {
+      console.error('Table schema error:', error);
+      res.status(500).json({ error: 'Failed to fetch table schema' });
+    }
+  });
+
+  // System Status route (comprehensive)
+  app.get('/api/system/status', async (req, res) => {
+    try {
+      const [health, agents, database, metadata, arcsec] = await Promise.all([
+        diagnosticsService.getSystemHealth(),
+        agentService.getAgentStatus(),
+        databaseService.getDatabaseStatus(),
+        metadataProcessor.getSystemMetadata(),
+        metadataProcessor.getARCSECStatus()
+      ]);
+      
+      res.json({
+        health,
+        agents: agents.agents,
+        database: {
+          connected: database.connected,
+          type: database.type,
+          tables: database.tables.length
+        },
+        project: metadata.metadata.project,
+        creator: metadata.metadata.creator,
+        arcsec: {
+          status: arcsec.status,
+          mode: arcsec.mode,
+          protocol: arcsec.protocol
+        },
+        timestamp: new Date().toISOString()
+      });
+    } catch (error) {
+      console.error('System status error:', error);
+      res.status(500).json({ error: 'Failed to fetch system status' });
     }
   });
 

@@ -1,5 +1,5 @@
 import { Suspense } from "react";
-import StormVerse from "./components/StormVerse";
+import { AppRouter } from "./router";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import "./styles/cyberpunk.css";
 import "@fontsource/inter";
@@ -28,7 +28,7 @@ function App() {
             </div>
           </div>
         }>
-          <StormVerse />
+          <AppRouter />
         </Suspense>
       </div>
     </QueryClientProvider>
