@@ -4,13 +4,13 @@ import { Link } from 'react-router-dom';
 const navigationItems = [
   { path: '/', label: 'Home', icon: '🏠' },
   { path: '/globe', label: 'Globe View', icon: '🌍' },
-  { path: '/monitor', label: 'System Monitor', icon: '📊' },
-  { path: '/diagnostics', label: 'Diagnostics', icon: '🔍' },
+  { path: '/control', label: 'Control Center', icon: '🎛️' },
+  { path: '/agents', label: 'AI Agents', icon: '🤖' },
   { path: '/quantum', label: 'Quantum Analysis', icon: '⚛️' },
+  { path: '/world', label: 'World Status', icon: '🌐' },
+  { path: '/podcasts', label: 'Podcasts', icon: '🎧' },
   { path: '/database', label: 'Database', icon: '💾' },
-  { path: '/metadata', label: 'Metadata', icon: '📋' },
-  { path: '/analysis', label: 'Analysis Docs', icon: '📄' },
-  { path: '/agents', label: 'AI Agents', icon: '🤖' }
+  { path: '/analysis', label: 'Analysis', icon: '📄' }
 ];
 
 export default function Navigation() {

@@ -84,6 +84,9 @@ class StormVerseServer {
     // Serve static files
     this.app.use(express.static(path.join(__dirname, 'client', 'dist')));
     
+    // Serve built client files  
+    this.app.use(express.static(path.join(__dirname, 'dist')));
+    
     // Serve podcast files from root
     this.app.use('/podcasts', express.static(path.join(__dirname)));
     
@@ -102,7 +105,17 @@ class StormVerseServer {
       
       // Fallback route for client-side routing
       this.app.get('*', (req, res) => {
-        res.sendFile(path.join(__dirname, 'client', 'dist', 'index.html'));
+        const indexPath = path.join(__dirname, 'dist', 'index.html');
+        const fallbackPath = path.join(__dirname, 'client', 'dist', 'index.html');
+        
+        // Try dist/index.html first, then fallback to client/dist/index.html
+        if (require('fs').existsSync(indexPath)) {
+          res.sendFile(indexPath);
+        } else if (require('fs').existsSync(fallbackPath)) {
+          res.sendFile(fallbackPath);
+        } else {
+          res.status(404).json({ error: 'Application not built. Run npm run build first.' });
+        }
       });
       
       // Start server

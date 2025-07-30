@@ -1,0 +1,16 @@
+{
+  "version": "2.0",
+  "changes": {
+    "added": [
+      "storm_predictions",
+      "quantum_states"
+    ],
+    "modified": [
+      "users",
+      "noaa_data",
+      "agent_activity"
+    ],
+    "indexes": "Performance indexes added",
+    "triggers": "ARCSEC audit triggers enabled"
+  }
+}

@@ -1,0 +1,159 @@
+{
+  "network": "StormVerse AI Network",
+  "agents": [
+    {
+      "id": "jarvis",
+      "name": "JARVIS",
+      "role": "Command Router & System Coordinator",
+      "color": "#00ffff",
+      "position": {
+        "lat": 0,
+        "lon": 0,
+        "altitude": 1000000
+      },
+      "capabilities": [
+        "routing",
+        "coordination",
+        "command-processing"
+      ],
+      "deployed": "2025-07-30T16:10:41.413Z",
+      "status": "ACTIVE",
+      "arcsecSignature": "ARCSEC-SHA256-amFydmlzLURhbmll"
+    },
+    {
+      "id": "mito",
+      "name": "MITO",
+      "role": "Development & System Optimization",
+      "color": "#ff00ff",
+      "position": {
+        "lat": 45,
+        "lon": 0,
+        "altitude": 1000000
+      },
+      "capabilities": [
+        "building",
+        "optimization",
+        "automation"
+      ],
+      "deployed": "2025-07-30T16:10:41.413Z",
+      "status": "ACTIVE",
+      "arcsecSignature": "ARCSEC-SHA256-bWl0by1EYW5pZWwg"
+    },
+    {
+      "id": "phoenix",
+      "name": "PHOENIX",
+      "role": "Memory & Data Resurrection",
+      "color": "#ff6600",
+      "position": {
+        "lat": -45,
+        "lon": 0,
+        "altitude": 1000000
+      },
+      "capabilities": [
+        "memory",
+        "recovery",
+        "archival"
+      ],
+      "deployed": "2025-07-30T16:10:41.413Z",
+      "status": "ACTIVE",
+      "arcsecSignature": "ARCSEC-SHA256-cGhvZW5peC1EYW5p"
+    },
+    {
+      "id": "ultron",
+      "name": "ULTRON",
+      "role": "Metadata Validation & Integrity",
+      "color": "#ff0000",
+      "position": {
+        "lat": 0,
+        "lon": 90,
+        "altitude": 1000000
+      },
+      "capabilities": [
+        "validation",
+        "verification",
+        "metadata"
+      ],
+      "deployed": "2025-07-30T16:10:41.413Z",
+      "status": "ACTIVE",
+      "arcsecSignature": "ARCSEC-SHA256-dWx0cm9uLURhbmll"
+    },
+    {
+      "id": "vader",
+      "name": "VADER",
+      "role": "Surveillance & Network Resilience",
+      "color": "#330066",
+      "position": {
+        "lat": 0,
+        "lon": -90,
+        "altitude": 1000000
+      },
+      "capabilities": [
+        "monitoring",
+        "surveillance",
+        "resilience"
+      ],
+      "deployed": "2025-07-30T16:10:41.413Z",
+      "status": "ACTIVE",
+      "arcsecSignature": "ARCSEC-SHA256-dmFkZXItRGFuaWVs"
+    },
+    {
+      "id": "odin",
+      "name": "ODIN",
+      "role": "Security & ARCSEC Enforcement",
+      "color": "#0066ff",
+      "position": {
+        "lat": 0,
+        "lon": 180,
+        "altitude": 1000000
+      },
+      "capabilities": [
+        "security",
+        "enforcement",
+        "protection"
+      ],
+      "deployed": "2025-07-30T16:10:41.414Z",
+      "status": "ACTIVE",
+      "arcsecSignature": "ARCSEC-SHA256-b2Rpbi1EYW5pZWwg"
+    },
+    {
+      "id": "echo",
+      "name": "ECHO",
+      "role": "Audio Interface & Communication",
+      "color": "#9933ff",
+      "position": {
+        "lat": 0,
+        "lon": -180,
+        "altitude": 1000000
+      },
+      "capabilities": [
+        "audio",
+        "voice",
+        "communication"
+      ],
+      "deployed": "2025-07-30T16:10:41.414Z",
+      "status": "ACTIVE",
+      "arcsecSignature": "ARCSEC-SHA256-ZWNoby1EYW5pZWwg"
+    },
+    {
+      "id": "storm",
+      "name": "STORM_CITADEL",
+      "role": "Weather Intelligence Core",
+      "color": "#00ff00",
+      "position": {
+        "lat": 90,
+        "lon": 0,
+        "altitude": 1500000
+      },
+      "capabilities": [
+        "weather",
+        "prediction",
+        "environmental"
+      ],
+      "deployed": "2025-07-30T16:10:41.414Z",
+      "status": "ACTIVE",
+      "arcsecSignature": "ARCSEC-SHA256-c3Rvcm0tRGFuaWVs"
+    }
+  ],
+  "totalAgents": 8,
+  "deploymentTime": "2025-07-30T16:10:41.414Z"
+}

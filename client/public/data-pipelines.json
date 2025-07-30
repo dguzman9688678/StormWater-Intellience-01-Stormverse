@@ -1,0 +1,28 @@
+{
+  "weather": {
+    "source": "NOAA",
+    "endpoints": {
+      "alerts": "/alerts/active",
+      "radar": "/radar/stations",
+      "hurricanes": "/nhc/products"
+    },
+    "refreshRate": 300000,
+    "status": "CONFIGURED"
+  },
+  "cesium": {
+    "source": "Cesium Ion",
+    "assets": {
+      "terrain": 1,
+      "imagery": 2,
+      "buildings": 96188
+    },
+    "cacheEnabled": true,
+    "status": "CONFIGURED"
+  },
+  "quantum": {
+    "processor": "Quantum Analysis Engine",
+    "dimensions": 19,
+    "entanglement": true,
+    "status": "CONFIGURED"
+  }
+}
