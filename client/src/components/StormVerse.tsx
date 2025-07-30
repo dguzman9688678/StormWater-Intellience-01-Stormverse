@@ -7,10 +7,25 @@ import KMZLoader from "./KMZLoader";
 import InteractiveAgentGlobe from "./InteractiveAgentGlobe";
 import AgentDeploymentShell from "./AgentDeploymentShell";
 import SystemMonitor from "./SystemMonitor";
+import AttributionFooter from "./AttributionFooter";
 import CyberpunkPanel from "./ui/cyberpunk-panel";
 import { useStormVerse } from "../lib/stores/useStormVerse";
 import { useWeatherData } from "../lib/stores/useWeatherData";
 import { useAgents } from "../lib/stores/useAgents";
+
+// TypeScript declarations for WebGL modules
+declare global {
+  interface Window {
+    StormLayerLoader: any;
+    QuantumArcRenderer: any;
+    StatsOverlay: any;
+    stormVerseModules: {
+      layerLoader: any;
+      quantumRenderer: any;
+      statsOverlay: any;
+    };
+  }
+}
 
 export default function StormVerse() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -151,6 +166,9 @@ export default function StormVerse() {
           </div>
         ))}
       </div>
+      
+      {/* Attribution Footer */}
+      <AttributionFooter />
     </div>
   );
 }

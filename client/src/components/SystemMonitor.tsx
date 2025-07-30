@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useStormVerse } from '../lib/stores/useStormVerse';
 import { useWeatherData } from '../lib/stores/useWeatherData';
 import { useAgents } from '../lib/stores/useAgents';
+import { stormWaterIntegration } from '../lib/stormwater-integration';
 import CyberpunkPanel from './ui/cyberpunk-panel';
 
 interface SystemMetrics {
@@ -111,6 +112,13 @@ export default function SystemMonitor() {
             </span>
           </div>
         )}
+        
+        <div className="metric-row mt-2 pt-2 border-t border-cyan-800">
+          <span className="metric-label text-xs">Platform:</span>
+          <span className="metric-value text-xs text-gray-400">
+            StormWater v{stormWaterIntegration.getMetadata().version}
+          </span>
+        </div>
       </div>
     </CyberpunkPanel>
   );

@@ -28,3 +28,47 @@ canvas {
   height: 100% !important;
   touch-action: none;
 }
+
+/* Attribution Footer */
+.attribution-footer {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.9);
+  border-top: 1px solid var(--cyber-blue);
+  padding: 8px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Courier New', monospace;
+  font-size: 11px;
+  z-index: 1000;
+}
+
+.attribution-text {
+  color: var(--matrix-green);
+  text-shadow: 0 0 5px var(--matrix-green);
+}
+
+.attribution-links {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.attribution-link {
+  color: var(--cyber-blue);
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.attribution-link:hover {
+  color: var(--cyber-purple);
+  text-shadow: 0 0 10px var(--cyber-purple);
+}
+
+.attribution-separator {
+  color: var(--matrix-green);
+  opacity: 0.5;
+}

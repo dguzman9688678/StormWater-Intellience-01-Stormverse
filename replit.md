@@ -26,6 +26,14 @@ StormVerse is a professional environmental intelligence platform that combines 3
 
 The platform demonstrates professional environmental intelligence capabilities suitable for emergency management, research institutions, and commercial applications.
 
+## StormWater Intelligence Platform Integration
+**Added January 30, 2025**: Full integration with StormWater Intelligence Platform v3.4
+- Copyright (c) 2025 Daniel Guzman - All Rights Reserved
+- 443 integrated files with comprehensive security auditing
+- Unified credential management system on Replit
+- Complete environmental configuration mapping
+- Professional attribution and metadata tracking
+
 ## User Preferences
 
 Preferred communication style: Simple, everyday language.
