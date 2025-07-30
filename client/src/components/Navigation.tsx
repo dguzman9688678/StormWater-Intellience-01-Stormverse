@@ -11,6 +11,7 @@ const navigationItems = [
   { path: '/world', label: 'World Status', icon: '🌐' },
   { path: '/podcasts', label: 'Podcasts', icon: '🎧' },
   { path: '/database', label: 'Database', icon: '💾' },
+  { path: '/environmental', label: 'Environmental', icon: '🌿' },
   { path: '/analysis', label: 'Analysis', icon: '📄' }
 ];
 

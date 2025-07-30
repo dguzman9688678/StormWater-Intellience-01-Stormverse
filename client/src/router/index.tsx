@@ -11,6 +11,7 @@ import AnalysisPanel from '../components/AnalysisPanel';
 import AgentNetwork from '../components/AgentNetwork';
 import WorldStatus from '../components/WorldStatus';
 import PodcastPlayer from '../components/PodcastPlayer';
+import EnvironmentalImpactVisualizer from '../components/EnvironmentalImpactVisualizer';
 import Navigation from '../components/Navigation';
 import NotFound from '../pages/not-found';
 
@@ -172,6 +173,14 @@ const router = createBrowserRouter([
             </div>
           </div>
         </div>
+      </PanelLayout>
+    )
+  },
+  {
+    path: '/environmental',
+    element: (
+      <PanelLayout>
+        <EnvironmentalImpactVisualizer />
       </PanelLayout>
     )
   },
