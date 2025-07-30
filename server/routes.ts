@@ -228,6 +228,58 @@ export async function registerRoutes(app: Express): Promise<Server> {
     }
   });
 
+  // ARCSEC Logic Master Controller Routes
+  app.get('/api/logic/status', async (req, res) => {
+    try {
+      const { arcsecLogicController } = await import('./services/arcsec-logic-master-controller');
+      const status = arcsecLogicController.getLogicStatus();
+      res.json({ status, timestamp: new Date() });
+    } catch (error) {
+      res.status(500).json({ error: error.message });
+    }
+  });
+
+  app.get('/api/logic/rules', async (req, res) => {
+    try {
+      const { arcsecLogicController } = await import('./services/arcsec-logic-master-controller');
+      const rules = arcsecLogicController.getLogicRules();
+      res.json({ rules, timestamp: new Date() });
+    } catch (error) {
+      res.status(500).json({ error: error.message });
+    }
+  });
+
+  app.get('/api/logic/decisions', async (req, res) => {
+    try {
+      const { arcsecLogicController } = await import('./services/arcsec-logic-master-controller');
+      const limit = parseInt(req.query.limit as string) || 10;
+      const decisions = arcsecLogicController.getDecisionHistory(limit);
+      res.json({ decisions, timestamp: new Date() });
+    } catch (error) {
+      res.status(500).json({ error: error.message });
+    }
+  });
+
+  app.post('/api/logic/manual-decision', async (req, res) => {
+    try {
+      const { arcsecLogicController } = await import('./services/arcsec-logic-master-controller');
+      const decision = await arcsecLogicController.executeManualDecision(req.body.context);
+      res.json({ decision, timestamp: new Date() });
+    } catch (error) {
+      res.status(500).json({ error: error.message });
+    }
+  });
+
+  app.post('/api/logic/add-rule', async (req, res) => {
+    try {
+      const { arcsecLogicController } = await import('./services/arcsec-logic-master-controller');
+      const success = arcsecLogicController.addLogicRule(req.body);
+      res.json({ success, timestamp: new Date() });
+    } catch (error) {
+      res.status(500).json({ error: error.message });
+    }
+  });
+
   // ARCSEC Security API Routes
   app.get('/api/arcsec/status', async (req, res) => {
     try {
