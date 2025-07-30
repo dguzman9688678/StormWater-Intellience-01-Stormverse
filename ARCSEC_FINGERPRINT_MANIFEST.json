@@ -3,8 +3,8 @@
     "version": "3.0X",
     "creator": "Daniel Guzman",
     "digital_signature": "a6672edf248c5eeef3054ecca057075c938af653",
-    "generated": "2025-07-30T19:36:56.262624+00:00",
-    "total_files": 48,
+    "generated": "2025-07-30T20:09:26.339878+00:00",
+    "total_files": 61,
     "scan_directory": "/home/runner/workspace",
     "protection_mode": "WAR_MODE_ACTIVE",
     "verification_method": "CRYPTOGRAPHIC_HMAC_SHA256"
@@ -16,7 +16,7 @@
       "size": 3920,
       "created": "2025-07-30T17:32:49.106020+00:00",
       "modified": "2025-07-30T17:32:47.647022+00:00",
-      "fingerprinted": "2025-07-30T19:36:56.124680+00:00",
+      "fingerprinted": "2025-07-30T20:09:26.156841+00:00",
       "hashes": {
         "sha256": "247d7bfa50cc7c2d85faf6231e2a48af8671d862b2e6154bd447ccd20df72367",
         "sha512": "bee9924cbfd046ee65f5fd4fb484e8f3572f6bdbc28f9ae13fb1c086c3df07c5a54e488ad954d56794b33fc5100e82e30abd38bed1292bb4074f70680c0145d3",
@@ -38,7 +38,7 @@
       "size": 4965,
       "created": "2025-07-30T18:18:07.640555+00:00",
       "modified": "2025-07-30T18:18:07.540555+00:00",
-      "fingerprinted": "2025-07-30T19:36:56.127833+00:00",
+      "fingerprinted": "2025-07-30T20:09:26.161362+00:00",
       "hashes": {
         "sha256": "97505de632749c1baecf05b5123de8d68becfa383615a49f3c6aa15a6dc40f4c",
         "sha512": "2cb29ad47d974d02839a34ae5a4fcd36451a584bfaec12bd081e35872ef3e96ef9b9faaba6f257e4dcca30052cf02b3e9bf3e14357ff15ee157259d91cc7eff4",
@@ -60,7 +60,7 @@
       "size": 6560,
       "created": "2025-07-30T18:20:24.259453+00:00",
       "modified": "2025-07-30T18:20:24.143453+00:00",
-      "fingerprinted": "2025-07-30T19:36:56.129300+00:00",
+      "fingerprinted": "2025-07-30T20:09:26.163110+00:00",
       "hashes": {
         "sha256": "3229220d107037f4321c4c2d1bfb9ecc8aa6223c14d3e837c33bb47ca2d57a4f",
         "sha512": "08213940c815b7103bcb07c59b5fb1ea84b30fffafe5c3b422156fe49e05888f1f845eb0794c1161d6966c6f8e95fc582a900d1e0fdbee9561cea8287a4e457e",
@@ -82,7 +82,7 @@
       "size": 11930,
       "created": "2025-07-30T18:29:26.785048+00:00",
       "modified": "2025-07-30T18:29:26.692048+00:00",
-      "fingerprinted": "2025-07-30T19:36:56.132366+00:00",
+      "fingerprinted": "2025-07-30T20:09:26.168298+00:00",
       "hashes": {
         "sha256": "e3b0e8ac90c3ed94c28934d7b81a821ad4b8cff4af5a49a5fa1d5c26d591f743",
         "sha512": "31f2d270f667c5b0166e9cb840aa574a7b87f0d36865b12bb60dd91644ff5fd8111a06387d97e800f2ac374eb1bd5c9a73e6495fb4a20100f4922a9cf3a14205",
@@ -104,7 +104,7 @@
       "size": 18526,
       "created": "2025-07-30T18:34:59.800798+00:00",
       "modified": "2025-07-30T18:34:59.608798+00:00",
-      "fingerprinted": "2025-07-30T19:36:56.135528+00:00",
+      "fingerprinted": "2025-07-30T20:09:26.172816+00:00",
       "hashes": {
         "sha256": "dbb3a4c6e572eebc7c1f643c7ad1313808dfa4665f34f8882cad9b64fffb18fc",
         "sha512": "f6ce91a5a126f1a0b9b8d0dc686f77e7f81cb161c4735021f0e27aa6e970a2ac6d527212a354f6fbc78ee3243601317d4bbd20b72cbab6bcb029522de657f26a",
@@ -126,7 +126,7 @@
       "size": 19168,
       "created": "2025-07-30T18:38:46.468628+00:00",
       "modified": "2025-07-30T18:38:46.309628+00:00",
-      "fingerprinted": "2025-07-30T19:36:56.139016+00:00",
+      "fingerprinted": "2025-07-30T20:09:26.179708+00:00",
       "hashes": {
         "sha256": "78028043556ffd0114d1bdf6b8f785bfdd0374f317167a53b3cbd0afe3035062",
         "sha512": "eb4ebafda29bd231e29476aecf6b8c96d20319fcb0b943e40a2dc9731f953c631ec75a1a6800f9cbc808e6f98dc309ea4ab0eb744c036a5c3065ae465a4940c8",
@@ -148,7 +148,7 @@
       "size": 27408,
       "created": "2025-07-30T18:58:29.376477+00:00",
       "modified": "2025-07-30T18:58:29.281477+00:00",
-      "fingerprinted": "2025-07-30T19:36:56.145341+00:00",
+      "fingerprinted": "2025-07-30T20:09:26.187392+00:00",
       "hashes": {
         "sha256": "68868795098f0f83824690223b321e6c83403e3273c8bbe0aa841e2eed25a377",
         "sha512": "7cae14418b04936db098016a5c96dbc25a5620212cd819e9502907419951718033175180ff515e5f5bf862bb8939f72d16ead999608257debd74edd1fbb3703d",
@@ -170,7 +170,7 @@
       "size": 7227,
       "created": "2025-07-30T19:03:07.973393+00:00",
       "modified": "2025-07-30T19:03:07.850393+00:00",
-      "fingerprinted": "2025-07-30T19:36:56.148898+00:00",
+      "fingerprinted": "2025-07-30T20:09:26.191832+00:00",
       "hashes": {
         "sha256": "ff253446fcaf36c646c37fc0598560af199b2350d142ade44e68090ca17947d7",
         "sha512": "2009792134813bf91a893649898e05ad5ac91e4989141b221bed4d4efa25da44f676c97a032348d6a9ab7b81e2fc2aead6e26c5cc0857e406c2f406c40f41048",
@@ -186,20 +186,42 @@
         "tamper_detection": "ENABLED"
       }
     },
+    "./ARCSEC_FINGERPRINT_MANIFEST.json": {
+      "filename": "ARCSEC_FINGERPRINT_MANIFEST.json",
+      "filepath": "/home/runner/workspace/ARCSEC_FINGERPRINT_MANIFEST.json",
+      "size": 57050,
+      "created": "2025-07-30T19:36:56.265137+00:00",
+      "modified": "2025-07-30T19:36:56.265137+00:00",
+      "fingerprinted": "2025-07-30T20:09:26.192953+00:00",
+      "hashes": {
+        "sha256": "930438a7449c064258c4356f272becace33864dba7a8e0cf268609858e95d7de",
+        "sha512": "e830b2a8bb644568426a09451db4db682ae3c5ec1c80b56fc47b040098647c14e7d084b230a51f6bf33c26c6121dc6535301fdc8847e4279efe2ff337fa92403",
+        "blake2b": "f612d523ba4c733eb3edcbcfc04f4c18aedabf6a5235602ad7fd92561f774221b79f86dfbfb89d996366dfda9e443b3c93409ff6ff63c199f36fc9d9df4dfd26"
+      },
+      "hmac_signature": "c77b704cb436d728def9e33bb650ea0172e4c4a8527f188039970f0a91d09cb6",
+      "compression_ratio": 0.2763716038562664,
+      "metadata": {
+        "creator": "Daniel Guzman",
+        "digital_signature": "a6672edf248c5eeef3054ecca057075c938af653",
+        "version": "3.0X",
+        "protection_level": "WAR_MODE",
+        "tamper_detection": "ENABLED"
+      }
+    },
     "./arcsec_fingerprint.py": {
       "filename": "arcsec_fingerprint.py",
       "filepath": "/home/runner/workspace/arcsec_fingerprint.py",
-      "size": 13778,
-      "created": "2025-07-30T19:35:17.655142+00:00",
-      "modified": "2025-07-30T19:35:17.547142+00:00",
-      "fingerprinted": "2025-07-30T19:36:56.149946+00:00",
+      "size": 13880,
+      "created": "2025-07-30T20:07:15.050190+00:00",
+      "modified": "2025-07-30T20:07:15.017190+00:00",
+      "fingerprinted": "2025-07-30T20:09:26.195036+00:00",
       "hashes": {
-        "sha256": "75f38db863e709148dd1c87be8af5794b110be7433e9eeb322fcbc92a043b2a8",
-        "sha512": "91294cac3125c271322e0ec32c99abf2749eb991141ba209733ff2ff8801c926371835e2bea60da996f6194048f6e64ac2c3a8ccf140713551abd879e6ede884",
-        "blake2b": "548d8fb6a53c80974a9b9892b862f0abf34019350601d5e88dffa9aa6e6cf726e86442d48b835e1f3910d6a939fbc46dcfbe7ade02c1a55c509d267f7f6fda51"
+        "sha256": "3c3991dd53bad1a7b46a015760eb8cd3cfb13f711a8082c6c4f5f03172084c08",
+        "sha512": "c1c73e1ca756206c62f8050b37ad4bde2638d321c55d83d657d34a31e5e8a745fd000940898cd3801770c177cc88b13469d4c3c5b76f7eac90e389664583cc64",
+        "blake2b": "480d2c4e0382ad04fb9182440d011478a14b581c95f1065bcd359d9713afc5dedb2c554f93aed2a5596b1d73e77224d5859c0783371b1db97aaef8d42297c31a"
       },
-      "hmac_signature": "43a70ab9d9d1cf9665c05bc2712206e4bf7a3b4befb92af1ad823575dae6bb43",
-      "compression_ratio": 0.2533749455653941,
+      "hmac_signature": "b7325509c4732ce70a1fc3bc6f6d0d57a107dcc8a3b1bc951e9e7498c48bee7d",
+      "compression_ratio": 0.2542507204610951,
       "metadata": {
         "creator": "Daniel Guzman",
         "digital_signature": "a6672edf248c5eeef3054ecca057075c938af653",
@@ -211,17 +233,281 @@
     "./arcsec_injector.py": {
       "filename": "arcsec_injector.py",
       "filepath": "/home/runner/workspace/arcsec_injector.py",
-      "size": 18102,
-      "created": "2025-07-30T19:36:20.689138+00:00",
-      "modified": "2025-07-30T19:36:20.625138+00:00",
-      "fingerprinted": "2025-07-30T19:36:56.150992+00:00",
+      "size": 18220,
+      "created": "2025-07-30T20:07:17.823190+00:00",
+      "modified": "2025-07-30T20:07:17.800190+00:00",
+      "fingerprinted": "2025-07-30T20:09:26.196075+00:00",
       "hashes": {
-        "sha256": "2c85f2ab84f59cb3f4bfd3bedc076414099913d6d394f506906a97b1a2054dd1",
-        "sha512": "4b47f373ae78bb5747a5aae251403b6f42dac8125b71b739830c1b7560db6a3816b26cee68ea2e5e6c9b0816f59546923aa3035cf8f2e52520aa85c2375ddd30",
-        "blake2b": "d27afb6f20b0d14b86fd547fef0a2cdb54be8c71d4a57a33ee68962185e78c9478ca7c1d6a4ef6aaf6ee3136be4e67b325c758fcd20df239db1cb460c06fc193"
+        "sha256": "079a28264ed0d1aa2583c950f3447042722afef0361dee36ef002c57ce9b267c",
+        "sha512": "6b13c283c8e3fbf69b030f02dd5f9268547a66516db2f1aea366b0fb41034b4e5262d91f5275072721170f36653d0be501675641d865205dd09d7d1a52b9b536",
+        "blake2b": "7ec6f761f9ec4296cf52b617e0d571fa793df7c80790387dff6e358c01173137eedf692642b2628f09039c6ef6a20d50e3b79239dbf9e1620f7756862c982083"
       },
-      "hmac_signature": "bf4e2ac3314fefa1ef0f9315d81678c5262dfc78a0a43b2723dfbe5116fcadbf",
-      "compression_ratio": 0.27886421389901667,
+      "hmac_signature": "b37d27cd2f5857e8787599bd83e1bf1ac205a6ee6af85da9c43ba0a119017a6e",
+      "compression_ratio": 0.2795279912184413,
+      "metadata": {
+        "creator": "Daniel Guzman",
+        "digital_signature": "a6672edf248c5eeef3054ecca057075c938af653",
+        "version": "3.0X",
+        "protection_level": "WAR_MODE",
+        "tamper_detection": "ENABLED"
+      }
+    },
+    "./arcsec_manifest_generator.py": {
+      "filename": "arcsec_manifest_generator.py",
+      "filepath": "/home/runner/workspace/arcsec_manifest_generator.py",
+      "size": 19006,
+      "created": "2025-07-30T20:07:20.976190+00:00",
+      "modified": "2025-07-30T20:07:20.950190+00:00",
+      "fingerprinted": "2025-07-30T20:09:26.197230+00:00",
+      "hashes": {
+        "sha256": "2838d6b3b65f3b9e81d95e92af261ba1f81f1478a188886d18288f370fec815b",
+        "sha512": "4748329af16cfefcf59799d21b0c1c3bf03e40c238cffdb8fc4f3572c9d994662549ba71d120cc53be038c4d75801640c00495d3fd236b349a2c46a1221d7dd1",
+        "blake2b": "fe4cb35e274e768d6384183139352233bffc3f5ab739b6bf8b71580437f6cac33e5aa916b6428ca5f607ca92aa4f1996bb8e53d97ec1cd55fbfc6e595aa00db8"
+      },
+      "hmac_signature": "f19977412fa959c111a66cdc1038591b48027ac2035354e60d72e7c45164e2d0",
+      "compression_ratio": 0.23860886035988635,
+      "metadata": {
+        "creator": "Daniel Guzman",
+        "digital_signature": "a6672edf248c5eeef3054ecca057075c938af653",
+        "version": "3.0X",
+        "protection_level": "WAR_MODE",
+        "tamper_detection": "ENABLED"
+      }
+    },
+    "./arcsec_signature_imprinter.py": {
+      "filename": "arcsec_signature_imprinter.py",
+      "filepath": "/home/runner/workspace/arcsec_signature_imprinter.py",
+      "size": 23419,
+      "created": "2025-07-30T20:07:24.061190+00:00",
+      "modified": "2025-07-30T20:07:24.024190+00:00",
+      "fingerprinted": "2025-07-30T20:09:26.198525+00:00",
+      "hashes": {
+        "sha256": "9b71dc1fda2f7e5ef0f2e97fbc6ff1662c21203d27eb735447675bf8759034b0",
+        "sha512": "c1bd94be331bd3bb38538aef16b41b77c6d632d03c8c8c3bc2b4859f5ead83e506bc458a6d608762107f3f0c688dbef586605c690a162465c372a6d85e3a5275",
+        "blake2b": "bd6f387288a1c706cab041b086aedb57ac7e05e4a9bb862851d4b7fee09bc49089565ad06b42dbfe9c11e8d83c53f1a3df39e369ecb4c49445ebfb6ee6ffde6a"
+      },
+      "hmac_signature": "061b499cbb54e341f047876cc18db3b6393bd61c7a9e48632e90bacee3b99843",
+      "compression_ratio": 0.21952260984670566,
+      "metadata": {
+        "creator": "Daniel Guzman",
+        "digital_signature": "a6672edf248c5eeef3054ecca057075c938af653",
+        "version": "3.0X",
+        "protection_level": "WAR_MODE",
+        "tamper_detection": "ENABLED"
+      }
+    },
+    "./arcsec_webhook_gateway.py": {
+      "filename": "arcsec_webhook_gateway.py",
+      "filepath": "/home/runner/workspace/arcsec_webhook_gateway.py",
+      "size": 25028,
+      "created": "2025-07-30T20:07:26.687190+00:00",
+      "modified": "2025-07-30T20:07:26.655190+00:00",
+      "fingerprinted": "2025-07-30T20:09:26.200001+00:00",
+      "hashes": {
+        "sha256": "793ded70fd11c49d1d22bd262c5ee5998c1755a73dceeb610d5577e573ba40ed",
+        "sha512": "1a6d36538ef47454a9df5a7bb512f3b1c43ce15fb0a109eb36f91a5819dc251b54e1a1c4218023e5a77f92f8d19d1d6e00dc0a6b30278fc1967d630f249ffd1f",
+        "blake2b": "7b847aab641018c76f2830b7a99d377b74d218865f06edfa6cf51915a6f592b82acb30ff2a15b0b694b50c2635b1be5995a0439e4ad3e4ae3187a695ad4c5e26"
+      },
+      "hmac_signature": "af53bd33df6b20749d11f060c12b3318ddbaa183435f7215f8130a9ba0a5c59d",
+      "compression_ratio": 0.21999360715998081,
+      "metadata": {
+        "creator": "Daniel Guzman",
+        "digital_signature": "a6672edf248c5eeef3054ecca057075c938af653",
+        "version": "3.0X",
+        "protection_level": "WAR_MODE",
+        "tamper_detection": "ENABLED"
+      }
+    },
+    "./arcsec_packager.py": {
+      "filename": "arcsec_packager.py",
+      "filepath": "/home/runner/workspace/arcsec_packager.py",
+      "size": 25135,
+      "created": "2025-07-30T20:07:29.555190+00:00",
+      "modified": "2025-07-30T20:07:29.518190+00:00",
+      "fingerprinted": "2025-07-30T20:09:26.201175+00:00",
+      "hashes": {
+        "sha256": "2a57a30f9191199337e8ab4c41460b1936e13f3780ae2a40e99bf2622f31291e",
+        "sha512": "5d5bc7aea29b23fc057b20c44e2522477578c754e05316c63eb0f4405f4a783e7617ec1442ad129a8dadf3e3c5f3cdacc81649831a7b1c5a6dbdd853675fdcff",
+        "blake2b": "c24678025157ab34642d5752b2fa2d7f6c9f7ad384595e9c2f5730c5cde87b32883a677825df483ae659803d5e24baf093d98cebe3517222d3b43280f4c01f0e"
+      },
+      "hmac_signature": "45837b7321674678cdd989b855380e7fdb7633074c95526ccde9c02d3b2c2e0a",
+      "compression_ratio": 0.235130296399443,
+      "metadata": {
+        "creator": "Daniel Guzman",
+        "digital_signature": "a6672edf248c5eeef3054ecca057075c938af653",
+        "version": "3.0X",
+        "protection_level": "WAR_MODE",
+        "tamper_detection": "ENABLED"
+      }
+    },
+    "./arcsec_auto_injection_hook.py": {
+      "filename": "arcsec_auto_injection_hook.py",
+      "filepath": "/home/runner/workspace/arcsec_auto_injection_hook.py",
+      "size": 17174,
+      "created": "2025-07-30T20:07:32.475190+00:00",
+      "modified": "2025-07-30T20:07:32.423190+00:00",
+      "fingerprinted": "2025-07-30T20:09:26.202315+00:00",
+      "hashes": {
+        "sha256": "5f824f3f4c5361f3808bfca8cf8d6dc92876fe8490ece120c9eb6863cc0f3039",
+        "sha512": "450fa1b9dd9bbe6974acaac83664e76c7fd329e9831d17d78f790e020dfbe0f4d58083ca9c1ebf1e696dd2471cb54f6a95278d184c83d1acf9a1f66e1f35009a",
+        "blake2b": "d81d42b74bf1fff613c55e6893302276b33bbb3673881ab11076d665636788a488f3e313941e1c2af3cf28b23d8738371abd90edca69e7ef24755db063825a92"
+      },
+      "hmac_signature": "9c073cb1afbe96fa3361083d6d43fc7b51096f3df0f2b977e20ab436648a2e43",
+      "compression_ratio": 0.25957843251426577,
+      "metadata": {
+        "creator": "Daniel Guzman",
+        "digital_signature": "a6672edf248c5eeef3054ecca057075c938af653",
+        "version": "3.0X",
+        "protection_level": "WAR_MODE",
+        "tamper_detection": "ENABLED"
+      }
+    },
+    "./arcsec_converter.py": {
+      "filename": "arcsec_converter.py",
+      "filepath": "/home/runner/workspace/arcsec_converter.py",
+      "size": 24927,
+      "created": "2025-07-30T20:07:35.071189+00:00",
+      "modified": "2025-07-30T20:07:35.043190+00:00",
+      "fingerprinted": "2025-07-30T20:09:26.203437+00:00",
+      "hashes": {
+        "sha256": "42ff4c6e5fcd98819db2caa2802b1c17daa3757e8caebe8d43cab46f13a260b7",
+        "sha512": "8c81d05ff43e0e2b150412a97bb7d0ae2d97905006b155354e7a577d2c25a509b57e56554ee5bb2486f9bbc36aceedf9ed068cc0c9ea3d60c96ab675142f93e3",
+        "blake2b": "4df00838db93c15d3ecddd95e478e94c88cb1a2645b1a1c6cefa64ea9cbb647c00a04b9183dccfbb91c894ab5662ab14028dc83a51a1a792158f138f7abc3019"
+      },
+      "hmac_signature": "85010aee3d27f445076579e04299380028edcee00efa5ad2a477a1c172e4d51d",
+      "compression_ratio": 0.2298311068319493,
+      "metadata": {
+        "creator": "Daniel Guzman",
+        "digital_signature": "a6672edf248c5eeef3054ecca057075c938af653",
+        "version": "3.0X",
+        "protection_level": "WAR_MODE",
+        "tamper_detection": "ENABLED"
+      }
+    },
+    "./arcsec_token_creator.py": {
+      "filename": "arcsec_token_creator.py",
+      "filepath": "/home/runner/workspace/arcsec_token_creator.py",
+      "size": 27225,
+      "created": "2025-07-30T20:07:38.202189+00:00",
+      "modified": "2025-07-30T20:07:37.961189+00:00",
+      "fingerprinted": "2025-07-30T20:09:26.204815+00:00",
+      "hashes": {
+        "sha256": "239e33886d238bd549d7d4d536336be03ae7d6896814fd6b9fa9fc724d53f984",
+        "sha512": "e9d5612aeafaea9b5a6367c5907405279f9da7424724d43d954ce2257db27ad474db06b2515a210fdc7fe5870293371e99e104ac1dd775a178841b3b2afa0fc5",
+        "blake2b": "00db6397378d06a920badcb353f455907e314f735cead6e3ad9bece0faf583837d2bea21931207c10b58c154f77ca925fa03934dcab1136ff09c8cfe22a17fd3"
+      },
+      "hmac_signature": "b35c81a5cf483b4abf0f0ff912d753f9aa41fcdb6933feea70ce5e96ee9522ac",
+      "compression_ratio": 0.22424242424242424,
+      "metadata": {
+        "creator": "Daniel Guzman",
+        "digital_signature": "a6672edf248c5eeef3054ecca057075c938af653",
+        "version": "3.0X",
+        "protection_level": "WAR_MODE",
+        "tamper_detection": "ENABLED"
+      }
+    },
+    "./arcsec_shell.py": {
+      "filename": "arcsec_shell.py",
+      "filepath": "/home/runner/workspace/arcsec_shell.py",
+      "size": 25073,
+      "created": "2025-07-30T20:07:40.392189+00:00",
+      "modified": "2025-07-30T20:07:40.372189+00:00",
+      "fingerprinted": "2025-07-30T20:09:26.206135+00:00",
+      "hashes": {
+        "sha256": "db741997bf6b6036726fa949c8e4e46b53826426bfea50fa21584632c67cae9d",
+        "sha512": "7fb9e684c37977a00da872f753305c019cddbc6aa543b5a14ab0c99f01dd3663f089bcbef485b40f7a3fbd1a185485ef047dbb837b0fcedc5600fd07436131bb",
+        "blake2b": "38a6f4228b364ea38ca335a2a860bae689256764ec45f75373dbcff28f3cd0e5983f03cbf71040ee8f70a35a867372eb924254287c909236cd0098e17309c098"
+      },
+      "hmac_signature": "95dfdb6076111c1a3edf1b68e01f10dbef56e338cd94948456cee87b80c2527b",
+      "compression_ratio": 0.1947912096677701,
+      "metadata": {
+        "creator": "Daniel Guzman",
+        "digital_signature": "a6672edf248c5eeef3054ecca057075c938af653",
+        "version": "3.0X",
+        "protection_level": "WAR_MODE",
+        "tamper_detection": "ENABLED"
+      }
+    },
+    "./arcsec_plugin.py": {
+      "filename": "arcsec_plugin.py",
+      "filepath": "/home/runner/workspace/arcsec_plugin.py",
+      "size": 20824,
+      "created": "2025-07-30T20:07:42.947189+00:00",
+      "modified": "2025-07-30T20:07:42.900189+00:00",
+      "fingerprinted": "2025-07-30T20:09:26.207569+00:00",
+      "hashes": {
+        "sha256": "6db9f9b6fd597fb8354b34dd1e8cca1a3ce59ccadd78ba33a56038c0b182f9c7",
+        "sha512": "82049b63f848c446f0f07360a83b70738574dca6e432dc21e234e49ddff4a3127fcca3b8cc69b1386f23a770e3deb1491c58b8394c7073a02ef6c98895507d41",
+        "blake2b": "3db0e3d414d18a1d4797ba4b8c29c2ef5954579f291f31a5ed63dca64760c0481b140aac2b912f2ff17395af386ad4a3391cc7b3e58dc7f5fcd9726f97aa4973"
+      },
+      "hmac_signature": "59b25e5e8ec81bf1014a25d1af519760b3d1db02a0aebc61721700e6cd2c365f",
+      "compression_ratio": 0.21700922013061852,
+      "metadata": {
+        "creator": "Daniel Guzman",
+        "digital_signature": "a6672edf248c5eeef3054ecca057075c938af653",
+        "version": "3.0X",
+        "protection_level": "WAR_MODE",
+        "tamper_detection": "ENABLED"
+      }
+    },
+    "./arcsec_ai_protocols.json": {
+      "filename": "arcsec_ai_protocols.json",
+      "filepath": "/home/runner/workspace/arcsec_ai_protocols.json",
+      "size": 15121,
+      "created": "2025-07-30T20:08:10.917188+00:00",
+      "modified": "2025-07-30T20:08:10.844188+00:00",
+      "fingerprinted": "2025-07-30T20:09:26.208700+00:00",
+      "hashes": {
+        "sha256": "4e4488ebfe03dc666b8f0e18420a15c213dc9294d803a4f350bcd356e5528459",
+        "sha512": "af66fa8f5d30de78a698e77b6de1330daf1361ec4a94642306a95789ded45d455e288c46add6655f2aa39f396d3240527085f2f58db417ed436a4135837c8b68",
+        "blake2b": "38c442be193fdb41480d90963d3cd89f68e2e9b3ff2fd7914736af74129efe1aa28c62303caa66fb3429697168837ef5d6f2edcd9d2c951da0621cc3e5aac28f"
+      },
+      "hmac_signature": "233875e95b6fc52f306c1244a02e6e8448959677beab5f0f93d429ead562cb05",
+      "compression_ratio": 0.3022286885787977,
+      "metadata": {
+        "creator": "Daniel Guzman",
+        "digital_signature": "a6672edf248c5eeef3054ecca057075c938af653",
+        "version": "3.0X",
+        "protection_level": "WAR_MODE",
+        "tamper_detection": "ENABLED"
+      }
+    },
+    "./ARCSEC_HASH_MAP_SEALED.json": {
+      "filename": "ARCSEC_HASH_MAP_SEALED.json",
+      "filepath": "/home/runner/workspace/ARCSEC_HASH_MAP_SEALED.json",
+      "size": 7347,
+      "created": "2025-07-30T20:08:20.311187+00:00",
+      "modified": "2025-07-30T20:08:20.265187+00:00",
+      "fingerprinted": "2025-07-30T20:09:26.209645+00:00",
+      "hashes": {
+        "sha256": "af351b5ae101059f3105f694735aca12961eb06c794649663876732e0b51127e",
+        "sha512": "bd583726fca8708786daffbfd17f00adbd40e0764aacd883365cb2a08abfa672db24ce54ea7f197f67a65a018113a1a9db74d779de75ce441d18b2c89e7d4138",
+        "blake2b": "57ed282e860cad5e5da983f233029aa999dcf03c3035f90cb81b37cea7444c3876fd2e4225cfc4b5356088d13176d8a52dd7a55ba8dab49805b7b103ed398dfe"
+      },
+      "hmac_signature": "243d34ed757157b2336e352fea164b072c099e42b256ad4948e11d35e0e532ef",
+      "compression_ratio": 0.3048863481693208,
+      "metadata": {
+        "creator": "Daniel Guzman",
+        "digital_signature": "a6672edf248c5eeef3054ecca057075c938af653",
+        "version": "3.0X",
+        "protection_level": "WAR_MODE",
+        "tamper_detection": "ENABLED"
+      }
+    },
+    "./ARCSEC_CI_CD_INTEGRATION.json": {
+      "filename": "ARCSEC_CI_CD_INTEGRATION.json",
+      "filepath": "/home/runner/workspace/ARCSEC_CI_CD_INTEGRATION.json",
+      "size": 13889,
+      "created": "2025-07-30T20:09:16.492185+00:00",
+      "modified": "2025-07-30T20:09:16.411185+00:00",
+      "fingerprinted": "2025-07-30T20:09:26.210524+00:00",
+      "hashes": {
+        "sha256": "0538a9b2740f1632fa10b7aa8ccc520eb13e12924c84601bdd4f763dc84afe12",
+        "sha512": "1bfff6699bf1ef2f8478b63f09ec8e49c67451a5053fb66512401b50010e0a8ce351a51a853dbda5b947be155597469912b19069e8fe34fd98c06a1146de2b35",
+        "blake2b": "5405c6d7f42846c380bb0367a10543111f6441426df4b84bcee395b6ef94536e327c3ba23362161840912ea298330e027297b4f78f8546459368a13637cf5858"
+      },
+      "hmac_signature": "76659714e2dd483df46d0802cc71f6aa2f6b81b58daa3665a11a7e506a80c6f0",
+      "compression_ratio": 0.24155806753545972,
       "metadata": {
         "creator": "Daniel Guzman",
         "digital_signature": "a6672edf248c5eeef3054ecca057075c938af653",
@@ -236,7 +522,7 @@
       "size": 10369,
       "created": "2025-07-30T14:12:51.844855+00:00",
       "modified": "2025-07-30T14:12:51.845619+00:00",
-      "fingerprinted": "2025-07-30T19:36:56.158347+00:00",
+      "fingerprinted": "2025-07-30T20:09:26.220961+00:00",
       "hashes": {
         "sha256": "ad7584c8a14c7540001061b45f67b8ef7ae8550f34eb212b043356b3267ac4f4",
         "sha512": "bc191615c7a521ccd25bd078d4e0be9a66db03932434c0ec5d4df7bcbcd8429f2d43790ac1e26d81a1aa4b0464f33cc62c55abdfe6ec57ac222e55c0d7722d05",
@@ -258,7 +544,7 @@
       "size": 14145,
       "created": "2025-07-30T14:12:56.825849+00:00",
       "modified": "2025-07-30T14:12:56.826762+00:00",
-      "fingerprinted": "2025-07-30T19:36:56.162161+00:00",
+      "fingerprinted": "2025-07-30T20:09:26.222646+00:00",
       "hashes": {
         "sha256": "df199df8433b4dce4f37a3f092f183e54900451eb9ff189db00407f1ff0caad4",
         "sha512": "de2454cda2d38293afe9dbeb27aa80784d18ed588feec9c2af1644628e7b4da6e7b6abc8eab73e828a9c9330e60a4f7bdc3d251e50ca65f36763663561888492",
@@ -280,7 +566,7 @@
       "size": 2233,
       "created": "2025-07-30T14:16:43.347607+00:00",
       "modified": "2025-07-30T14:16:43.305607+00:00",
-      "fingerprinted": "2025-07-30T19:36:56.166520+00:00",
+      "fingerprinted": "2025-07-30T20:09:26.223740+00:00",
       "hashes": {
         "sha256": "bef7bd5efad3d2ed3f5f980406cf93c5cbd5f75d52eff4e211447bbc2470fe5c",
         "sha512": "c0c6f2212c9256a3c56a7f5a077f4dbe855b6e77af8beede8fc29ec8115c54572a11a619fc4116ebb30173ac8a09dc7399ee0bccbe4b5d533f7dd2c5655a1a86",
@@ -302,7 +588,7 @@
       "size": 13496,
       "created": "2025-07-30T17:24:35.925714+00:00",
       "modified": "2025-07-30T17:24:35.920714+00:00",
-      "fingerprinted": "2025-07-30T19:36:56.167711+00:00",
+      "fingerprinted": "2025-07-30T20:09:26.224538+00:00",
       "hashes": {
         "sha256": "c3b8a605d10b63813074654312379b4424e9aa4906f7bdbf701bed91b049f052",
         "sha512": "36019ace655ae0258e7ae2cb08f2438411539e70398ce793cae826b6dcec2b786123f7a638b6673f80fae13933def8bf96bbc718e3783de7ea3374bf3e42184e",
@@ -324,7 +610,7 @@
       "size": 12321,
       "created": "2025-07-30T18:17:28.138584+00:00",
       "modified": "2025-07-30T18:17:28.118584+00:00",
-      "fingerprinted": "2025-07-30T19:36:56.174571+00:00",
+      "fingerprinted": "2025-07-30T20:09:26.231128+00:00",
       "hashes": {
         "sha256": "82245880a8f10eef73f00c5faa0c144e30665288d5db9b04b5c279b20ea6f80c",
         "sha512": "c437814a7e876fbcafa353d6af8a83fcb73174b4acb94201e0e0f5f2dcac664e61a97547b106e076a914a3387b0e6177c0dfc7a7b90e19aff5177300ad69d028",
@@ -346,7 +632,7 @@
       "size": 15031,
       "created": "2025-07-30T18:21:55.280385+00:00",
       "modified": "2025-07-30T18:21:55.256385+00:00",
-      "fingerprinted": "2025-07-30T19:36:56.178465+00:00",
+      "fingerprinted": "2025-07-30T20:09:26.234947+00:00",
       "hashes": {
         "sha256": "290cd3309a0acabc28a7afe061139c49ae0f3c0c740a4a19938ed3ab8cd5c0b9",
         "sha512": "9db9d930adbdbbdf3a30ffdd0405cfb077f7b972ef7a70ac896d2f35f2cc9403269789957eeed9c5b7dfd1f54ae11c5745c2cfd2d592b1dc5e7a6ac137ca7e0f",
@@ -368,7 +654,7 @@
       "size": 28191,
       "created": "2025-07-30T18:24:03.233289+00:00",
       "modified": "2025-07-30T18:24:03.195290+00:00",
-      "fingerprinted": "2025-07-30T19:36:56.182352+00:00",
+      "fingerprinted": "2025-07-30T20:09:26.238927+00:00",
       "hashes": {
         "sha256": "94fde6b0e12bf8af9e2ed70a952d2e8babff1e4a93a7a3bb834909924fc04552",
         "sha512": "9482a1e625150e347aba559f5560badf2351eaaf5796844ec18ff40a6e1485debbd35cbf6e2bf1351b885925f0ff426f27259ac46f49c21b14a4a96a91b3dcd7",
@@ -390,7 +676,7 @@
       "size": 44137,
       "created": "2025-07-30T18:32:51.268894+00:00",
       "modified": "2025-07-30T18:32:51.241894+00:00",
-      "fingerprinted": "2025-07-30T19:36:56.188446+00:00",
+      "fingerprinted": "2025-07-30T20:09:26.243566+00:00",
       "hashes": {
         "sha256": "86f82b7430d1bca8bebe5937cb7d985b4cef592b33f7f535f1578a19b2791dc1",
         "sha512": "99c71997d78cba521f7ac28edc543e02ffd2283b093e7e46a9a64317f188e49b709a364dc295fb5e3b31c19846b769d03f45217fbbf21a0f6994deb2833a038b",
@@ -412,7 +698,7 @@
       "size": 30333,
       "created": "2025-07-30T18:37:20.186692+00:00",
       "modified": "2025-07-30T18:37:20.166692+00:00",
-      "fingerprinted": "2025-07-30T19:36:56.193338+00:00",
+      "fingerprinted": "2025-07-30T20:09:26.249296+00:00",
       "hashes": {
         "sha256": "ac17ddff3fc406d529f10372b464c3cfda8efdec3ef20380127886488b91e9ee",
         "sha512": "8846fb124bbb349777c696cc38932711f3171f84d4a57dd78baca802d5c60116384fd096df712012e62966742ab6d4e35ead862bf71eda1b71afbe102a549b3d",
@@ -434,7 +720,7 @@
       "size": 31811,
       "created": "2025-07-30T18:42:21.541466+00:00",
       "modified": "2025-07-30T18:42:21.512466+00:00",
-      "fingerprinted": "2025-07-30T19:36:56.197658+00:00",
+      "fingerprinted": "2025-07-30T20:09:26.253873+00:00",
       "hashes": {
         "sha256": "c59f25743d931a3782077efd434b8ba9f32d58cfc1892dceb6749abbe9756dff",
         "sha512": "603058d1a84901f9a3936453e95fc90c612464836b0156da6c37352b31f64da275b95c9ebd34775299ec00c6bb49545f3808f0fe081dd3089b26c912abf54336",
@@ -456,7 +742,7 @@
       "size": 39309,
       "created": "2025-07-30T18:44:38.917363+00:00",
       "modified": "2025-07-30T18:44:38.890363+00:00",
-      "fingerprinted": "2025-07-30T19:36:56.199970+00:00",
+      "fingerprinted": "2025-07-30T20:09:26.255950+00:00",
       "hashes": {
         "sha256": "d6d6f0188fda39da5b76383c58af684c810c025e1f06fabdc6fe6162cd0672b4",
         "sha512": "b0ce9dc8ab8da5e565089cf77e9c4c9e2faae3878ae8bbfea4d6f119c288d22260180772689c3cf6af4c6a5875576cfdc4c9342538f142f13cf312cc2dcc59b3",
@@ -478,7 +764,7 @@
       "size": 38800,
       "created": "2025-07-30T18:49:38.609213+00:00",
       "modified": "2025-07-30T18:49:38.574213+00:00",
-      "fingerprinted": "2025-07-30T19:36:56.205079+00:00",
+      "fingerprinted": "2025-07-30T20:09:26.262421+00:00",
       "hashes": {
         "sha256": "3383044ec7e24a9240d9a0a92caceb5275fea77dac26b58a42a6ae130c179b9b",
         "sha512": "71b022f200e1e55988170730bbcbc06dc6e631a5384b5f804a4cda36d8bdeaea566c0f3468def8abfe1b2761e20541f8bf6c6f17c6ee706d93196e71ca921b77",
@@ -500,7 +786,7 @@
       "size": 54967,
       "created": "2025-07-30T18:55:45.243220+00:00",
       "modified": "2025-07-30T18:55:45.215220+00:00",
-      "fingerprinted": "2025-07-30T19:36:56.209533+00:00",
+      "fingerprinted": "2025-07-30T20:09:26.267416+00:00",
       "hashes": {
         "sha256": "4c90c4f39c8b68b97759d442e6cb5910dc17773449e5469b9aa6784b55862a52",
         "sha512": "756a72d053d5d1454f9b0915b4db605fb012f03b722382d6e90760108535771a1cafbb8ec30d03614770d93ca76742a156842d8ef9846ef934757c9953301155",
@@ -522,7 +808,7 @@
       "size": 39368,
       "created": "2025-07-30T18:59:23.219587+00:00",
       "modified": "2025-07-30T18:27:00.857157+00:00",
-      "fingerprinted": "2025-07-30T19:36:56.212855+00:00",
+      "fingerprinted": "2025-07-30T20:09:26.270339+00:00",
       "hashes": {
         "sha256": "e086cc9ae8be231b1b8dc85162cabbe34ee17257122ac93cd2fbdd3ee6b27b1c",
         "sha512": "ad5945d7eac38a190e3736c1254f89ac17b406922f4e69d2f090a8e673b631631c1488bc8a74033f36d30a4769f1a422413064953aa417e9113ac800fe6472b5",
@@ -544,7 +830,7 @@
       "size": 2983,
       "created": "2025-07-30T18:59:57.247677+00:00",
       "modified": "2025-07-30T15:46:24.898267+00:00",
-      "fingerprinted": "2025-07-30T19:36:56.215498+00:00",
+      "fingerprinted": "2025-07-30T20:09:26.272273+00:00",
       "hashes": {
         "sha256": "4238ebc76a52d7cd859e2343ab5697baaa53e2a3d90f6187d15ce119e827d752",
         "sha512": "4cbebe56515d10020a4ef0fe4e3e95e5790706f7da6a14c35fb3f18838769653c70e34cea17fffca4b4af63100fcf23b2750a9d88398db89f2cd382037e99f46",
@@ -566,7 +852,7 @@
       "size": 3016,
       "created": "2025-07-30T18:59:57.958679+00:00",
       "modified": "2025-07-30T15:46:40.325246+00:00",
-      "fingerprinted": "2025-07-30T19:36:56.217268+00:00",
+      "fingerprinted": "2025-07-30T20:09:26.273081+00:00",
       "hashes": {
         "sha256": "007abab2eec6b784052d22f1aec2e4b0de3458af877e8d2e4ffb1b32e1db1923",
         "sha512": "eec3db1f04e68f6538f993c51623940f4374477127e5de903e053fa00ae5e53713262db96a02ecaac85aacdc97b6731f094a93255b84112fed830b325ccc22bd",
@@ -588,7 +874,7 @@
       "size": 4498,
       "created": "2025-07-30T18:59:58.292680+00:00",
       "modified": "2025-07-30T15:45:44.209321+00:00",
-      "fingerprinted": "2025-07-30T19:36:56.218575+00:00",
+      "fingerprinted": "2025-07-30T20:09:26.273949+00:00",
       "hashes": {
         "sha256": "d2713100979a4fff9d2fd38a20ec5b270f1419c2fe535df9cd45906fd72f1881",
         "sha512": "aab7a3b0b73f0d5c5673c2251c88ef2509e0209ec79c2e73873cc2879c80c07db62d2ef09ab189e205e8b1d6fbd6675baae5ba000a7c9424ef6b6b21576f8400",
@@ -610,7 +896,7 @@
       "size": 1327,
       "created": "2025-07-30T18:59:58.836682+00:00",
       "modified": "2025-07-30T14:16:20.694629+00:00",
-      "fingerprinted": "2025-07-30T19:36:56.219366+00:00",
+      "fingerprinted": "2025-07-30T20:09:26.274749+00:00",
       "hashes": {
         "sha256": "fab20d2965cbddb88501794ddbfd1bfa5c35ab54f8dddcd796d0ea759f266b45",
         "sha512": "d197212d044020752bfdc4046860f45e3ac2fd7fd22c5aca39ed4d953d362e72ad1a292d021300d57b36906be7aa17c56b972b841fe82edfca6c49ef5c67b391",
@@ -632,7 +918,7 @@
       "size": 2863,
       "created": "2025-07-30T18:59:59.341683+00:00",
       "modified": "2025-07-30T14:45:18.952329+00:00",
-      "fingerprinted": "2025-07-30T19:36:56.220667+00:00",
+      "fingerprinted": "2025-07-30T20:09:26.275536+00:00",
       "hashes": {
         "sha256": "e85c7084fc4f9574ab1df91a467a7d0c55ba0a6683ca6318a1204e64629541e2",
         "sha512": "96a4d675fd42d8220a5b58224f855c6075a3f79176616e81572b668ad26796ebe9f75c6fa6dab69e24649327be433b466706076a5b07df206dfb031f7791bdc4",
@@ -654,7 +940,7 @@
       "size": 11398,
       "created": "2025-07-30T18:59:59.816685+00:00",
       "modified": "2025-07-30T17:15:12.839503+00:00",
-      "fingerprinted": "2025-07-30T19:36:56.222078+00:00",
+      "fingerprinted": "2025-07-30T20:09:26.276359+00:00",
       "hashes": {
         "sha256": "326fecb13343497faf651bfd8376253de080f57aaecf7612b08c5d7f636b91a4",
         "sha512": "a24da25c61b55be9212872088fffda3cda831ebc36a7dd73fb5b132237cc9d8e2658b646248d6e1ee9622c2cb30fc9ef95930c48a2c5a2db7e21c8e415be0b0a",
@@ -676,7 +962,7 @@
       "size": 1383,
       "created": "2025-07-30T19:00:00.354686+00:00",
       "modified": "2025-07-30T14:16:13.337636+00:00",
-      "fingerprinted": "2025-07-30T19:36:56.223159+00:00",
+      "fingerprinted": "2025-07-30T20:09:26.277377+00:00",
       "hashes": {
         "sha256": "6c324f1cb8925a4e3329bc646960a6cae6445e74ef94991dbb6011ab3b496b82",
         "sha512": "b4f2685cf0af62cb12696ce80799505abf3d8747baaf788e9c9b46d59ccd221e49fa2de7f6458f47f032e6610ef4936af3d4b77bab1170936b2649574478ea2e",
@@ -698,7 +984,7 @@
       "size": 3939,
       "created": "2025-07-30T19:00:00.874688+00:00",
       "modified": "2025-07-30T15:46:07.366290+00:00",
-      "fingerprinted": "2025-07-30T19:36:56.224558+00:00",
+      "fingerprinted": "2025-07-30T20:09:26.278055+00:00",
       "hashes": {
         "sha256": "38d0f66694c6aac7055f5354619df32cae62f28f13e71c7fa7490798b6486ec6",
         "sha512": "fd7263fc70e0fa82c80320132d6c30144ab1c57c6840748cdb188c5a016da14b5f0aefb4939cf162268a77d626f9a89e18702b5d9279319cf00bb26c832d00fd",
@@ -720,7 +1006,7 @@
       "size": 3213,
       "created": "2025-07-30T19:00:01.397689+00:00",
       "modified": "2025-07-30T14:17:19.211572+00:00",
-      "fingerprinted": "2025-07-30T19:36:56.225961+00:00",
+      "fingerprinted": "2025-07-30T20:09:26.278881+00:00",
       "hashes": {
         "sha256": "b3f7c5ba613add350f0ee7260ef140a279a7d84e8c621ff52be1efbdd950aa22",
         "sha512": "3d6eeea8b98e0c692c00bfc7d008e13fca861a530b45ff9a9042e98906296f4436b8f2e72a92851248e51719dcee02b86a8e1742ccc7fc05007bfa54eddafce2",
@@ -742,7 +1028,7 @@
       "size": 1830,
       "created": "2025-07-30T19:00:01.962691+00:00",
       "modified": "2025-07-30T14:16:31.128619+00:00",
-      "fingerprinted": "2025-07-30T19:36:56.226919+00:00",
+      "fingerprinted": "2025-07-30T20:09:26.279585+00:00",
       "hashes": {
         "sha256": "5cfc8018bfece12a7dedfa39863c9f7440056c0d77ef77a1ba4022e3a007275b",
         "sha512": "983b020e89bcda029393cfdbcfc3cea986fea187d9c116bf2a69a7fc9eb1fb62bad89372cba42c427a0a6a902609d491def81788be69a540a03dae2dcbcf0764",
@@ -764,7 +1050,7 @@
       "size": 13751,
       "created": "2025-07-30T19:02:15.138166+00:00",
       "modified": "2025-07-30T19:02:15.058166+00:00",
-      "fingerprinted": "2025-07-30T19:36:56.231191+00:00",
+      "fingerprinted": "2025-07-30T20:09:26.280945+00:00",
       "hashes": {
         "sha256": "eb71f8b61c65e4d94d8519c1c93fe3915ca1985af1e6b4fed60e82701eaba800",
         "sha512": "50313e086b8ab9f535edc35a1a93f759be44d81a03c707631bf0d311d6f3de1db70b2503aaf9124eea37ff8999f1b1a4674e47935dab0e5021b716a5aff86800",
@@ -786,7 +1072,7 @@
       "size": 11332,
       "created": "2025-07-30T19:02:25.626210+00:00",
       "modified": "2025-07-30T19:02:25.575210+00:00",
-      "fingerprinted": "2025-07-30T19:36:56.238849+00:00",
+      "fingerprinted": "2025-07-30T20:09:26.281927+00:00",
       "hashes": {
         "sha256": "2e6c29164e5d9dd5804f9e5381fd8e09914f5103f5967ba82329f578f3861f3b",
         "sha512": "422b73ce8e06c890f61fc327970e981613ba691ba90336ebd401b3ee0e1e3fd86b598a319c645854dbf879a9f8a6be43f95fa6ec9512670d097fb588a41d19ac",
@@ -808,7 +1094,7 @@
       "size": 16140,
       "created": "2025-07-30T19:02:28.341221+00:00",
       "modified": "2025-07-30T19:02:28.335221+00:00",
-      "fingerprinted": "2025-07-30T19:36:56.242197+00:00",
+      "fingerprinted": "2025-07-30T20:09:26.286152+00:00",
       "hashes": {
         "sha256": "1344ce0b0808bf66d2ea947b3d3015031546592560910eea6caa48073d17caff",
         "sha512": "d7e10bd92c6d69143dbb7cb5e83e380c6f9eef430b1c5d92e233f735a7333fd2a21e6faebcbe1c49606db10106e209c80b1e9809d73f9e9a6b8977e865a3810b",
@@ -830,7 +1116,7 @@
       "size": 19654,
       "created": "2025-07-30T19:04:56.134902+00:00",
       "modified": "2025-07-30T19:04:56.110903+00:00",
-      "fingerprinted": "2025-07-30T19:36:56.243276+00:00",
+      "fingerprinted": "2025-07-30T20:09:26.290151+00:00",
       "hashes": {
         "sha256": "626ae2477f2aa835628c7210966a7c88d7c6c7544db33725884c339c46c3657c",
         "sha512": "9ece5c0f959d3336e84c381103cd998243441c7233d6fdddeb1eac8c31f50191d666b277805b2b250163850df5c01ef352b62b3bf70711130decd395ae98984b",
@@ -852,7 +1138,7 @@
       "size": 23635,
       "created": "2025-07-30T19:06:18.260319+00:00",
       "modified": "2025-07-30T19:06:18.231319+00:00",
-      "fingerprinted": "2025-07-30T19:36:56.244465+00:00",
+      "fingerprinted": "2025-07-30T20:09:26.294492+00:00",
       "hashes": {
         "sha256": "b9090499c49a0b892201883a167ff802eeb2b1e94a02876e787a6eae15c6586c",
         "sha512": "00ae4fe12d6ba621fbc55a9151205074fe37a5699805285d0bcf948752bf350a294bb7ba573b0cd9d836c64cd4151f501ae30b0db0160c3826296cf7813918a7",
@@ -874,7 +1160,7 @@
       "size": 26308,
       "created": "2025-07-30T19:07:53.080823+00:00",
       "modified": "2025-07-30T19:07:53.058823+00:00",
-      "fingerprinted": "2025-07-30T19:36:56.245853+00:00",
+      "fingerprinted": "2025-07-30T20:09:26.296488+00:00",
       "hashes": {
         "sha256": "914afaaa886f21c2ad6852b7479a282cade52448c0a7a6e1d4fbc94afc4302b8",
         "sha512": "c706d469411cbc2de6d5ad975a7e0cdd47a661064212b6fe0b1422b4dfd4fd1c3680da0c378196ee3461c9f8bf5d7f7e245f9533b888cbb3048387827f3811a8",
@@ -896,7 +1182,7 @@
       "size": 32981,
       "created": "2025-07-30T19:12:11.532265+00:00",
       "modified": "2025-07-30T19:12:11.512265+00:00",
-      "fingerprinted": "2025-07-30T19:36:56.247415+00:00",
+      "fingerprinted": "2025-07-30T20:09:26.298405+00:00",
       "hashes": {
         "sha256": "6a71a43c93965ae9bd45ab129c8d474655cfd0d7d0a30f07f76fec34ae92992a",
         "sha512": "1ea9535a96cde171d84e2dbbbd0ba2354f30c0dcd6f7c7da0623326a32fdfcaa89533c8278b783c34172507e07ddc9ffa9a91046c94323f016fca30f5f497fca",
@@ -918,7 +1204,7 @@
       "size": 42531,
       "created": "2025-07-30T19:14:47.723700+00:00",
       "modified": "2025-07-30T19:14:47.702700+00:00",
-      "fingerprinted": "2025-07-30T19:36:56.249025+00:00",
+      "fingerprinted": "2025-07-30T20:09:26.306104+00:00",
       "hashes": {
         "sha256": "45a054193e5fe27e12eec1daa25b64a8966c7d9c395fbe90aba93f53e6642f9e",
         "sha512": "cd208c54f6b275675a1070141ff34d09c4196c2f1333015013591db1a74a7fb00d28fa537b39c1080abba63e039a2059eaf61bfd1d02c6c6d0362a7208a57ceb",
@@ -940,7 +1226,7 @@
       "size": 30253,
       "created": "2025-07-30T19:17:23.806916+00:00",
       "modified": "2025-07-30T19:17:23.762916+00:00",
-      "fingerprinted": "2025-07-30T19:36:56.250776+00:00",
+      "fingerprinted": "2025-07-30T20:09:26.309100+00:00",
       "hashes": {
         "sha256": "d6e722805e09423dea96220b956855da03bf810933f6340bc896a5a1d155dd43",
         "sha512": "8c6aaae9887a5e8b23f52a857b81bbb608eb806ceaf21c5a3a5577c7e4b035b7ae3dd6252c8d457cb6cc0027ada1b465956d32bbb1fb54ab3c2a41a33f5be1a6",
@@ -962,7 +1248,7 @@
       "size": 40824,
       "created": "2025-07-30T19:19:57.719227+00:00",
       "modified": "2025-07-30T19:19:57.688227+00:00",
-      "fingerprinted": "2025-07-30T19:36:56.252457+00:00",
+      "fingerprinted": "2025-07-30T20:09:26.315587+00:00",
       "hashes": {
         "sha256": "4866e663d78887d7101df0ab2558229446bd1be1f0c97dd45c3e6b6b839b0d73",
         "sha512": "2c45cb04a35dd013fa65322876e24a40aabcf12ab205925f2e140aeaf652421a0b716455d4282570efa8bcef27c2c3172ed4c27d18f29239f2559826e2b14cb1",
@@ -984,7 +1270,7 @@
       "size": 51795,
       "created": "2025-07-30T19:23:15.558248+00:00",
       "modified": "2025-07-30T19:23:15.529248+00:00",
-      "fingerprinted": "2025-07-30T19:36:56.254243+00:00",
+      "fingerprinted": "2025-07-30T20:09:26.320111+00:00",
       "hashes": {
         "sha256": "a937291fbf2c14e5538514228e66d77e846f861ae048685e0d1afd4511677eac",
         "sha512": "bfd80265df5a6b5e2552b793a704c8ad1217483e878eddfbae9c1925f42102ae38f593c814ad6fa03620d33b632913d68ac8f64adf595c0b405abe30cfcf0e88",
@@ -1006,7 +1292,7 @@
       "size": 53716,
       "created": "2025-07-30T19:26:31.120269+00:00",
       "modified": "2025-07-30T19:26:31.097269+00:00",
-      "fingerprinted": "2025-07-30T19:36:56.256356+00:00",
+      "fingerprinted": "2025-07-30T20:09:26.326193+00:00",
       "hashes": {
         "sha256": "241544aca30eb7887930036885207bad5793864d9a87ab77b75a86795857a46a",
         "sha512": "8471360e23ddd0575606ed16802066eac97802a6e2936b4ec4c1bc714e7ca0c8907213d9922a04c5802a292d86107a8a66fc6a5bf7ad265d8d10504b64590b18",
@@ -1028,7 +1314,7 @@
       "size": 49627,
       "created": "2025-07-30T19:30:21.571186+00:00",
       "modified": "2025-07-30T19:30:21.549186+00:00",
-      "fingerprinted": "2025-07-30T19:36:56.258792+00:00",
+      "fingerprinted": "2025-07-30T20:09:26.331561+00:00",
       "hashes": {
         "sha256": "f24afc97d1d69615b58bc1c491ca85fbb11b32a40353ae936e3d6108b7463126",
         "sha512": "29fe2a81bda4e06b5576999e5e0d2a6173ce4a3ebc8837990db63d0aa0391cff324ec078c2de3590ed5171a7cd989ebba0137ea1bd686d8711c19dd27a3287e5",
@@ -1050,7 +1336,7 @@
       "size": 49053,
       "created": "2025-07-30T19:33:28.122152+00:00",
       "modified": "2025-07-30T19:33:28.102152+00:00",
-      "fingerprinted": "2025-07-30T19:36:56.261365+00:00",
+      "fingerprinted": "2025-07-30T20:09:26.338605+00:00",
       "hashes": {
         "sha256": "30aeab01b7837e9c8ef59577f2cd30e0f5e93ac8dd1c3fce6e8c99e44a066bec",
         "sha512": "a651a195cfa66ba2b862418f9b3717ad7d207f9bd1ac53863c2cb5f08f5d9191992469a15c6195ff997f1fd0f0b8eb87ad1072764bee982d6c997edc6f095d45",
@@ -1068,15 +1354,15 @@
     }
   },
   "integrity_seal": {
-    "manifest_hash": "d1ad629b8687333ad362cf5621d4f66c233dccda822bd38ba2a36e564bfb6112",
-    "integrity_seal": "cc7c7851262d73044ffa23c7a8e056429a316b369a7cf317f9f520a8a5c889ca",
-    "timestamp": "2025-07-30T19:36:56.263126+00:00",
-    "timestamp_proof": "5517dfd60d598f74b3ed637d5253c6b86b077460725567796da8a45bb1b8c15b",
+    "manifest_hash": "1507f1e1ece2483c703c7b9e3a2bcafa878a4531e2c9e4e433f1a683addfe00e",
+    "integrity_seal": "aad4adb195a66d2d81c8ae55245bbff6ed9bafcb5a6b1fc8aa3c7b5678d76ab6",
+    "timestamp": "2025-07-30T20:09:26.340876+00:00",
+    "timestamp_proof": "603903731509d4b0df5ed1ee82038f125fa0b5b7c404410a69026df08837c6f3",
     "sealed_by": "Daniel Guzman - ARCSEC v3.0X",
     "verification_status": "CRYPTOGRAPHICALLY_SEALED"
   },
   "manifest_metadata": {
-    "saved": "2025-07-30T19:36:56.263254+00:00",
+    "saved": "2025-07-30T20:09:26.340899+00:00",
     "filename": "ARCSEC_FINGERPRINT_MANIFEST.json",
     "format_version": "1.0",
     "encoding": "UTF-8",

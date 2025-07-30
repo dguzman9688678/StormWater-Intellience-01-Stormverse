@@ -7,7 +7,8 @@
     "digital_signature": "a6672edf248c5eeef3054ecca057075c938af653",
     "version": "3.0X",
     "created": "2025-07-30T19:52:00Z",
-    "protection_level": "ARCSEC_PROTECTED"
+    "last_updated": "2025-07-30T20:00:00Z",
+    "protection_level": "WAR_MODE_MAXIMUM"
   },
   
   "arcsec_ai_protocols": {

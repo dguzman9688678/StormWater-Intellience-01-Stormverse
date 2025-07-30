@@ -81,6 +81,8 @@ class ARCSECWebhookGateway:
         self.digital_signature = "a6672edf248c5eeef3054ecca057075c938af653"
         self.creator = "Daniel Guzman"
         self.version = "3.0X"
+        self.last_updated = "2025-07-30T20:00:00Z"
+        self.protection_level = "WAR_MODE_MAXIMUM"
         
         self.webhooks: Dict[str, WebhookEndpoint] = {}
         self.event_queue: asyncio.Queue = asyncio.Queue()
