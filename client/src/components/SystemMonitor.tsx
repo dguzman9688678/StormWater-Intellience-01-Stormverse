@@ -4,6 +4,7 @@ import { useWeatherData } from '../lib/stores/useWeatherData';
 import { useAgents } from '../lib/stores/useAgents';
 import { stormWaterIntegration } from '../lib/stormwater-integration';
 import CyberpunkPanel from './ui/cyberpunk-panel';
+import { STORMVERSE_CONFIG } from '../lib/stormverse-config';
 
 interface SystemMetrics {
   apiStatus: 'connected' | 'fallback' | 'error';
@@ -115,8 +116,15 @@ export default function SystemMonitor() {
         
         <div className="metric-row mt-2 pt-2 border-t border-cyan-800">
           <span className="metric-label text-xs">Platform:</span>
-          <span className="metric-value text-xs text-gray-400">
-            StormWater v{stormWaterIntegration.getMetadata().version}
+          <span className="metric-value text-xs text-cyan-400">
+            {STORMVERSE_CONFIG.project} {STORMVERSE_CONFIG.version}
+          </span>
+        </div>
+        
+        <div className="metric-row">
+          <span className="metric-label text-xs">Security:</span>
+          <span className="metric-value text-xs text-red-400">
+            {STORMVERSE_CONFIG.security.protocol}
           </span>
         </div>
       </div>

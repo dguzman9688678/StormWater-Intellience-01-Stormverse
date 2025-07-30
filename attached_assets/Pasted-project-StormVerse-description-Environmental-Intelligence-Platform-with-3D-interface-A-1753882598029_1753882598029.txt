@@ -1,0 +1,130 @@
+project": "StormVerse",
+    "description": "Environmental Intelligence Platform with 3D interface, AI agents, real-time weather, and ARCSEC security.",
+    "owner": "Daniel Guzman",
+    "status": "Active",
+    "last_updated": "2025-07-30T13:35:35.022683",
+    "visual_interface": {
+        "technology": "CesiumJS / Google Earth Pro",
+        "features": [
+            "3D Earth visualization",
+            "Layered KMZ/KML overlays",
+            "Weather data integration",
+            "Interactive AI node orbitals"
+        ]
+    },
+    "ai_agents": [
+        {
+            "name": "STORM",
+            "role": "Weather Prediction",
+            "functions": [
+                "Hurricane tracking",
+                "Quantum probability cones",
+                "Storm surge analysis"
+            ]
+        },
+        {
+            "name": "ULTRON",
+            "role": "Metadata & Validation",
+            "functions": [
+                "Integrity checks",
+                "Data format conversion",
+                "Digital signatures"
+            ]
+        },
+        {
+            "name": "JARVIS",
+            "role": "Command Router",
+            "functions": [
+                "Task coordination",
+                "Inter-agent communication",
+                "System alerts"
+            ]
+        },
+        {
+            "name": "PHOENIX",
+            "role": "Memory & Data Resurrection",
+            "functions": [
+                "Historical reconstruction",
+                "Climate trend detection"
+            ]
+        },
+        {
+            "name": "ODIN",
+            "role": "Security & ARCSEC Enforcement",
+            "functions": [
+                "Auth & encryption",
+                "ARCSEC protocol enforcement"
+            ]
+        },
+        {
+            "name": "ECHO",
+            "role": "Audio Interface",
+            "functions": [
+                "Voice commands",
+                "Multilingual alerts",
+                "Human-readable output"
+            ]
+        },
+        {
+            "name": "MITO",
+            "role": "Development Automation",
+            "functions": [
+                "CI/CD pipelines",
+                "Code optimization",
+                "Self-repair"
+            ]
+        },
+        {
+            "name": "VADER",
+            "role": "Surveillance & System Health",
+            "functions": [
+                "Anomaly detection",
+                "Disaster recovery"
+            ]
+        }
+    ],
+    "data_integration": {
+        "sources": [
+            "NOAA",
+            "EPA",
+            "FEMA"
+        ],
+        "formats": [
+            "KMZ",
+            "GeoJSON",
+            "JSON-LD"
+        ],
+        "features": [
+            "Live radar & satellite feeds",
+            "Environmental risk overlays",
+            "Storm forecasting"
+        ]
+    },
+    "security": {
+        "protocol": "ARCSEC v3.0X WAR MODE",
+        "features": [
+            "Data provenance tracking",
+            "Digital authorship locks",
+            "SHA-256 notarization"
+        ]
+    },
+    "output_capabilities": [
+        "PDF reports",
+        "KML/KMZ exports",
+        "JSON-LD environmental graphs"
+    ],
+    "deployment": {
+        "platforms": [
+            "Replit",
+            "GitHub",
+            "Local shell",
+            "Google Earth Pro"
+        ],
+        "current_version": "v3.4",
+        "executables": [
+            "storm.json",
+            "autonomous_controller.py",
+            "dashboard.html"
+        ]
+    }
+}

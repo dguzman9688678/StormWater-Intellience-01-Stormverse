@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState, useCallback } from 'react';
 import { useAgents } from '../lib/stores/useAgents';
 import { useStormVerse } from '../lib/stores/useStormVerse';
+import { STORMVERSE_CONFIG } from '../lib/stormverse-config';
 
 // TypeScript declaration for Cesium on window
 declare global {
@@ -39,8 +40,40 @@ export function InteractiveAgentGlobe({ viewer, onAgentSelect }: InteractiveAgen
   const animationRef = useRef<number>();
   const agentNodesRef = useRef<Map<string, any>>(new Map());
 
-  // Agent configuration with precise global positioning
-  const agentConfiguration: AgentNode[] = [
+  // Agent configuration from StormVerse config
+  const agentConfiguration: AgentNode[] = STORMVERSE_CONFIG.aiAgents.map(agent => ({
+    id: agent.code,
+    name: agent.name,
+    codename: agent.code,
+    position: {
+      longitude: agent.location.lon,
+      latitude: agent.location.lat,
+      altitude: 8000000
+    },
+    status: 'active' as const,
+    color: getAgentColor(agent.name),
+    role: agent.role,
+    zone: agent.zone,
+    performance: 85 + Math.random() * 15,
+    lastActivity: new Date().toISOString()
+  }));
+  
+  function getAgentColor(name: string): string {
+    const colors: Record<string, string> = {
+      STORM: '#00FFFF',
+      ULTRON: '#FF00FF',
+      JARVIS: '#00FF00',
+      PHOENIX: '#FF4500',
+      ODIN: '#FFD700',
+      ECHO: '#1E90FF',
+      MITO: '#FF1493',
+      VADER: '#DC143C'
+    };
+    return colors[name] || '#FFFFFF';
+  }
+  
+  // Legacy agent configuration (commented out)
+  const legacyAgentConfiguration: AgentNode[] = [
     {
       id: 'STORM_CITADEL',
       name: 'STORM CITADEL',
@@ -409,11 +442,11 @@ export function InteractiveAgentGlobe({ viewer, onAgentSelect }: InteractiveAgen
     console.log(`Sending command to ${agent.name}: ${command}`);
     
     // Update agent status to processing
-    updateAgentStatus(agentId, 'processing', command, agent.performance);
+    updateAgentStatus(agentId, 'processing');
     
     // Simulate command execution
     setTimeout(() => {
-      updateAgentStatus(agentId, 'active', `Completed: ${command}`, agent.performance);
+      updateAgentStatus(agentId, 'active');
     }, 3000);
   }, [updateAgentStatus]);
 

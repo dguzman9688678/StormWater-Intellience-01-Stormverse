@@ -7,6 +7,7 @@ import KMZLoader from "./KMZLoader";
 import InteractiveAgentGlobe from "./InteractiveAgentGlobe";
 import AgentDeploymentShell from "./AgentDeploymentShell";
 import SystemMonitor from "./SystemMonitor";
+import StormDataPanel from "./StormDataPanel";
 import AttributionFooter from "./AttributionFooter";
 import CyberpunkPanel from "./ui/cyberpunk-panel";
 import { useStormVerse } from "../lib/stores/useStormVerse";
@@ -109,6 +110,9 @@ export default function StormVerse() {
       
       {/* System Monitoring */}
       <SystemMonitor />
+      
+      {/* Storm Data Integration */}
+      <StormDataPanel />
       
       {/* Control Panels */}
       <div className="control-panels">

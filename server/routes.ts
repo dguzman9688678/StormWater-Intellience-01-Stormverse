@@ -5,6 +5,7 @@ import { NOAAService } from "./services/noaa-service";
 import { KMZProcessor } from "./services/kmz-processor";
 import { TripleStoreService } from "./services/triple-store-service";
 import { ARCSECService } from "./services/arcsec-security";
+import { stormDataProcessor } from "./services/storm-data-processor";
 
 export async function registerRoutes(app: Express): Promise<Server> {
   // Initialize services
@@ -96,8 +97,16 @@ export async function registerRoutes(app: Express): Promise<Server> {
       // Handle KMZ file upload and processing
       const processedData = await kmzProcessor.processKMZ(req.body);
       
+      // Transform to semantic entity format
+      const semanticEntity = {
+        '@context': 'https://schema.org/',
+        '@type': 'GeoCoordinates',
+        '@id': `kmz_${Date.now()}`,
+        ...processedData
+      };
+      
       // Store in triple store
-      await tripleStoreService.storeSemanticData(processedData);
+      await tripleStoreService.storeSemanticData(semanticEntity);
       
       res.json({ success: true, data: processedData });
     } catch (error) {
@@ -128,6 +137,17 @@ export async function registerRoutes(app: Express): Promise<Server> {
     }
   });
 
+  // Storm Data Integration routes
+  app.get('/api/storm/metrics', async (req, res) => {
+    try {
+      const metrics = await stormDataProcessor.getStormMetrics();
+      res.json(metrics);
+    } catch (error) {
+      console.error('Storm metrics error:', error);
+      res.status(500).json({ error: 'Failed to fetch storm metrics' });
+    }
+  });
+  
   // ARCSEC security routes
   app.post('/api/security/verify', async (req, res) => {
     try {

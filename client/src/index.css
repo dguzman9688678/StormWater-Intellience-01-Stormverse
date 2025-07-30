@@ -72,3 +72,37 @@ canvas {
   color: var(--matrix-green);
   opacity: 0.5;
 }
+
+/* Storm Data Panel */
+.storm-data-panel {
+  min-width: 300px;
+}
+
+.storm-metrics {
+  font-family: 'Courier New', monospace;
+  font-size: 12px;
+}
+
+.storm-metrics .metric-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 3px 0;
+  border-bottom: 1px solid rgba(0, 255, 255, 0.1);
+}
+
+.storm-metrics .metric-label {
+  color: rgba(0, 255, 255, 0.7);
+  font-weight: bold;
+}
+
+.storm-metrics .metric-value {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.loading-text, .error-text {
+  color: var(--matrix-green);
+  font-style: italic;
+  text-align: center;
+  padding: 10px;
+}
