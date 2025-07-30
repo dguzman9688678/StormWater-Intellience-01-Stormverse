@@ -1,0 +1,336 @@
+{
+  "kmz_manifest": {
+    "version": "1.0",
+    "last_updated": "2025-01-30T18:30:00Z",
+    "arcsec_verification": "VERIFIED",
+    "manifest_hash": "SHA256:kmz_manifest_integrity_hash",
+    "description": "StormVerse KMZ data manifest defining all supported geospatial files and their metadata"
+  },
+  
+  "hurricane_tracking_files": {
+    "al052024_best_track.kmz": {
+      "description": "Hurricane Delta (2024) - Best track analysis with intensity data",
+      "source": "NOAA National Hurricane Center",
+      "data_type": "hurricane_track",
+      "temporal_coverage": "2024-09-25T00:00:00Z to 2024-10-10T00:00:00Z",
+      "geographic_bounds": {
+        "north": 35.0,
+        "south": 15.0,
+        "east": -60.0,
+        "west": -95.0
+      },
+      "data_fields": [
+        "wind_speed_kts",
+        "minimum_pressure_mb", 
+        "storm_center_coordinates",
+        "radius_maximum_winds_nm",
+        "storm_category"
+      ],
+      "update_frequency": "post_storm_analysis",
+      "quality_score": 0.98,
+      "arcsec_metadata": {
+        "source": "NOAA/NHC",
+        "timestamp": "2024-10-15T12:00:00Z",
+        "authorship": "National Hurricane Center",
+        "integrity_hash": "SHA256:al052024_track_hash",
+        "verification_status": "VERIFIED"
+      }
+    },
+    
+    "wind_probability_forecast.kmz": {
+      "description": "Hurricane wind probability polygons for 64+ kt winds",
+      "source": "NOAA National Hurricane Center", 
+      "data_type": "wind_probability",
+      "temporal_coverage": "72_hour_forecast_window",
+      "geographic_bounds": {
+        "north": 50.0,
+        "south": 10.0,
+        "east": -40.0,
+        "west": -100.0
+      },
+      "data_fields": [
+        "probability_64kt_winds",
+        "probability_34kt_winds", 
+        "forecast_valid_time",
+        "confidence_interval"
+      ],
+      "update_frequency": "every_6_hours",
+      "quality_score": 0.92,
+      "arcsec_metadata": {
+        "source": "NOAA/NHC",
+        "timestamp": "2025-01-30T18:00:00Z",
+        "authorship": "National Hurricane Center",
+        "integrity_hash": "SHA256:wind_prob_hash",
+        "verification_status": "VERIFIED"
+      }
+    },
+    
+    "storm_surge_inundation.kmz": {
+      "description": "Storm surge height predictions and coastal inundation zones",
+      "source": "NOAA/NWS Storm Surge Unit",
+      "data_type": "storm_surge",
+      "temporal_coverage": "48_hour_forecast_window",
+      "geographic_bounds": {
+        "north": 32.0,
+        "south": 24.0,
+        "east": -79.0,
+        "west": -84.0
+      },
+      "data_fields": [
+        "surge_height_feet",
+        "inundation_depth",
+        "arrival_time",
+        "confidence_level"
+      ],
+      "update_frequency": "every_6_hours",
+      "quality_score": 0.89,
+      "arcsec_metadata": {
+        "source": "NOAA/NWS",
+        "timestamp": "2025-01-30T18:00:00Z", 
+        "authorship": "Storm Surge Unit",
+        "integrity_hash": "SHA256:surge_inun_hash",
+        "verification_status": "VERIFIED"
+      }
+    }
+  },
+  
+  "weather_alert_files": {
+    "severe_weather_warnings.geojson": {
+      "description": "Active severe weather warnings and watches",
+      "source": "NOAA National Weather Service",
+      "data_type": "weather_alerts",
+      "temporal_coverage": "real_time_active_alerts",
+      "geographic_bounds": {
+        "north": 49.0,
+        "south": 25.0,
+        "east": -67.0,
+        "west": -125.0
+      },
+      "data_fields": [
+        "alert_type",
+        "severity_level",
+        "effective_time",
+        "expiration_time",
+        "affected_areas"
+      ],
+      "update_frequency": "real_time",
+      "quality_score": 0.96,
+      "arcsec_metadata": {
+        "source": "NOAA/NWS",
+        "timestamp": "2025-01-30T18:30:00Z",
+        "authorship": "National Weather Service",
+        "integrity_hash": "SHA256:weather_alerts_hash",
+        "verification_status": "VERIFIED"
+      }
+    }
+  },
+  
+  "historical_climate_data": {
+    "hurricane_climatology_1851_2023.kmz": {
+      "description": "Complete Atlantic hurricane database (HURDAT2) with all recorded storms",
+      "source": "NOAA/NHC Historical Archive",
+      "data_type": "historical_tracks",
+      "temporal_coverage": "1851-01-01T00:00:00Z to 2023-12-31T23:59:59Z",
+      "geographic_bounds": {
+        "north": 60.0,
+        "south": 5.0,
+        "east": -10.0,
+        "west": -110.0
+      },
+      "data_fields": [
+        "storm_id",
+        "storm_name", 
+        "date_time",
+        "coordinates",
+        "maximum_winds",
+        "minimum_pressure",
+        "storm_status"
+      ],
+      "update_frequency": "annual_reanalysis",
+      "quality_score": 0.94,
+      "record_count": 2023,
+      "arcsec_metadata": {
+        "source": "NOAA/NHC",
+        "timestamp": "2024-01-15T00:00:00Z",
+        "authorship": "Hurricane Database Team",
+        "integrity_hash": "SHA256:hurdat2_complete_hash",
+        "verification_status": "VERIFIED"
+      }
+    }
+  },
+  
+  "user_uploaded_files": {
+    "business_continuity_plans": {
+      "description": "User-uploaded KMZ files containing business continuity and evacuation plans",
+      "data_type": "user_generated",
+      "supported_formats": [
+        "kmz", "kml", "geojson"
+      ],
+      "maximum_file_size": "50MB",
+      "validation_requirements": [
+        "valid_geographic_coordinates",
+        "schema_compliance",
+        "virus_scan_clear",
+        "arcsec_metadata_addition"
+      ],
+      "retention_policy": "90_days_unless_registered_user",
+      "privacy_level": "user_controlled"
+    },
+    
+    "flood_zone_mapping": {
+      "description": "Custom flood zone data and vulnerability assessments",
+      "data_type": "user_generated",
+      "common_use_cases": [
+        "local_flood_assessments",
+        "infrastructure_vulnerability",
+        "evacuation_route_planning",
+        "emergency_shelter_locations"
+      ],
+      "quality_assurance": "automatic_validation_plus_user_verification",
+      "integration_method": "arcsec_verified_overlay"
+    }
+  },
+  
+  "real_time_data_streams": {
+    "noaa_radar_composite": {
+      "description": "Real-time weather radar imagery from NOAA NEXRAD network",
+      "source": "NOAA/NWS Radar Operations Center",
+      "data_type": "radar_imagery",
+      "format": "WMS_layers",
+      "update_frequency": "every_5_minutes",
+      "geographic_coverage": "continental_united_states",
+      "resolution": "1km_spatial_5min_temporal",
+      "arcsec_metadata": {
+        "source": "NOAA/ROC",
+        "timestamp": "real_time",
+        "authorship": "Radar Operations Center", 
+        "integrity_hash": "real_time_generation",
+        "verification_status": "LIVE_VERIFIED"
+      }
+    },
+    
+    "satellite_imagery_feeds": {
+      "description": "Current satellite imagery from GOES-East and GOES-West",
+      "source": "NOAA/NESDIS Satellite Services",
+      "data_type": "satellite_imagery",
+      "format": "WMS_layers",
+      "update_frequency": "every_15_minutes",
+      "geographic_coverage": "western_hemisphere",
+      "channels": [
+        "visible",
+        "infrared", 
+        "water_vapor",
+        "clean_infrared"
+      ],
+      "arcsec_metadata": {
+        "source": "NOAA/NESDIS",
+        "timestamp": "real_time",
+        "authorship": "Satellite Services Division",
+        "integrity_hash": "real_time_generation", 
+        "verification_status": "LIVE_VERIFIED"
+      }
+    }
+  },
+  
+  "agent_generated_data": {
+    "quantum_probability_cones": {
+      "description": "AI-generated probability visualizations from STORM_CITADEL agent",
+      "source": "StormVerse AI Agent Network",
+      "data_type": "ai_generated_visualization",
+      "generation_method": "ensemble_model_consensus",
+      "confidence_calculation": "statistical_agreement_measurement",
+      "update_frequency": "real_time_with_new_data",
+      "visualization_format": "cesium_polygon_entities",
+      "arcsec_metadata": {
+        "source": "StormVerse/STORM_CITADEL",
+        "timestamp": "real_time_generation",
+        "authorship": "AI Agent STORM_CITADEL",
+        "integrity_hash": "agent_signature_hash",
+        "verification_status": "AI_VERIFIED"
+      }
+    },
+    
+    "agent_network_status": {
+      "description": "Real-time status and communication data from all 8 AI agents",
+      "source": "StormVerse AI Agent Network",
+      "data_type": "agent_telemetry",
+      "included_agents": [
+        "STORM_CITADEL",
+        "ULTRON",
+        "JARVIS", 
+        "PHOENIX",
+        "ODIN",
+        "ECHO",
+        "MITO",
+        "VADER"
+      ],
+      "metrics_tracked": [
+        "processing_load",
+        "response_time",
+        "accuracy_scores",
+        "communication_status",
+        "security_verification"
+      ],
+      "arcsec_metadata": {
+        "source": "StormVerse/Agent_Network",
+        "timestamp": "real_time_telemetry",
+        "authorship": "Multi-Agent System",
+        "integrity_hash": "network_consensus_hash",
+        "verification_status": "NETWORK_VERIFIED"
+      }
+    }
+  },
+  
+  "data_processing_pipeline": {
+    "ingestion_workflow": {
+      "step_1": "file_upload_or_api_fetch",
+      "step_2": "format_validation_ultron_agent",
+      "step_3": "arcsec_metadata_embedding",
+      "step_4": "geographic_bounds_verification",
+      "step_5": "temporal_consistency_check",
+      "step_6": "cesium_format_conversion",
+      "step_7": "visualization_layer_creation",
+      "step_8": "agent_network_notification"
+    },
+    
+    "quality_assurance": {
+      "automated_checks": [
+        "schema_validation",
+        "coordinate_boundary_verification",
+        "temporal_consistency",
+        "data_completeness",
+        "format_compliance"
+      ],
+      "agent_validation": {
+        "primary": "ULTRON",
+        "secondary": "ODIN",
+        "verification": "JARVIS"
+      },
+      "failure_handling": "quarantine_and_manual_review"
+    }
+  },
+  
+  "visualization_configuration": {
+    "cesium_rendering_settings": {
+      "default_opacity": 0.8,
+      "color_schemes": {
+        "hurricane_tracks": "#ff3366",
+        "probability_cones": "#ff6b6b_to_transparent",
+        "weather_alerts": "#ffaa00",
+        "historical_data": "#888888"
+      },
+      "animation_settings": {
+        "temporal_playback": "enabled",
+        "real_time_updates": "5_minute_intervals",
+        "smooth_transitions": "bezier_interpolation"
+      }
+    },
+    
+    "user_interface_integration": {
+      "layer_toggle_controls": "top_right_panel",
+      "transparency_sliders": "per_layer_control",
+      "temporal_controls": "bottom_timeline",
+      "info_panels": "click_to_activate"
+    }
+  }
+}
