@@ -2,7 +2,12 @@ import { useEffect, useRef } from "react";
 import { useStormVerse } from "../lib/stores/useStormVerse";
 import { initializeCesium, createGlobeViewer } from "../lib/cesium-utils";
 
-export default function CesiumGlobe() {
+interface CesiumGlobeProps {
+  className?: string;
+  onViewerReady?: (viewer: any) => void;
+}
+
+export default function CesiumGlobe({ className, onViewerReady }: CesiumGlobeProps) {
   const cesiumContainerRef = useRef<HTMLDivElement>(null);
   const viewerRef = useRef<any>(null);
   const { setViewer, addLayer } = useStormVerse();
@@ -15,6 +20,11 @@ export default function CesiumGlobe() {
       const viewer = createGlobeViewer(cesiumContainerRef.current!);
       viewerRef.current = viewer;
       setViewer(viewer);
+      
+      // Notify parent component that viewer is ready
+      if (onViewerReady) {
+        onViewerReady(viewer);
+      }
 
       // Configure globe appearance for cyberpunk theme
       viewer.scene.globe.baseColor = window.Cesium.Color.fromCssColorString('#0a0a0f');
@@ -118,7 +128,7 @@ export default function CesiumGlobe() {
   return (
     <div 
       ref={cesiumContainerRef}
-      className="cesium-container"
+      className={`cesium-container ${className || ''}`}
       style={{
         width: '100%',
         height: '100vh',

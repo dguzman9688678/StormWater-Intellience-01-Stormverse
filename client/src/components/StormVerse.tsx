@@ -1,9 +1,11 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import CesiumGlobe from "./CesiumGlobe";
 import AgentNetwork from "./AgentNetwork";
 import QuantumArcRenderer from "./QuantumArcRenderer";
 import WeatherOverlay from "./WeatherOverlay";
 import KMZLoader from "./KMZLoader";
+import InteractiveAgentGlobe from "./InteractiveAgentGlobe";
+import AgentDeploymentShell from "./AgentDeploymentShell";
 import CyberpunkPanel from "./ui/cyberpunk-panel";
 import { useStormVerse } from "../lib/stores/useStormVerse";
 import { useWeatherData } from "../lib/stores/useWeatherData";
@@ -11,6 +13,7 @@ import { useAgents } from "../lib/stores/useAgents";
 
 export default function StormVerse() {
   const containerRef = useRef<HTMLDivElement>(null);
+  const [cesiumViewer, setCesiumViewer] = useState<any>(null);
   const { initializeSystem, isInitialized } = useStormVerse();
   const { fetchWeatherData } = useWeatherData();
   const { initializeAgents, activeAgents } = useAgents();
@@ -56,10 +59,22 @@ export default function StormVerse() {
     );
   }
 
+  const handleCesiumViewerReady = (viewer: any) => {
+    setCesiumViewer(viewer);
+  };
+
   return (
     <div ref={containerRef} className="stormverse-container">
       {/* Main 3D Globe */}
-      <CesiumGlobe />
+      <CesiumGlobe onViewerReady={handleCesiumViewerReady} />
+      
+      {/* Interactive Agent Globe */}
+      {cesiumViewer && (
+        <InteractiveAgentGlobe 
+          viewer={cesiumViewer}
+          onAgentSelect={(agent) => console.log('Selected agent:', agent.name)}
+        />
+      )}
       
       {/* Agent Network Overlay */}
       <AgentNetwork />
@@ -72,6 +87,9 @@ export default function StormVerse() {
       
       {/* KMZ File Loader */}
       <KMZLoader />
+      
+      {/* Agent Deployment Shell */}
+      <AgentDeploymentShell />
       
       {/* Control Panels */}
       <div className="control-panels">
