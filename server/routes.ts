@@ -280,6 +280,155 @@ export async function registerRoutes(app: Express): Promise<Server> {
     }
   });
 
+  // ARCSEC Server Management Routes
+  app.get('/api/server/status', async (req, res) => {
+    try {
+      const { arcsecServer } = await import('./services/arcsec-server');
+      const statistics = arcsecServer.getServerStatistics();
+      res.json({ statistics, timestamp: new Date() });
+    } catch (error) {
+      res.status(500).json({ error: error.message });
+    }
+  });
+
+  app.get('/api/server/instances', async (req, res) => {
+    try {
+      const { arcsecServer } = await import('./services/arcsec-server');
+      const filters = {
+        type: req.query.type as any,
+        status: req.query.status as any,
+        minHealthScore: req.query.minHealthScore ? parseInt(req.query.minHealthScore as string) : undefined
+      };
+      const instances = arcsecServer.getServerInstances(filters);
+      res.json({ instances, timestamp: new Date() });
+    } catch (error) {
+      res.status(500).json({ error: error.message });
+    }
+  });
+
+  app.post('/api/server/restart/:serverId', async (req, res) => {
+    try {
+      const { arcsecServer } = await import('./services/arcsec-server');
+      const result = await arcsecServer.restartServer(req.params.serverId);
+      res.json({ result, timestamp: new Date() });
+    } catch (error) {
+      res.status(500).json({ error: error.message });
+    }
+  });
+
+  app.post('/api/server/deploy', async (req, res) => {
+    try {
+      const { arcsecServer } = await import('./services/arcsec-server');
+      const result = await arcsecServer.deployServer(req.body.deploymentId);
+      res.json({ result, timestamp: new Date() });
+    } catch (error) {
+      res.status(500).json({ error: error.message });
+    }
+  });
+
+  // ARCSEC Environment Management Routes
+  app.get('/api/environment/status', async (req, res) => {
+    try {
+      const { arcsecEnvironment } = await import('./services/arcsec-environment');
+      const statistics = arcsecEnvironment.getEnvironmentStatistics();
+      res.json({ statistics, timestamp: new Date() });
+    } catch (error) {
+      res.status(500).json({ error: error.message });
+    }
+  });
+
+  app.get('/api/environment/configs', async (req, res) => {
+    try {
+      const { arcsecEnvironment } = await import('./services/arcsec-environment');
+      const filters = {
+        type: req.query.type as any,
+        status: req.query.status as any
+      };
+      const environments = arcsecEnvironment.getEnvironments(filters);
+      res.json({ environments, timestamp: new Date() });
+    } catch (error) {
+      res.status(500).json({ error: error.message });
+    }
+  });
+
+  app.post('/api/environment/compare', async (req, res) => {
+    try {
+      const { arcsecEnvironment } = await import('./services/arcsec-environment');
+      const { sourceId, targetId } = req.body;
+      const comparison = arcsecEnvironment.compareEnvironments(sourceId, targetId);
+      res.json({ comparison, timestamp: new Date() });
+    } catch (error) {
+      res.status(500).json({ error: error.message });
+    }
+  });
+
+  // ARCSEC Sandbox Routes
+  app.get('/api/sandbox/status', async (req, res) => {
+    try {
+      const { arcsecSandbox } = await import('./services/arcsec-sandbox');
+      const statistics = arcsecSandbox.getSandboxStatistics();
+      res.json({ statistics, timestamp: new Date() });
+    } catch (error) {
+      res.status(500).json({ error: error.message });
+    }
+  });
+
+  app.get('/api/sandbox/instances', async (req, res) => {
+    try {
+      const { arcsecSandbox } = await import('./services/arcsec-sandbox');
+      const filters = {
+        type: req.query.type as any,
+        status: req.query.status as any,
+        environment: req.query.environment as string
+      };
+      const sandboxes = arcsecSandbox.getSandboxes(filters);
+      res.json({ sandboxes, timestamp: new Date() });
+    } catch (error) {
+      res.status(500).json({ error: error.message });
+    }
+  });
+
+  app.get('/api/sandbox/templates', async (req, res) => {
+    try {
+      const { arcsecSandbox } = await import('./services/arcsec-sandbox');
+      const filters = { type: req.query.type as any };
+      const templates = arcsecSandbox.getTemplates(filters);
+      res.json({ templates, timestamp: new Date() });
+    } catch (error) {
+      res.status(500).json({ error: error.message });
+    }
+  });
+
+  app.post('/api/sandbox/create', async (req, res) => {
+    try {
+      const { arcsecSandbox } = await import('./services/arcsec-sandbox');
+      const sandbox = arcsecSandbox.createSandbox(req.body);
+      res.json({ sandbox, timestamp: new Date() });
+    } catch (error) {
+      res.status(500).json({ error: error.message });
+    }
+  });
+
+  app.post('/api/sandbox/start/:sandboxId', async (req, res) => {
+    try {
+      const { arcsecSandbox } = await import('./services/arcsec-sandbox');
+      const result = await arcsecSandbox.startSandbox(req.params.sandboxId);
+      res.json({ result, timestamp: new Date() });
+    } catch (error) {
+      res.status(500).json({ error: error.message });
+    }
+  });
+
+  app.post('/api/sandbox/terminate/:sandboxId', async (req, res) => {
+    try {
+      const { arcsecSandbox } = await import('./services/arcsec-sandbox');
+      const result = await arcsecSandbox.terminateSandbox(req.params.sandboxId, req.body.reason);
+      res.json({ result, timestamp: new Date() });
+    } catch (error) {
+      res.status(500).json({ error: error.message });
+    }
+  });
+
   // ARCSEC Security API Routes
   app.get('/api/arcsec/status', async (req, res) => {
     try {
