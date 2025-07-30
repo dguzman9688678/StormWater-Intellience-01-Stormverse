@@ -15,6 +15,8 @@ import QuantumAnalysisPanel from "./QuantumAnalysisPanel";
 import DiagnosticsPanel from "./DiagnosticsPanel";
 import AttributionFooter from "./AttributionFooter";
 import CyberpunkPanel from "./ui/cyberpunk-panel";
+import WorldStatus from "./WorldStatus";
+import PodcastPlayer from "./PodcastPlayer";
 import { useStormVerse } from "../lib/stores/useStormVerse";
 import { useWeatherData } from "../lib/stores/useWeatherData";
 import { useAgents } from "../lib/stores/useAgents";
@@ -133,6 +135,12 @@ export default function StormVerse() {
       
       {/* System Diagnostics */}
       <DiagnosticsPanel />
+      
+      {/* World Status */}
+      <WorldStatus />
+      
+      {/* Podcast Player */}
+      <PodcastPlayer />
       
       {/* Control Panels */}
       <div className="control-panels">

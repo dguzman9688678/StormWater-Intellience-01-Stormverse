@@ -1,0 +1,47 @@
+{
+  "world": {
+    "name": "StormVerse",
+    "description": "Environmental Intelligence Platform with AI Agent Network",
+    "dimensions": {
+      "globe": {
+        "radius": 6371000,
+        "segments": 64
+      },
+      "atmosphere": {
+        "height": 100000,
+        "layers": 5
+      },
+      "space": {
+        "orbitalRadius": 8000000,
+        "agentDistance": 1000000
+      }
+    },
+    "theme": {
+      "primary": "cyberpunk",
+      "secondary": "environmental",
+      "mood": "dark-futuristic"
+    }
+  },
+  "created": "2025-07-30T16:10:41.402Z",
+  "creator": "Daniel Guzman",
+  "dimensions": {
+    "physical": {
+      "globe": {
+        "radius": 6371000,
+        "segments": 64
+      },
+      "atmosphere": {
+        "height": 100000,
+        "layers": 5
+      },
+      "space": {
+        "orbitalRadius": 8000000,
+        "agentDistance": 1000000
+      }
+    },
+    "quantum": {
+      "hilbertSpace": 19,
+      "qubits": 4.25
+    }
+  }
+}
