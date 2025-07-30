@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import CesiumGlobe from "./CesiumGlobe";
 import AgentNetwork from "./AgentNetwork";
 import QuantumArcRenderer from "./QuantumArcRenderer";
@@ -10,6 +10,9 @@ import SystemMonitor from "./SystemMonitor";
 import StormDataPanel from "./StormDataPanel";
 import AnalysisPanel from "./AnalysisPanel";
 import DatabasePanel from "./DatabasePanel";
+import MetadataPanel from "./MetadataPanel";
+import QuantumAnalysisPanel from "./QuantumAnalysisPanel";
+import DiagnosticsPanel from "./DiagnosticsPanel";
 import AttributionFooter from "./AttributionFooter";
 import CyberpunkPanel from "./ui/cyberpunk-panel";
 import { useStormVerse } from "../lib/stores/useStormVerse";
@@ -121,6 +124,15 @@ export default function StormVerse() {
       
       {/* Database Schema */}
       <DatabasePanel />
+      
+      {/* System Metadata */}
+      <MetadataPanel />
+      
+      {/* Quantum Analysis */}
+      <QuantumAnalysisPanel />
+      
+      {/* System Diagnostics */}
+      <DiagnosticsPanel />
       
       {/* Control Panels */}
       <div className="control-panels">

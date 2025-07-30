@@ -61,7 +61,7 @@ export default function DatabasePanel() {
   return (
     <CyberpunkPanel 
       title="DATABASE SCHEMA" 
-      position="left"
+      position="bottom-left"
       className="database-panel w-[380px] max-h-[70vh]"
     >
       <div className="database-content">

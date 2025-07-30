@@ -6,6 +6,7 @@ import { KMZProcessor } from "./services/kmz-processor";
 import { TripleStoreService } from "./services/triple-store-service";
 import { ARCSECService } from "./services/arcsec-security";
 import { stormDataProcessor } from "./services/storm-data-processor";
+import { metadataProcessor } from "./services/metadata-processor";
 
 const noaaService = new NOAAService();
 const kmzProcessor = new KMZProcessor();
@@ -148,6 +149,37 @@ export async function registerRoutes(app: Express): Promise<Server> {
     } catch (error) {
       console.error('ARCSEC verification error:', error);
       res.status(500).json({ error: 'Security verification failed' });
+    }
+  });
+
+  // System Metadata routes
+  app.get('/api/metadata/system', async (req, res) => {
+    try {
+      const metadata = await metadataProcessor.getSystemMetadata();
+      res.json(metadata);
+    } catch (error) {
+      console.error('System metadata error:', error);
+      res.status(500).json({ error: 'Failed to fetch system metadata' });
+    }
+  });
+
+  app.get('/api/metadata/session', async (req, res) => {
+    try {
+      const session = await metadataProcessor.getSessionStatus();
+      res.json(session);
+    } catch (error) {
+      console.error('Session status error:', error);
+      res.status(500).json({ error: 'Failed to fetch session status' });
+    }
+  });
+
+  app.get('/api/metadata/arcsec', async (req, res) => {
+    try {
+      const arcsecStatus = await metadataProcessor.getARCSECStatus();
+      res.json(arcsecStatus);
+    } catch (error) {
+      console.error('ARCSEC status error:', error);
+      res.status(500).json({ error: 'Failed to fetch ARCSEC status' });
     }
   });
 
