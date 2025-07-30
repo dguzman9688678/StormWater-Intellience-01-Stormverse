@@ -1,0 +1,30 @@
+{
+  "name": "stormverse-server",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "StormVerse server with NOAA integration, KMZ processing, and ARCSEC security",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "tsx watch index.ts",
+    "build": "tsc",
+    "test": "jest"
+  },
+  "dependencies": {
+    "express": "^4.21.2",
+    "node-fetch": "^3.3.2",
+    "jszip": "^3.10.1",
+    "xml2js": "^0.6.2",
+    "crypto": "^1.0.1"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.16.11",
+    "@types/xml2js": "^0.4.14",
+    "tsx": "^4.19.1",
+    "typescript": "^5.6.3"
+  },
+  "keywords": ["stormverse", "weather", "noaa", "hurricane", "cesium", "ai"],
+  "author": "StormVerse Team",
+  "license": "MIT"
+}

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+    <title>StormVerse - Environmental Intelligence Platform</title>
+    <meta name="description" content="Professional environmental intelligence platform with CesiumJS 3D globe, AI-powered analysis, and real-time weather data." />
+    
+    <!-- Cesium CSS -->
+    <link href="https://cesium.com/downloads/cesiumjs/releases/1.118/Build/Cesium/Widgets/widgets.css" rel="stylesheet">
+    
+    <!-- Custom Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%2300ffff'%3E%3Cpath d='M12 2L2 7v10c0 5.55 3.84 9.74 9 11 5.16-1.26 9-5.45 9-11V7l-10-5z'/%3E%3C/svg%3E" />
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="https://cesium.com/downloads/cesiumjs/releases/1.118/Build/Cesium/Cesium.js" as="script" crossorigin>
+    <link rel="preconnect" href="https://api.weather.gov" crossorigin>
+    <link rel="preconnect" href="https://services.arcgisonline.com" crossorigin>
+    
+    <!-- Open Graph metadata -->
+    <meta property="og:title" content="StormVerse - Environmental Intelligence Platform" />
+    <meta property="og:description" content="Professional environmental intelligence platform with 3D visualization and AI-powered analysis" />
+    <meta property="og:type" content="website" />
+    
+    <style>
+      /* Critical CSS for loading state */
+      html, body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        overflow: hidden;
+        background: #0a0a0f;
+        color: #e0e0e0;
+        font-family: 'Inter', 'Courier New', monospace;
+      }
+      
+      #root {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+      }
+      
+      /* Loading screen styles */
+      .cesium-viewer-loading {
+        background: linear-gradient(135deg, #050508 0%, #0a0a0f 100%) !important;
+        color: #00ffff !important;
+        font-family: 'Inter', monospace !important;
+      }
+      
+      .cesium-viewer-loading .cesium-loading-text {
+        color: #00ffff !important;
+        text-shadow: 0 0 20px #00ffff !important;
+        font-weight: 600 !important;
+        letter-spacing: 0.2em !important;
+      }
+      
+      /* Hide Cesium credits initially */
+      .cesium-widget-credits {
+        display: none !important;
+      }
+      
+      /* Ensure proper canvas sizing */
+      canvas {
+        width: 100% !important;
+        height: 100% !important;
+        touch-action: none !important;
+      }
+      
+      /* Error fallback */
+      .error-boundary {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background: #0a0a0f;
+        color: #ff6b6b;
+        font-family: monospace;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Main application container -->
+    <div id="root">
+      <!-- Fallback loading state -->
+      <div id="loading-fallback" style="
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: linear-gradient(135deg, #050508 0%, #0a0a0f 100%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 9999;
+        color: #00ffff;
+        font-family: 'Inter', monospace;
+        font-size: 1.2rem;
+        font-weight: 600;
+        letter-spacing: 0.2em;
+        text-shadow: 0 0 20px #00ffff;
+      ">
+        INITIALIZING STORMVERSE SYSTEM...
+      </div>
+    </div>
+    
+    <!-- Error boundary fallback -->
+    <script>
+      window.addEventListener('error', function(e) {
+        console.error('Global error:', e.error);
+        const fallback = document.getElementById('loading-fallback');
+        if (fallback) {
+          fallback.innerHTML = 'SYSTEM ERROR: ' + e.message;
+          fallback.style.color = '#ff6b6b';
+          fallback.style.textShadow = '0 0 20px #ff6b6b';
+        }
+      });
+      
+      window.addEventListener('unhandledrejection', function(e) {
+        console.error('Unhandled promise rejection:', e.reason);
+      });
+    </script>
+    
+    <!-- Load Cesium before our application -->
+    <script src="https://cesium.com/downloads/cesiumjs/releases/1.118/Build/Cesium/Cesium.js"></script>
+    
+    <!-- Initialize Cesium Ion token -->
+    <script>
+      if (window.Cesium) {
+        // Set default Cesium Ion token
+        window.Cesium.Ion.defaultAccessToken = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiJkYWJmMWMzOS04N2FhLTQwYzMtODdjNy04YmY2OWJmZGY4ZGUiLCJpZCI6MjU5LCJpYXQiOjE0OTY4MjA2MjR9.VnWyPb1YpKPgDhX4Y_LYNeM-C3CY6u5jvdXNq7ZxYlA';
+        console.log('Cesium loaded successfully');
+      } else {
+        console.error('Failed to load Cesium');
+      }
+    </script>
+    
+    <!-- Load main application -->
+    <script type="module" src="/src/main.tsx"></script>
+    
+    <!-- Service Worker for caching (optional) -->
+    <script>
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('/sw.js')
+          .then(reg => console.log('Service Worker registered'))
+          .catch(err => console.log('Service Worker registration failed'));
+      }
+    </script>
+  </body>
+</html>
