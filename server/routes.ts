@@ -58,6 +58,39 @@ export async function registerRoutes(app: Express): Promise<Server> {
     });
   });
 
+  // ARCSEC Primary Directory Structure API
+  app.get('/api/arcsec/directory-structure', (req, res) => {
+    try {
+      const structure = arcsecMasterController.getDirectoryStructure();
+      const validation = arcsecMasterController.validateDirectoryPriority();
+      
+      res.json({
+        directory_structure: structure,
+        validation: validation,
+        primary_directory: "arcsec",
+        hierarchy: "ARCSEC_FIRST",
+        timestamp: new Date().toISOString()
+      });
+    } catch (error) {
+      res.status(500).json({ error: error.message });
+    }
+  });
+
+  // ARCSEC System Status API
+  app.get('/api/arcsec/system-status', (req, res) => {
+    try {
+      const status = arcsecMasterController.getSystemStatus();
+      res.json({
+        arcsec_status: status,
+        directory_priority: "PRIMARY",
+        protection_level: "WAR_MODE_MAXIMUM",
+        timestamp: new Date().toISOString()
+      });
+    } catch (error) {
+      res.status(500).json({ error: error.message });
+    }
+  });
+
   // Machine Learning API Routes
   app.get('/api/ml/models', async (req, res) => {
     try {

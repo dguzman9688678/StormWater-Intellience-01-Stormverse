@@ -1,0 +1,90 @@
+{
+  "arcsec_directory_structure": {
+    "version": "3.0X",
+    "creator": "Daniel Guzman",
+    "digital_signature": "a6672edf248c5eeef3054ecca057075c938af653",
+    "priority": "PRIMARY_DIRECTORY_HIERARCHY",
+    "created": "2025-07-30T20:40:00Z"
+  },
+  "directory_hierarchy": {
+    "arcsec/": {
+      "priority": 1,
+      "description": "Primary ARCSEC ecosystem directory",
+      "subdirectories": {
+        "core/": {
+          "purpose": "Core ARCSEC system components",
+          "contains": ["controllers", "handlers", "processors"],
+          "priority": "CRITICAL"
+        },
+        "security/": {
+          "purpose": "Security protocols and monitoring",
+          "contains": ["protocols", "monitoring", "compliance"],
+          "priority": "MAXIMUM"
+        },
+        "agents/": {
+          "purpose": "AI agent network and coordination", 
+          "contains": ["network", "coordination", "models"],
+          "priority": "HIGH"
+        },
+        "services/": {
+          "purpose": "API services and system interfaces",
+          "contains": ["api", "websocket", "database"],
+          "priority": "HIGH"
+        },
+        "utilities/": {
+          "purpose": "ARCSEC utility tools and scripts",
+          "contains": ["tools", "scripts", "generators"],
+          "priority": "MEDIUM"
+        },
+        "config/": {
+          "purpose": "Configuration and manifest files",
+          "contains": ["system", "security", "network"],
+          "priority": "HIGH"
+        },
+        "data/": {
+          "purpose": "Protected data storage",
+          "contains": ["processed", "raw", "backups"],
+          "priority": "HIGH"
+        },
+        "logs/": {
+          "purpose": "System and security logging",
+          "contains": ["system", "security", "audit"],
+          "priority": "MEDIUM"
+        },
+        "backup/": {
+          "purpose": "System backup and recovery",
+          "contains": ["files", "configs", "databases"],
+          "priority": "CRITICAL"
+        }
+      }
+    },
+    "server/": {
+      "priority": 2,
+      "description": "Secondary - Express.js server components",
+      "note": "Integrates with ARCSEC primary structure"
+    },
+    "client/": {
+      "priority": 3,
+      "description": "Tertiary - React frontend components", 
+      "note": "User interface for ARCSEC ecosystem"
+    },
+    "replit_local/": {
+      "priority": 4,
+      "description": "Quaternary - Replit-specific configurations",
+      "note": "Environment-specific files, lowest priority"
+    }
+  },
+  "migration_plan": {
+    "phase_1": "Move core ARCSEC utilities to arcsec/utilities/",
+    "phase_2": "Relocate security components to arcsec/security/",
+    "phase_3": "Transfer agent services to arcsec/agents/",
+    "phase_4": "Organize API services in arcsec/services/",
+    "phase_5": "Update all import paths and references"
+  },
+  "protection_status": {
+    "arcsec_directories": "WAR_MODE_MAXIMUM",
+    "backup_enabled": true,
+    "integrity_monitoring": "CONTINUOUS",
+    "access_control": "RESTRICTED"
+  }
+}

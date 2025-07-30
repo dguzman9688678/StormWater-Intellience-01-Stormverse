@@ -1,0 +1,80 @@
+{
+  "arcsec_system_routing": {
+    "version": "3.0X",
+    "creator": "Daniel Guzman", 
+    "digital_signature": "a6672edf248c5eeef3054ecca057075c938af653",
+    "primary_structure": "ARCSEC_FIRST",
+    "routing_priority": {
+      "1": "arcsec/services/api/",
+      "2": "arcsec/core/controllers/",
+      "3": "server/routes.ts",
+      "4": "client/src/router/"
+    }
+  },
+  "import_path_mapping": {
+    "arcsec_utilities": "./arcsec/utilities/",
+    "arcsec_security": "./arcsec/security/",
+    "arcsec_agents": "./arcsec/agents/",
+    "arcsec_services": "./arcsec/services/",
+    "arcsec_core": "./arcsec/core/",
+    "arcsec_config": "./arcsec/config/",
+    "server_legacy": "./server/",
+    "client_ui": "./client/src/"
+  },
+  "api_routing_hierarchy": {
+    "primary": {
+      "path": "arcsec/services/api/",
+      "routes": [
+        "/api/arcsec/status",
+        "/api/arcsec/security",
+        "/api/arcsec/agents",
+        "/api/arcsec/utilities",
+        "/api/arcsec/core"
+      ]
+    },
+    "secondary": {
+      "path": "server/routes.ts",
+      "routes": [
+        "/api/health",
+        "/api/weather",
+        "/api/hurricanes",
+        "/api/quantum",
+        "/api/database"
+      ]
+    }
+  },
+  "client_routing_hierarchy": {
+    "primary": {
+      "path": "arcsec/config/",
+      "configuration": "system-navigation.json"
+    },
+    "secondary": {
+      "path": "client/src/router/",
+      "configuration": "index.tsx"
+    }
+  },
+  "directory_access_rules": {
+    "arcsec/": {
+      "access_level": "RESTRICTED",
+      "protection": "WAR_MODE_MAXIMUM",
+      "modification_policy": "SIGNATURE_REQUIRED"
+    },
+    "server/": {
+      "access_level": "CONTROLLED",
+      "protection": "STANDARD",
+      "modification_policy": "AUDIT_TRAIL"
+    },
+    "client/": {
+      "access_level": "PUBLIC",
+      "protection": "BASIC",
+      "modification_policy": "VERSION_CONTROL"
+    }
+  },
+  "file_organization": {
+    "utilities_location": "arcsec/utilities/",
+    "services_location": "arcsec/services/",
+    "security_location": "arcsec/security/",
+    "config_location": "arcsec/config/",
+    "backup_location": "arcsec/backup/"
+  }
+}

@@ -1,8 +1,14 @@
 {
   "stormverse_endpoints": {
     "version": "3.5.0",
-    "last_updated": "2025-01-30",
+    "last_updated": "2025-07-30",
     "api_routes": {
+      "/api/health": {
+        "method": "GET",
+        "description": "API health check and system status",
+        "status": "active",
+        "security": "ARCSEC v3.0X"
+      },
       "/api/weather": {
         "method": "GET",
         "description": "Real-time weather data from NOAA API",
@@ -102,6 +108,21 @@
       "/database": {
         "component": "DatabasePanel",
         "description": "Database management interface",
+        "status": "active"
+      },
+      "/monitor": {
+        "component": "SystemMonitor",
+        "description": "Real-time system monitoring dashboard",
+        "status": "active"
+      },
+      "/diagnostics": {
+        "component": "DiagnosticsPanel",
+        "description": "Advanced system diagnostics and anomaly detection",
+        "status": "active"
+      },
+      "/metadata": {
+        "component": "MetadataPanel",
+        "description": "System metadata and configuration management",
         "status": "active"
       },
       "/analysis": {

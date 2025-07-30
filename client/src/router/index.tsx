@@ -72,6 +72,14 @@ const router = createBrowserRouter([
     )
   },
   {
+    path: '/monitor',
+    element: (
+      <PanelLayout>
+        <SystemMonitor />
+      </PanelLayout>
+    )
+  },
+  {
     path: '/metadata',
     element: (
       <PanelLayout>
