@@ -5,6 +5,7 @@ const navigationItems = [
   { path: '/', label: 'Home', icon: '🏠' },
   { path: '/globe', label: 'Globe View', icon: '🌍' },
   { path: '/control', label: 'Control Center', icon: '🎛️' },
+  { path: '/graph', label: 'Network Graph', icon: '🔗' },
   { path: '/agents', label: 'AI Agents', icon: '🤖' },
   { path: '/quantum', label: 'Quantum Analysis', icon: '⚛️' },
   { path: '/world', label: 'World Status', icon: '🌐' },

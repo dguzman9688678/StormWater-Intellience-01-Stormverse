@@ -115,11 +115,54 @@ const router = createBrowserRouter([
     path: '/control',
     element: (
       <PanelLayout>
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-          <SystemMonitor />
-          <DiagnosticsPanel />
-          <QuantumAnalysisPanel />
-          <DatabasePanel />
+        <div className="control-center-grid">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+            <div className="control-panel">
+              <h2 className="text-xl font-bold text-cyan-400 mb-4">System Monitor</h2>
+              <SystemMonitor />
+            </div>
+            <div className="control-panel">
+              <h2 className="text-xl font-bold text-cyan-400 mb-4">Diagnostics</h2>
+              <DiagnosticsPanel />
+            </div>
+            <div className="control-panel">
+              <h2 className="text-xl font-bold text-cyan-400 mb-4">Quantum Analysis</h2>
+              <QuantumAnalysisPanel />
+            </div>
+            <div className="control-panel">
+              <h2 className="text-xl font-bold text-cyan-400 mb-4">Database</h2>
+              <DatabasePanel />
+            </div>
+          </div>
+        </div>
+      </PanelLayout>
+    )
+  },
+  {
+    path: '/graph',
+    element: (
+      <PanelLayout>
+        <div className="graph-visualization">
+          <h1 className="text-2xl font-bold text-cyan-400 mb-6">StormVerse Network Graph</h1>
+          <div className="graph-container bg-gray-900 border border-cyan-500 rounded-lg p-6">
+            <div className="graph-nodes">
+              <div className="network-diagram">
+                <div className="node-cluster">
+                  <div className="central-node">STORMVERSE</div>
+                  <div className="agent-nodes">
+                    <div className="agent-node jarvis">JARVIS</div>
+                    <div className="agent-node storm">STORM</div>
+                    <div className="agent-node ultron">ULTRON</div>
+                    <div className="agent-node phoenix">PHOENIX</div>
+                    <div className="agent-node odin">ODIN</div>
+                    <div className="agent-node echo">ECHO</div>
+                    <div className="agent-node mito">MITO</div>
+                    <div className="agent-node vader">VADER</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </PanelLayout>
     )

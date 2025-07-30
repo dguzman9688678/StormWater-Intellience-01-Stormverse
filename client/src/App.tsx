@@ -1,7 +1,8 @@
-import { Suspense } from "react";
+import React, { Suspense } from "react";
 import { AppRouter } from "./router";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import "./styles/cyberpunk.css";
+import "./styles/graph.css";
 import "@fontsource/inter";
 
 const queryClient = new QueryClient({
