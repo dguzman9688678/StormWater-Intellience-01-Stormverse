@@ -1,0 +1,231 @@
+{
+  "project": {
+    "name": "StormVerse Environmental Intelligence Platform",
+    "version": "3.4.0",
+    "creator": "Daniel Guzman",
+    "copyright": "© 2025 Daniel Guzman - All Rights Reserved",
+    "protocol": "ARCSEC v3.0X WAR MODE",
+    "description": "Advanced environmental intelligence platform with AI agents, 3D visualization, and quantum analysis"
+  },
+  
+  "architecture": {
+    "frontend": {
+      "framework": "React with TypeScript",
+      "visualization": "CesiumJS 3D Globe",
+      "ui": "Radix UI with Cyberpunk Theme",
+      "state": "Zustand stores",
+      "styling": "Tailwind CSS"
+    },
+    "backend": {
+      "server": "Express.js with TypeScript",
+      "database": "PostgreSQL with Drizzle ORM",
+      "api": "RESTful endpoints",
+      "modules": "ES modules"
+    }
+  },
+  
+  "files": {
+    "root": {
+      "stormverse-server.ts": {
+        "type": "server",
+        "description": "Unified binary server with ARCSEC security headers",
+        "features": ["Express server", "CORS handling", "Static file serving", "Agent initialization"]
+      },
+      "world-builder.ts": {
+        "type": "builder",
+        "description": "Creates and initializes the StormVerse world environment",
+        "creates": ["world-manifest.json", "agent-deployment.json", "data-pipelines.json", "quantum-engine.json", "security-deployment.json"]
+      },
+      "stormverse.config.ts": {
+        "type": "config",
+        "description": "Central configuration for entire system",
+        "sections": ["identity", "world", "agents", "dataSources", "quantum", "security"]
+      },
+      "build-binary.js": {
+        "type": "builder",
+        "description": "Creates standalone executable binaries",
+        "outputs": ["Linux", "Windows", "macOS binaries"]
+      },
+      "podcasts.json": {
+        "type": "data",
+        "description": "Metadata for 8 podcast files",
+        "categories": ["Environmental AI", "Technical", "Media & Audio", "Quantum Theory", "Development"]
+      }
+    },
+    
+    "client": {
+      "components": {
+        "StormVerse.tsx": {
+          "type": "main",
+          "description": "Main application component",
+          "imports": 18,
+          "features": ["Globe integration", "Agent network", "All panels"]
+        },
+        "CesiumGlobe.tsx": {
+          "type": "visualization",
+          "description": "3D Earth visualization with CesiumJS",
+          "features": ["Terrain", "Weather layers", "Hurricane tracking"]
+        },
+        "AgentNetwork.tsx": {
+          "type": "ai",
+          "description": "AI agent management and visualization",
+          "agents": ["JARVIS", "MITO", "PHOENIX", "ULTRON", "VADER", "ODIN", "ECHO", "STORM"]
+        },
+        "QuantumAnalysisPanel.tsx": {
+          "type": "analysis",
+          "description": "Quantum information theory visualization",
+          "metrics": ["19D Hilbert space", "4.25 qubits", "74.1% preservation"]
+        },
+        "DiagnosticsPanel.tsx": {
+          "type": "monitoring",
+          "description": "Loop detection and anomaly monitoring",
+          "features": ["8 diagnostic signals", "3-tier loop flags", "Child-friendly explanations"]
+        },
+        "DatabasePanel.tsx": {
+          "type": "data",
+          "description": "Database schema visualization",
+          "tables": 7
+        },
+        "PodcastPlayer.tsx": {
+          "type": "media",
+          "description": "Audio player for podcast content",
+          "podcasts": 8
+        },
+        "WorldStatus.tsx": {
+          "type": "status",
+          "description": "Displays world configuration and agent status",
+          "shows": ["World identity", "Dimensions", "Agent network", "Quantum status"]
+        },
+        "Navigation.tsx": {
+          "type": "navigation",
+          "description": "Main navigation component",
+          "routes": 9
+        }
+      },
+      
+      "router": {
+        "index.tsx": {
+          "type": "routing",
+          "description": "React Router configuration",
+          "routes": ["/", "/globe", "/monitor", "/diagnostics", "/quantum", "/database", "/metadata", "/analysis", "/agents"]
+        }
+      },
+      
+      "stores": {
+        "useStormVerse.tsx": "Main system state management",
+        "useAgents.tsx": "AI agent state and operations",
+        "useWeatherData.tsx": "Weather data management",
+        "useAudio.tsx": "Audio playback state",
+        "useGame.tsx": "Game state management"
+      }
+    },
+    
+    "server": {
+      "routes.ts": {
+        "type": "api",
+        "description": "All API endpoints",
+        "endpoints": {
+          "weather": ["/api/weather/current", "/api/weather/hurricanes", "/api/weather/kmz"],
+          "agents": ["/api/agents/status", "/api/agents/activity", "/api/agents/deploy"],
+          "quantum": ["/api/quantum/states", "/api/quantum/entanglement", "/api/quantum/metrics"],
+          "diagnostics": ["/api/diagnostics", "/api/diagnostics/flags", "/api/diagnostics/reset"],
+          "database": ["/api/database/status", "/api/database/schema"],
+          "system": ["/api/system/status", "/api/system/metadata", "/api/metadata/all"]
+        }
+      },
+      "storage.ts": {
+        "type": "database",
+        "description": "Database storage layer",
+        "mode": "In-memory or PostgreSQL"
+      }
+    },
+    
+    "shared": {
+      "schema.ts": {
+        "type": "database",
+        "description": "Drizzle ORM schema definitions",
+        "tables": {
+          "users": "Role-based access control",
+          "geo_files": "KMZ/KML file tracking",
+          "noaa_data": "Weather data storage",
+          "compliance_zones": "EPA/FEMA compliance",
+          "arcsec_assets": "Protected assets",
+          "agent_activity": "AI agent logs",
+          "system_metadata": "Configuration store"
+        }
+      }
+    }
+  },
+  
+  "media": {
+    "podcasts": [
+      "Stormwater_AI_How_Artificial_Intelligence_is_Revolutionizing_Urban_Flood_Management_1753890890330.mp3",
+      "Cities_Under_Siege_How_AI_is_Reshaping_Our_Fight_for_Water_1753890890330.mp3",
+      "Stormjson_and_Stromverse_Your_Map_to_Massive_Weather_Data_Not_the_Storm_Itself_1753890890329.mp3",
+      "Sonic_Strategists_How_Audio_Shapes_Your_Story_and_Experience_in_Media_1753890890329.mp3",
+      "quantum-podcast-analysis-metadata-podcast_1753890890330.mp3",
+      "file-analysis-podcast_1753890890329.mp3",
+      "new-task-podcast_1753890890329.mp3"
+    ]
+  },
+  
+  "data": {
+    "world_files": [
+      "world-manifest.json",
+      "agent-deployment.json",
+      "data-pipelines.json",
+      "quantum-engine.json",
+      "security-deployment.json",
+      "STORMVERSE_WORLD.json"
+    ],
+    "configuration": [
+      "stormverse.config.ts",
+      "podcasts.json",
+      "API_DOCUMENTATION.md",
+      "replit.md"
+    ]
+  },
+  
+  "features": {
+    "ai_agents": {
+      "count": 8,
+      "network": "Orbital positioning around globe",
+      "communication": "Real-time through JARVIS router"
+    },
+    "visualization": {
+      "3d_globe": "CesiumJS with terrain and weather layers",
+      "quantum_arcs": "Probability cone rendering",
+      "agent_orbits": "Interactive 3D positioning"
+    },
+    "data_processing": {
+      "weather": "NOAA real-time integration",
+      "quantum": "19D Hilbert space analysis",
+      "security": "ARCSEC v3.0X enforcement"
+    },
+    "monitoring": {
+      "diagnostics": "Loop detection with 8 signals",
+      "system": "Real-time performance metrics",
+      "database": "Schema and status monitoring"
+    }
+  },
+  
+  "deployment": {
+    "server": "Unified binary with ARCSEC headers",
+    "platforms": ["Linux", "Windows", "macOS"],
+    "database": "PostgreSQL or in-memory",
+    "port": 5000,
+    "security": "WAR MODE enforced"
+  },
+  
+  "summary": {
+    "total_files": 89,
+    "components": 24,
+    "api_endpoints": 20,
+    "database_tables": 7,
+    "ai_agents": 8,
+    "podcasts": 8,
+    "quantum_dimensions": 19,
+    "creator": "Daniel Guzman",
+    "status": "OPERATIONAL"
+  }
+}
