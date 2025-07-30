@@ -8,9 +8,9 @@
  */
 
 import { arcsecHandler } from './arcsec-universal-handler.js';
-import { mlEngine } from './ml-engine.js';
-import { agentCoordinator } from './agent-coordinator.js';
-import { WebSocketService } from './websocket-service.js';
+import { mlEngine } from './arcsec-ml-engine.js';
+import { agentCoordinator } from './arcsec-agent-coordinator.js';
+import { WebSocketService } from './arcsec-websocket-service.js';
 import crypto from 'crypto';
 import { promises as fs } from 'fs';
 import path from 'path';

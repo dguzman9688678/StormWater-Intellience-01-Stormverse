@@ -4,18 +4,18 @@ import { createServer, type Server } from "http";
 import { Server as SocketServer } from "socket.io";
 import rateLimit from "express-rate-limit";
 import axios from "axios";
-import { NOAAService } from "./services/noaa-service";
-import { KMZProcessor } from "./services/kmz-processor";
-import { TripleStoreService } from "./services/triple-store-service";
+import { NOAAService } from "./services/arcsec-noaa-service";
+import { KMZProcessor } from "./services/arcsec-kmz-processor";
+import { TripleStoreService } from "./services/arcsec-triple-store-service";
 import { ARCSECService } from "./services/arcsec-security";
-import { stormDataProcessor } from "./services/storm-data-processor";
-import { metadataProcessor } from "./services/metadata-processor";
-import { diagnosticsService } from "./services/diagnostics-service";
-import { quantumService } from "./services/quantum-service";
-import { agentService } from "./services/agent-service";
-import { databaseService } from "./services/database-service";
-import { mlEngine } from "./services/ml-engine.js";
-import { agentCoordinator } from "./services/agent-coordinator.js";
+import { stormDataProcessor } from "./services/arcsec-storm-data-processor";
+import { metadataProcessor } from "./services/arcsec-metadata-processor";
+import { diagnosticsService } from "./services/arcsec-diagnostics-service";
+import { quantumService } from "./services/arcsec-quantum-service";
+import { agentService } from "./services/arcsec-agent-service";
+import { databaseService } from "./services/arcsec-database-service";
+import { mlEngine } from "./services/arcsec-ml-engine.js";
+import { agentCoordinator } from "./services/arcsec-agent-coordinator.js";
 import { arcsecHandler } from "./services/arcsec-universal-handler.js";
 
 const noaaService = new NOAAService();
@@ -40,7 +40,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
   const server = createServer(app);
   
   // Initialize WebSocket service
-  const { initializeWebSocketService } = await import('./services/websocket-service.js');
+  const { initializeWebSocketService } = await import('./services/arcsec-websocket-service.js');
   const wsService = initializeWebSocketService(server);
 
   // Apply rate limiting to API routes

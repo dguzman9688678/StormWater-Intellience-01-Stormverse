@@ -1,7 +1,7 @@
 import { Server as SocketServer } from 'socket.io';
 import { Server } from 'http';
-import { mlEngine } from './ml-engine.js';
-import { agentCoordinator } from './agent-coordinator.js';
+import { mlEngine } from './arcsec-ml-engine.js';
+import { agentCoordinator } from './arcsec-agent-coordinator.js';
 
 export interface WebSocketMessage {
   type: 'agent_prediction' | 'task_update' | 'system_status' | 'ml_training' | 'webhook_data';
