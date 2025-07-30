@@ -8,6 +8,8 @@
     
     <!-- Cesium CSS -->
     <link href="https://cesium.com/downloads/cesiumjs/releases/1.118/Build/Cesium/Widgets/widgets.css" rel="stylesheet">
+    <!-- Local fallback CSS -->
+    <link href="/cesium/Widgets/widgets.css" rel="stylesheet" media="screen and (max-width: 0px)">
     
     <!-- Custom Favicon -->
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%2300ffff'%3E%3Cpath d='M12 2L2 7v10c0 5.55 3.84 9.74 9 11 5.16-1.26 9-5.45 9-11V7l-10-5z'/%3E%3C/svg%3E" />
@@ -137,6 +139,11 @@
         console.error('Failed to load Cesium');
       }
     </script>
+    
+    <!-- StormVerse JavaScript Modules -->
+    <script src="/js/storm_layer_loader.js"></script>
+    <script src="/js/quantum_arc_renderer.js"></script>
+    <script src="/js/stats_overlay.js"></script>
     
     <!-- Load main application -->
     <script type="module" src="/src/main.tsx"></script>

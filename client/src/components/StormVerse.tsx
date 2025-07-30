@@ -19,6 +19,25 @@ export default function StormVerse() {
     initializeSystem();
     initializeAgents();
     
+    // Initialize StormVerse modules when available
+    const initializeModules = () => {
+      if (window.StormLayerLoader && window.QuantumArcRenderer && window.StatsOverlay) {
+        console.log('StormVerse WebGL modules loaded');
+        
+        // These will be initialized when the Cesium viewer is ready
+        window.stormVerseModules = {
+          layerLoader: null,
+          quantumRenderer: null,
+          statsOverlay: null
+        };
+      }
+    };
+    
+    // Check if modules are available
+    if (typeof window !== 'undefined') {
+      setTimeout(initializeModules, 1000);
+    }
+    
     // Start real-time weather data fetching
     const weatherInterval = setInterval(() => {
       fetchWeatherData();

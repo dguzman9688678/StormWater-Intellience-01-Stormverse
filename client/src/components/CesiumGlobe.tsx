@@ -51,6 +51,39 @@ export default function CesiumGlobe() {
         url: 'https://services.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer',
         alpha: 0.7
       });
+
+      // Initialize StormVerse WebGL modules
+      if (window.StormLayerLoader && window.QuantumArcRenderer && window.StatsOverlay) {
+        try {
+          // Initialize Storm Layer Loader
+          const layerLoader = new window.StormLayerLoader(viewer);
+          
+          // Initialize Quantum Arc Renderer
+          const quantumRenderer = new window.QuantumArcRenderer(viewer);
+          
+          // Initialize Stats Overlay
+          const statsOverlay = new window.StatsOverlay(viewer);
+          
+          // Store references globally for access from other components
+          window.stormVerseModules = {
+            layerLoader,
+            quantumRenderer,
+            statsOverlay
+          };
+          
+          console.log('StormVerse WebGL modules initialized successfully');
+          
+          // Load sample hurricane data to demonstrate functionality
+          setTimeout(() => {
+            loadSampleHurricaneData(quantumRenderer);
+          }, 2000);
+          
+        } catch (error) {
+          console.error('Failed to initialize StormVerse modules:', error);
+        }
+      } else {
+        console.warn('StormVerse WebGL modules not available yet');
+      }
     });
 
     return () => {
@@ -59,6 +92,28 @@ export default function CesiumGlobe() {
       }
     };
   }, [setViewer, addLayer]);
+
+  // Function to load sample hurricane data for demonstration
+  const loadSampleHurricaneData = (quantumRenderer: any) => {
+    const sampleHurricaneTrack = {
+      id: 'AL052024',
+      name: 'Hurricane Delta Demo',
+      forecast: [
+        { longitude: -80.0, latitude: 25.0, probability: 0.95, time: 0, windSpeed: 115 },
+        { longitude: -78.5, latitude: 27.0, probability: 0.88, time: 6, windSpeed: 120 },
+        { longitude: -77.0, latitude: 29.0, probability: 0.82, time: 12, windSpeed: 125 },
+        { longitude: -75.5, latitude: 31.0, probability: 0.75, time: 18, windSpeed: 130 },
+        { longitude: -74.0, latitude: 33.0, probability: 0.68, time: 24, windSpeed: 135 }
+      ]
+    };
+
+    quantumRenderer.createProbabilityCone(sampleHurricaneTrack, {
+      agent: 'STORM_CITADEL',
+      coneColor: '#ff6b6b'
+    });
+
+    console.log('Sample hurricane prediction data loaded');
+  };
 
   return (
     <div 

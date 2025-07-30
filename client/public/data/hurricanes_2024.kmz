@@ -1,0 +1,24 @@
+# StormVerse Sample Hurricane Data
+
+This file would contain actual KMZ data from NOAA for hurricane tracking.
+In a production environment, this would be a binary KMZ file containing:
+
+- Hurricane track lines
+- Wind probability polygons
+- Storm surge predictions
+- Intensity forecasts with timestamps
+
+For demonstration purposes, the system uses the sample_data.json file
+and generates realistic hurricane visualizations using the Quantum Arc Renderer.
+
+To add real NOAA data:
+1. Download KMZ files from https://www.nhc.noaa.gov/gis/
+2. Place them in this /data/ directory
+3. Use the Storm Layer Loader to import them:
+
+```javascript
+stormLoader.loadHurricaneTrack('hurricanes_2024.kmz');
+```
+
+The ARCSEC security system will automatically verify data integrity
+and add provenance tracking to all loaded hurricane data.

@@ -1,0 +1,393 @@
+{
+  "stormverse": {
+    "version": "1.0.0",
+    "title": "StormVerse Environmental Intelligence Platform",
+    "description": "Professional environmental intelligence with cyberpunk-themed 3D globe interface"
+  },
+  
+  "cesium": {
+    "ion_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiJkYWJmMWMzOS04N2FhLTQwYzMtODdjNy04YmY2OWJmZGY4ZGUiLCJpZCI6MjU5LCJpYXQiOjE0OTY4MjA2MjR9.VnWyPb1YpKPgDhX4Y_LYNeM-C3CY6u5jvdXNq7ZxYlA",
+    "terrain": true,
+    "imagery": "world_imagery",
+    "performance": {
+      "enable_lighting": true,
+      "enable_fog": true,
+      "enable_atmosphere": true,
+      "fps_target": 60
+    },
+    "camera": {
+      "default_position": {
+        "longitude": -95.0,
+        "latitude": 30.0,
+        "height": 15000000
+      },
+      "home_view": {
+        "longitude": -80.0,
+        "latitude": 25.0,
+        "height": 8000000
+      }
+    }
+  },
+
+  "agents": [
+    {
+      "id": "STORM_CITADEL",
+      "name": "Storm Citadel",
+      "codename": "STORM_CITADEL",
+      "role": "Forecast Logic & Weather Prediction",
+      "zone": "Global Weather Analysis",
+      "coordinates": {
+        "latitude": 25.0,
+        "longitude": -80.0,
+        "altitude": 2000000
+      },
+      "orbital_radius": 1500000,
+      "color": "#ff6b6b",
+      "functions": [
+        "hurricane_tracking",
+        "weather_prediction",
+        "storm_analysis",
+        "forecast_generation"
+      ],
+      "data_sources": [
+        "NOAA_NHC",
+        "GOES_Satellite",
+        "Weather_Buoys",
+        "Radiosonde_Data"
+      ],
+      "update_interval": 300,
+      "priority": "high"
+    },
+    {
+      "id": "CODEX_TEMPLE",
+      "name": "Codex Temple",
+      "codename": "ULTRON",
+      "role": "Metadata Validation & Data Analytics",
+      "zone": "Data Integrity Systems",
+      "coordinates": {
+        "latitude": 40.7,
+        "longitude": -74.0,
+        "altitude": 2000000
+      },
+      "orbital_radius": 1600000,
+      "color": "#4ecdc4",
+      "functions": [
+        "data_validation",
+        "metadata_analysis",
+        "quality_assurance",
+        "integrity_checking"
+      ],
+      "data_sources": [
+        "All_Agent_Outputs",
+        "External_APIs",
+        "User_Uploads",
+        "System_Logs"
+      ],
+      "update_interval": 120,
+      "priority": "critical"
+    },
+    {
+      "id": "SKYWALL",
+      "name": "SkyWall",
+      "codename": "MITO",
+      "role": "Development Automation & System Orchestration",
+      "zone": "System Automation",
+      "coordinates": {
+        "latitude": 37.4,
+        "longitude": -122.1,
+        "altitude": 2000000
+      },
+      "orbital_radius": 1700000,
+      "color": "#45b7d1",
+      "functions": [
+        "system_automation",
+        "process_optimization",
+        "resource_allocation",
+        "performance_monitoring"
+      ],
+      "data_sources": [
+        "System_Metrics",
+        "Performance_Logs",
+        "Resource_Usage",
+        "Error_Reports"
+      ],
+      "update_interval": 60,
+      "priority": "high"
+    },
+    {
+      "id": "MIRRORFIELD",
+      "name": "MirrorField",
+      "codename": "PHOENIX",
+      "role": "Memory & Data Resurrection",
+      "zone": "Data Recovery & Historical Analysis",
+      "coordinates": {
+        "latitude": 51.5,
+        "longitude": -0.1,
+        "altitude": 2000000
+      },
+      "orbital_radius": 1800000,
+      "color": "#f39c12",
+      "functions": [
+        "data_recovery",
+        "historical_analysis",
+        "pattern_recognition",
+        "trend_analysis"
+      ],
+      "data_sources": [
+        "Historical_Weather",
+        "Archive_Data",
+        "Backup_Systems",
+        "Legacy_Formats"
+      ],
+      "update_interval": 600,
+      "priority": "medium"
+    },
+    {
+      "id": "WATERSHED_REALMS",
+      "name": "Watershed Realms",
+      "codename": "JARVIS",
+      "role": "Command Routing & System Coordination",
+      "zone": "Command & Control Hub",
+      "coordinates": {
+        "latitude": 35.7,
+        "longitude": 139.7,
+        "altitude": 2000000
+      },
+      "orbital_radius": 1900000,
+      "color": "#9b59b6",
+      "functions": [
+        "command_routing",
+        "agent_coordination",
+        "task_distribution",
+        "priority_management"
+      ],
+      "data_sources": [
+        "Agent_Network",
+        "User_Commands",
+        "System_Requests",
+        "Priority_Queues"
+      ],
+      "update_interval": 30,
+      "priority": "critical"
+    },
+    {
+      "id": "SANCTUM_OF_SELF",
+      "name": "Sanctum of Self",
+      "codename": "ECHO",
+      "role": "Audio/Voice Interface & Human Interaction",
+      "zone": "Human-AI Interface Layer",
+      "coordinates": {
+        "latitude": -33.9,
+        "longitude": 151.2,
+        "altitude": 2000000
+      },
+      "orbital_radius": 2000000,
+      "color": "#1abc9c",
+      "functions": [
+        "voice_processing",
+        "natural_language",
+        "user_interaction",
+        "interface_management"
+      ],
+      "data_sources": [
+        "User_Input",
+        "Voice_Commands",
+        "Interface_Events",
+        "Interaction_Logs"
+      ],
+      "update_interval": 100,
+      "priority": "high"
+    },
+    {
+      "id": "ARCSEC_CITADEL",
+      "name": "ARCSEC Citadel",
+      "codename": "ODIN",
+      "role": "Security Protocols & Data Verification",
+      "zone": "Security & Verification Layer",
+      "coordinates": {
+        "latitude": 55.7,
+        "longitude": 12.6,
+        "altitude": 2000000
+      },
+      "orbital_radius": 2100000,
+      "color": "#e74c3c",
+      "functions": [
+        "security_monitoring",
+        "data_encryption",
+        "access_control",
+        "threat_detection"
+      ],
+      "data_sources": [
+        "Security_Logs",
+        "Access_Patterns",
+        "Threat_Intelligence",
+        "Audit_Trails"
+      ],
+      "update_interval": 15,
+      "priority": "critical"
+    },
+    {
+      "id": "PHOENIX_CORE",
+      "name": "Phoenix Core",
+      "codename": "VADER",
+      "role": "Surveillance & System Resilience",
+      "zone": "System Monitoring & Resilience",
+      "coordinates": {
+        "latitude": -22.9,
+        "longitude": -43.2,
+        "altitude": 2000000
+      },
+      "orbital_radius": 2200000,
+      "color": "#34495e",
+      "functions": [
+        "system_surveillance",
+        "resilience_monitoring",
+        "failover_management",
+        "disaster_recovery"
+      ],
+      "data_sources": [
+        "System_Health",
+        "Network_Status",
+        "Service_Availability",
+        "Recovery_Metrics"
+      ],
+      "update_interval": 45,
+      "priority": "critical"
+    }
+  ],
+
+  "weather_data": {
+    "sources": {
+      "noaa": {
+        "base_url": "https://api.weather.gov",
+        "endpoints": {
+          "alerts": "/alerts/active",
+          "stations": "/stations",
+          "observations": "/stations/{station}/observations",
+          "forecast": "/points/{lat},{lon}/forecast"
+        },
+        "refresh_interval": 300,
+        "timeout": 10000
+      },
+      "nhc": {
+        "base_url": "https://www.nhc.noaa.gov",
+        "endpoints": {
+          "active_storms": "/CurrentStorms.json",
+          "gis_data": "/gis/"
+        },
+        "refresh_interval": 1800,
+        "timeout": 15000
+      }
+    },
+    "data_types": [
+      "hurricane_tracks",
+      "wind_probabilities",
+      "storm_surge",
+      "rainfall_forecasts",
+      "weather_alerts",
+      "satellite_imagery"
+    ]
+  },
+
+  "visualization": {
+    "quantum_arcs": {
+      "enabled": true,
+      "confidence_threshold": 0.5,
+      "max_radius": 300000,
+      "animation_speed": 1.0,
+      "glow_intensity": 0.3
+    },
+    "hurricane_tracks": {
+      "enabled": true,
+      "track_width": 3,
+      "point_size": 8,
+      "uncertainty_bands": true,
+      "historical_tracks": false
+    },
+    "weather_overlays": {
+      "radar": {
+        "enabled": true,
+        "transparency": 0.7,
+        "refresh_rate": 300
+      },
+      "satellite": {
+        "enabled": true,
+        "transparency": 0.6,
+        "refresh_rate": 900
+      },
+      "pressure_systems": {
+        "enabled": true,
+        "contour_lines": true,
+        "color_gradient": true
+      }
+    },
+    "agent_network": {
+      "orbital_visualization": true,
+      "connection_lines": true,
+      "activity_indicators": true,
+      "status_panels": true
+    }
+  },
+
+  "cyberpunk_theme": {
+    "primary_color": "#00ffff",
+    "secondary_color": "#ff6b6b",
+    "accent_color": "#00ff88",
+    "background_color": "#0a0a0f",
+    "text_color": "#e0e0e0",
+    "glow_effects": true,
+    "neon_borders": true,
+    "matrix_backgrounds": true,
+    "font_family": "Inter, Courier New, monospace"
+  },
+
+  "performance": {
+    "optimization": {
+      "level_of_detail": true,
+      "frustum_culling": true,
+      "occlusion_culling": false,
+      "batching": true
+    },
+    "rendering": {
+      "multi_sample_anti_aliasing": 4,
+      "high_dynamic_range": true,
+      "bloom_effects": true,
+      "depth_of_field": false
+    },
+    "memory": {
+      "texture_streaming": true,
+      "garbage_collection": true,
+      "resource_pooling": true
+    }
+  },
+
+  "arcsec_security": {
+    "enabled": true,
+    "data_integrity": {
+      "hash_algorithm": "SHA-256",
+      "verification_interval": 60,
+      "integrity_threshold": 0.95
+    },
+    "authorship_tracking": {
+      "digital_signatures": true,
+      "provenance_chain": true,
+      "timestamp_authority": "RFC3161"
+    },
+    "audit_logging": {
+      "enabled": true,
+      "retention_period": 2592000,
+      "log_level": "info"
+    }
+  },
+
+  "development": {
+    "debug_mode": false,
+    "performance_monitoring": true,
+    "error_reporting": true,
+    "feature_flags": {
+      "experimental_features": false,
+      "beta_agents": false,
+      "advanced_quantum": false
+    }
+  }
+}
