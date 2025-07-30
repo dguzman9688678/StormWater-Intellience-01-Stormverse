@@ -1,0 +1,1086 @@
+{
+  "arcsec_fingerprint_manifest": {
+    "version": "3.0X",
+    "creator": "Daniel Guzman",
+    "digital_signature": "a6672edf248c5eeef3054ecca057075c938af653",
+    "generated": "2025-07-30T19:36:56.262624+00:00",
+    "total_files": 48,
+    "scan_directory": "/home/runner/workspace",
+    "protection_mode": "WAR_MODE_ACTIVE",
+    "verification_method": "CRYPTOGRAPHIC_HMAC_SHA256"
+  },
+  "file_fingerprints": {
+    "./ARCSEC_MASTER_CONTROLLER_STATUS.md": {
+      "filename": "ARCSEC_MASTER_CONTROLLER_STATUS.md",
+      "filepath": "/home/runner/workspace/ARCSEC_MASTER_CONTROLLER_STATUS.md",
+      "size": 3920,
+      "created": "2025-07-30T17:32:49.106020+00:00",
+      "modified": "2025-07-30T17:32:47.647022+00:00",
+      "fingerprinted": "2025-07-30T19:36:56.124680+00:00",
+      "hashes": {
+        "sha256": "247d7bfa50cc7c2d85faf6231e2a48af8671d862b2e6154bd447ccd20df72367",
+        "sha512": "bee9924cbfd046ee65f5fd4fb484e8f3572f6bdbc28f9ae13fb1c086c3df07c5a54e488ad954d56794b33fc5100e82e30abd38bed1292bb4074f70680c0145d3",
+        "blake2b": "d7c08dff9ef84aa7651a652ca538ab2262de37a4e9a7599d58897e6a45a7bbb4e8d9103ea028f4a439a21affd52dc80183b3c365738d8c7ea0db57732b272176"
+      },
+      "hmac_signature": "0f403024154dbb6c31cd5e873bcce6648110eca79411df559aec954642d9fd00",
+      "compression_ratio": 0.47270408163265304,
+      "metadata": {
+        "creator": "Daniel Guzman",
+        "digital_signature": "a6672edf248c5eeef3054ecca057075c938af653",
+        "version": "3.0X",
+        "protection_level": "WAR_MODE",
+        "tamper_detection": "ENABLED"
+      }
+    },
+    "./ARCSEC_LOGIC_MASTER_CONTROLLER_STATUS.md": {
+      "filename": "ARCSEC_LOGIC_MASTER_CONTROLLER_STATUS.md",
+      "filepath": "/home/runner/workspace/ARCSEC_LOGIC_MASTER_CONTROLLER_STATUS.md",
+      "size": 4965,
+      "created": "2025-07-30T18:18:07.640555+00:00",
+      "modified": "2025-07-30T18:18:07.540555+00:00",
+      "fingerprinted": "2025-07-30T19:36:56.127833+00:00",
+      "hashes": {
+        "sha256": "97505de632749c1baecf05b5123de8d68becfa383615a49f3c6aa15a6dc40f4c",
+        "sha512": "2cb29ad47d974d02839a34ae5a4fcd36451a584bfaec12bd081e35872ef3e96ef9b9faaba6f257e4dcca30052cf02b3e9bf3e14357ff15ee157259d91cc7eff4",
+        "blake2b": "8aafb9e84e379fa88f53f2f931f94e40c4fd34fc2d32b91833bde83c8d9f8528c70885d677eae1d6dbfd130715204eb25a17223b7f2619b29f0c65b94c7b291e"
+      },
+      "hmac_signature": "29d9ab6cb7493d7ac8eed545ce8a39dc19fb1118fa5be56c6f5be30fde5062c5",
+      "compression_ratio": 0.42658610271903324,
+      "metadata": {
+        "creator": "Daniel Guzman",
+        "digital_signature": "a6672edf248c5eeef3054ecca057075c938af653",
+        "version": "3.0X",
+        "protection_level": "WAR_MODE",
+        "tamper_detection": "ENABLED"
+      }
+    },
+    "./ARCSEC_MASTER_CONTROLLER_DEMO.json": {
+      "filename": "ARCSEC_MASTER_CONTROLLER_DEMO.json",
+      "filepath": "/home/runner/workspace/ARCSEC_MASTER_CONTROLLER_DEMO.json",
+      "size": 6560,
+      "created": "2025-07-30T18:20:24.259453+00:00",
+      "modified": "2025-07-30T18:20:24.143453+00:00",
+      "fingerprinted": "2025-07-30T19:36:56.129300+00:00",
+      "hashes": {
+        "sha256": "3229220d107037f4321c4c2d1bfb9ecc8aa6223c14d3e837c33bb47ca2d57a4f",
+        "sha512": "08213940c815b7103bcb07c59b5fb1ea84b30fffafe5c3b422156fe49e05888f1f845eb0794c1161d6966c6f8e95fc582a900d1e0fdbee9561cea8287a4e457e",
+        "blake2b": "3811e2c66d2a71b7a041e7e36f9b66b1351c473b07ec5a8d92edb596a55a487176d48da3f8d69b5807cc35b043e7d787a7adda8ce09e2d1f8f7c9eecc6f76c88"
+      },
+      "hmac_signature": "84355394a6f690ee21e5e1dd320832d88c73febcb03e524603f5fc39c318b52a",
+      "compression_ratio": 0.3099085365853659,
+      "metadata": {
+        "creator": "Daniel Guzman",
+        "digital_signature": "a6672edf248c5eeef3054ecca057075c938af653",
+        "version": "3.0X",
+        "protection_level": "WAR_MODE",
+        "tamper_detection": "ENABLED"
+      }
+    },
+    "./ARCSEC_PREDICTING_ENGINE_DEMO.json": {
+      "filename": "ARCSEC_PREDICTING_ENGINE_DEMO.json",
+      "filepath": "/home/runner/workspace/ARCSEC_PREDICTING_ENGINE_DEMO.json",
+      "size": 11930,
+      "created": "2025-07-30T18:29:26.785048+00:00",
+      "modified": "2025-07-30T18:29:26.692048+00:00",
+      "fingerprinted": "2025-07-30T19:36:56.132366+00:00",
+      "hashes": {
+        "sha256": "e3b0e8ac90c3ed94c28934d7b81a821ad4b8cff4af5a49a5fa1d5c26d591f743",
+        "sha512": "31f2d270f667c5b0166e9cb840aa574a7b87f0d36865b12bb60dd91644ff5fd8111a06387d97e800f2ac374eb1bd5c9a73e6495fb4a20100f4922a9cf3a14205",
+        "blake2b": "89be7cc21005eec86dfea5b917b56be8b02e30b708f65b652166bce5c425e690ce4b6b9988faaaceef55054274cc4872a866573232c625ddca7d4ff5dce44e6c"
+      },
+      "hmac_signature": "4d431fc001b8ce0dfd43d764ced5f118e0641075bcf64db40943c84c0eeb6e39",
+      "compression_ratio": 0.3052808046940486,
+      "metadata": {
+        "creator": "Daniel Guzman",
+        "digital_signature": "a6672edf248c5eeef3054ecca057075c938af653",
+        "version": "3.0X",
+        "protection_level": "WAR_MODE",
+        "tamper_detection": "ENABLED"
+      }
+    },
+    "./ARCSEC_EVENT_HANDLER_DEMO.json": {
+      "filename": "ARCSEC_EVENT_HANDLER_DEMO.json",
+      "filepath": "/home/runner/workspace/ARCSEC_EVENT_HANDLER_DEMO.json",
+      "size": 18526,
+      "created": "2025-07-30T18:34:59.800798+00:00",
+      "modified": "2025-07-30T18:34:59.608798+00:00",
+      "fingerprinted": "2025-07-30T19:36:56.135528+00:00",
+      "hashes": {
+        "sha256": "dbb3a4c6e572eebc7c1f643c7ad1313808dfa4665f34f8882cad9b64fffb18fc",
+        "sha512": "f6ce91a5a126f1a0b9b8d0dc686f77e7f81cb161c4735021f0e27aa6e970a2ac6d527212a354f6fbc78ee3243601317d4bbd20b72cbab6bcb029522de657f26a",
+        "blake2b": "b9fab44e7b30e10c2baa50d8f054e48066116e8f12a9a133525551ecc2f4dee4ab3a0a07734a639fc55940e2e7b581bf31ea83f17a9341f9030f80f8ac217959"
+      },
+      "hmac_signature": "cbb9ff8bc830a970366d02da3a37d875d6d10d630d749cd197d007ff34a73094",
+      "compression_ratio": 0.29099643743927456,
+      "metadata": {
+        "creator": "Daniel Guzman",
+        "digital_signature": "a6672edf248c5eeef3054ecca057075c938af653",
+        "version": "3.0X",
+        "protection_level": "WAR_MODE",
+        "tamper_detection": "ENABLED"
+      }
+    },
+    "./ARCSEC_CONSOLE_DEMO.json": {
+      "filename": "ARCSEC_CONSOLE_DEMO.json",
+      "filepath": "/home/runner/workspace/ARCSEC_CONSOLE_DEMO.json",
+      "size": 19168,
+      "created": "2025-07-30T18:38:46.468628+00:00",
+      "modified": "2025-07-30T18:38:46.309628+00:00",
+      "fingerprinted": "2025-07-30T19:36:56.139016+00:00",
+      "hashes": {
+        "sha256": "78028043556ffd0114d1bdf6b8f785bfdd0374f317167a53b3cbd0afe3035062",
+        "sha512": "eb4ebafda29bd231e29476aecf6b8c96d20319fcb0b943e40a2dc9731f953c631ec75a1a6800f9cbc808e6f98dc309ea4ab0eb744c036a5c3065ae465a4940c8",
+        "blake2b": "c3cee698b77567a6f4e20aea30cb8edb35a00cc3f91c7aff272ef42acaa825d0804b60dc2ae8d97829a6e8306f3c3cc555cd767bc383fddeeda2bd4d6649b4ae"
+      },
+      "hmac_signature": "1edc14d65dab0ccaf9852957eb502e43c9a7709649edbd8372b0794c48a67005",
+      "compression_ratio": 0.2756677796327212,
+      "metadata": {
+        "creator": "Daniel Guzman",
+        "digital_signature": "a6672edf248c5eeef3054ecca057075c938af653",
+        "version": "3.0X",
+        "protection_level": "WAR_MODE",
+        "tamper_detection": "ENABLED"
+      }
+    },
+    "./ARCSEC_RESEARCH_DEMO.json": {
+      "filename": "ARCSEC_RESEARCH_DEMO.json",
+      "filepath": "/home/runner/workspace/ARCSEC_RESEARCH_DEMO.json",
+      "size": 27408,
+      "created": "2025-07-30T18:58:29.376477+00:00",
+      "modified": "2025-07-30T18:58:29.281477+00:00",
+      "fingerprinted": "2025-07-30T19:36:56.145341+00:00",
+      "hashes": {
+        "sha256": "68868795098f0f83824690223b321e6c83403e3273c8bbe0aa841e2eed25a377",
+        "sha512": "7cae14418b04936db098016a5c96dbc25a5620212cd819e9502907419951718033175180ff515e5f5bf862bb8939f72d16ead999608257debd74edd1fbb3703d",
+        "blake2b": "12ac2f3e3fbdaf4be37e42eb1ed92c569f1be7a8d0fcbab2f6fb24ed1d4f7c85725b314000af5bdfff1ea89797a8205cdc4bae5c53b42aa38b034c7ea9b66f01"
+      },
+      "hmac_signature": "3c7c958589940344115e3ae4c42174e5e327224485151d3302ce853e5cc7da17",
+      "compression_ratio": 0.2747737886748395,
+      "metadata": {
+        "creator": "Daniel Guzman",
+        "digital_signature": "a6672edf248c5eeef3054ecca057075c938af653",
+        "version": "3.0X",
+        "protection_level": "WAR_MODE",
+        "tamper_detection": "ENABLED"
+      }
+    },
+    "./ARCSEC_FILE_NAMING_COMPLETE.json": {
+      "filename": "ARCSEC_FILE_NAMING_COMPLETE.json",
+      "filepath": "/home/runner/workspace/ARCSEC_FILE_NAMING_COMPLETE.json",
+      "size": 7227,
+      "created": "2025-07-30T19:03:07.973393+00:00",
+      "modified": "2025-07-30T19:03:07.850393+00:00",
+      "fingerprinted": "2025-07-30T19:36:56.148898+00:00",
+      "hashes": {
+        "sha256": "ff253446fcaf36c646c37fc0598560af199b2350d142ade44e68090ca17947d7",
+        "sha512": "2009792134813bf91a893649898e05ad5ac91e4989141b221bed4d4efa25da44f676c97a032348d6a9ab7b81e2fc2aead6e26c5cc0857e406c2f406c40f41048",
+        "blake2b": "df7953a903f7f484fc7b966f61d8a1a7a4cd475151d6b0ea7e7f518dc69aca26dbebcc55a29abfe6874697433d654999f00e641f80c45ea50bedff8e31dea80a"
+      },
+      "hmac_signature": "adf99add4b9d8478b368b9a1f6684122c3a11ec55e34dd1eb35ffe7255d2c175",
+      "compression_ratio": 0.2754946727549467,
+      "metadata": {
+        "creator": "Daniel Guzman",
+        "digital_signature": "a6672edf248c5eeef3054ecca057075c938af653",
+        "version": "3.0X",
+        "protection_level": "WAR_MODE",
+        "tamper_detection": "ENABLED"
+      }
+    },
+    "./arcsec_fingerprint.py": {
+      "filename": "arcsec_fingerprint.py",
+      "filepath": "/home/runner/workspace/arcsec_fingerprint.py",
+      "size": 13778,
+      "created": "2025-07-30T19:35:17.655142+00:00",
+      "modified": "2025-07-30T19:35:17.547142+00:00",
+      "fingerprinted": "2025-07-30T19:36:56.149946+00:00",
+      "hashes": {
+        "sha256": "75f38db863e709148dd1c87be8af5794b110be7433e9eeb322fcbc92a043b2a8",
+        "sha512": "91294cac3125c271322e0ec32c99abf2749eb991141ba209733ff2ff8801c926371835e2bea60da996f6194048f6e64ac2c3a8ccf140713551abd879e6ede884",
+        "blake2b": "548d8fb6a53c80974a9b9892b862f0abf34019350601d5e88dffa9aa6e6cf726e86442d48b835e1f3910d6a939fbc46dcfbe7ade02c1a55c509d267f7f6fda51"
+      },
+      "hmac_signature": "43a70ab9d9d1cf9665c05bc2712206e4bf7a3b4befb92af1ad823575dae6bb43",
+      "compression_ratio": 0.2533749455653941,
+      "metadata": {
+        "creator": "Daniel Guzman",
+        "digital_signature": "a6672edf248c5eeef3054ecca057075c938af653",
+        "version": "3.0X",
+        "protection_level": "WAR_MODE",
+        "tamper_detection": "ENABLED"
+      }
+    },
+    "./arcsec_injector.py": {
+      "filename": "arcsec_injector.py",
+      "filepath": "/home/runner/workspace/arcsec_injector.py",
+      "size": 18102,
+      "created": "2025-07-30T19:36:20.689138+00:00",
+      "modified": "2025-07-30T19:36:20.625138+00:00",
+      "fingerprinted": "2025-07-30T19:36:56.150992+00:00",
+      "hashes": {
+        "sha256": "2c85f2ab84f59cb3f4bfd3bedc076414099913d6d394f506906a97b1a2054dd1",
+        "sha512": "4b47f373ae78bb5747a5aae251403b6f42dac8125b71b739830c1b7560db6a3816b26cee68ea2e5e6c9b0816f59546923aa3035cf8f2e52520aa85c2375ddd30",
+        "blake2b": "d27afb6f20b0d14b86fd547fef0a2cdb54be8c71d4a57a33ee68962185e78c9478ca7c1d6a4ef6aaf6ee3136be4e67b325c758fcd20df239db1cb460c06fc193"
+      },
+      "hmac_signature": "bf4e2ac3314fefa1ef0f9315d81678c5262dfc78a0a43b2723dfbe5116fcadbf",
+      "compression_ratio": 0.27886421389901667,
+      "metadata": {
+        "creator": "Daniel Guzman",
+        "digital_signature": "a6672edf248c5eeef3054ecca057075c938af653",
+        "version": "3.0X",
+        "protection_level": "WAR_MODE",
+        "tamper_detection": "ENABLED"
+      }
+    },
+    "./client/src/lib/docs/ARCSEC_PROTOCOL.md": {
+      "filename": "ARCSEC_PROTOCOL.md",
+      "filepath": "/home/runner/workspace/client/src/lib/docs/ARCSEC_PROTOCOL.md",
+      "size": 10369,
+      "created": "2025-07-30T14:12:51.844855+00:00",
+      "modified": "2025-07-30T14:12:51.845619+00:00",
+      "fingerprinted": "2025-07-30T19:36:56.158347+00:00",
+      "hashes": {
+        "sha256": "ad7584c8a14c7540001061b45f67b8ef7ae8550f34eb212b043356b3267ac4f4",
+        "sha512": "bc191615c7a521ccd25bd078d4e0be9a66db03932434c0ec5d4df7bcbcd8429f2d43790ac1e26d81a1aa4b0464f33cc62c55abdfe6ec57ac222e55c0d7722d05",
+        "blake2b": "51b866108e7bea802328e5d69c84b109654da1cd70589a955d9810c6a0dc0f40e9494770e4a7c0c400fa4027b7042a1d3cd56607bb8783a255242f0f9a6f02a9"
+      },
+      "hmac_signature": "012b29ca09f29a1ed2b11b68e3c3fb12a2219ca9b8c2627b18bcf51446a1a89f",
+      "compression_ratio": 0.3914552994502845,
+      "metadata": {
+        "creator": "Daniel Guzman",
+        "digital_signature": "a6672edf248c5eeef3054ecca057075c938af653",
+        "version": "3.0X",
+        "protection_level": "WAR_MODE",
+        "tamper_detection": "ENABLED"
+      }
+    },
+    "./client/src/lib/server/services/arcsec-security.ts": {
+      "filename": "arcsec-security.ts",
+      "filepath": "/home/runner/workspace/client/src/lib/server/services/arcsec-security.ts",
+      "size": 14145,
+      "created": "2025-07-30T14:12:56.825849+00:00",
+      "modified": "2025-07-30T14:12:56.826762+00:00",
+      "fingerprinted": "2025-07-30T19:36:56.162161+00:00",
+      "hashes": {
+        "sha256": "df199df8433b4dce4f37a3f092f183e54900451eb9ff189db00407f1ff0caad4",
+        "sha512": "de2454cda2d38293afe9dbeb27aa80784d18ed588feec9c2af1644628e7b4da6e7b6abc8eab73e828a9c9330e60a4f7bdc3d251e50ca65f36763663561888492",
+        "blake2b": "7dba34aba354c7a88fb50bf2bfece36ede0f7aed53c3504cec48f3357310ddfc6748475d4db17097b4dad3c4323bcea929664b34367cb88fa19eb8128b5db752"
+      },
+      "hmac_signature": "371cf1b5cbf6f43e25cfcd55e99d49a9bd0660e5ab6da368e2d6b210855a7a54",
+      "compression_ratio": 0.27260516083421704,
+      "metadata": {
+        "creator": "Daniel Guzman",
+        "digital_signature": "a6672edf248c5eeef3054ecca057075c938af653",
+        "version": "3.0X",
+        "protection_level": "WAR_MODE",
+        "tamper_detection": "ENABLED"
+      }
+    },
+    "./server/services/arcsec-security.ts": {
+      "filename": "arcsec-security.ts",
+      "filepath": "/home/runner/workspace/server/services/arcsec-security.ts",
+      "size": 2233,
+      "created": "2025-07-30T14:16:43.347607+00:00",
+      "modified": "2025-07-30T14:16:43.305607+00:00",
+      "fingerprinted": "2025-07-30T19:36:56.166520+00:00",
+      "hashes": {
+        "sha256": "bef7bd5efad3d2ed3f5f980406cf93c5cbd5f75d52eff4e211447bbc2470fe5c",
+        "sha512": "c0c6f2212c9256a3c56a7f5a077f4dbe855b6e77af8beede8fc29ec8115c54572a11a619fc4116ebb30173ac8a09dc7399ee0bccbe4b5d533f7dd2c5655a1a86",
+        "blake2b": "4bd030b5f15a4887fb0c58cf04387be32392a2ef641d8e491f92f68623192949f586b8493b263ada80ba0a444a4bdf6043d9736eac351b4c3876be46b96bbc4d"
+      },
+      "hmac_signature": "273ba98d55d6aa0f539d49331a3f68ecbd5ffe48c4f1cdfa1d0e906567e7ee22",
+      "compression_ratio": 0.39901477832512317,
+      "metadata": {
+        "creator": "Daniel Guzman",
+        "digital_signature": "a6672edf248c5eeef3054ecca057075c938af653",
+        "version": "3.0X",
+        "protection_level": "WAR_MODE",
+        "tamper_detection": "ENABLED"
+      }
+    },
+    "./server/services/arcsec-universal-handler.ts": {
+      "filename": "arcsec-universal-handler.ts",
+      "filepath": "/home/runner/workspace/server/services/arcsec-universal-handler.ts",
+      "size": 13496,
+      "created": "2025-07-30T17:24:35.925714+00:00",
+      "modified": "2025-07-30T17:24:35.920714+00:00",
+      "fingerprinted": "2025-07-30T19:36:56.167711+00:00",
+      "hashes": {
+        "sha256": "c3b8a605d10b63813074654312379b4424e9aa4906f7bdbf701bed91b049f052",
+        "sha512": "36019ace655ae0258e7ae2cb08f2438411539e70398ce793cae826b6dcec2b786123f7a638b6673f80fae13933def8bf96bbc718e3783de7ea3374bf3e42184e",
+        "blake2b": "ddf25d04b9a007824ec3089c236e59e398fe811991d482e076a561eca448ef6f77df6bb2b00185bef11b50d9903485fc5c89f46705e4bb44b87c52b605ac246b"
+      },
+      "hmac_signature": "b3e505c906877e4655285cfe8a8e502c4378649addb87b0765df4d73b47117d7",
+      "compression_ratio": 0.27889745109662123,
+      "metadata": {
+        "creator": "Daniel Guzman",
+        "digital_signature": "a6672edf248c5eeef3054ecca057075c938af653",
+        "version": "3.0X",
+        "protection_level": "WAR_MODE",
+        "tamper_detection": "ENABLED"
+      }
+    },
+    "./server/services/arcsec-logic-master-controller.ts": {
+      "filename": "arcsec-logic-master-controller.ts",
+      "filepath": "/home/runner/workspace/server/services/arcsec-logic-master-controller.ts",
+      "size": 12321,
+      "created": "2025-07-30T18:17:28.138584+00:00",
+      "modified": "2025-07-30T18:17:28.118584+00:00",
+      "fingerprinted": "2025-07-30T19:36:56.174571+00:00",
+      "hashes": {
+        "sha256": "82245880a8f10eef73f00c5faa0c144e30665288d5db9b04b5c279b20ea6f80c",
+        "sha512": "c437814a7e876fbcafa353d6af8a83fcb73174b4acb94201e0e0f5f2dcac664e61a97547b106e076a914a3387b0e6177c0dfc7a7b90e19aff5177300ad69d028",
+        "blake2b": "2b72f58638e024fb4f0da458a44dc742142f8a0d2381ecf8714ccf8f774d34cf69cf3e43f1f2259b238aa950f8d6bfda37d1e4563f4f10297c013742fb7ffa91"
+      },
+      "hmac_signature": "9d4b12d147ae1c35efbd86286811433935523f9decaa9d6f0d1bb1d57afb2535",
+      "compression_ratio": 0.30517003489976463,
+      "metadata": {
+        "creator": "Daniel Guzman",
+        "digital_signature": "a6672edf248c5eeef3054ecca057075c938af653",
+        "version": "3.0X",
+        "protection_level": "WAR_MODE",
+        "tamper_detection": "ENABLED"
+      }
+    },
+    "./server/services/arcsec-master-log-controller.ts": {
+      "filename": "arcsec-master-log-controller.ts",
+      "filepath": "/home/runner/workspace/server/services/arcsec-master-log-controller.ts",
+      "size": 15031,
+      "created": "2025-07-30T18:21:55.280385+00:00",
+      "modified": "2025-07-30T18:21:55.256385+00:00",
+      "fingerprinted": "2025-07-30T19:36:56.178465+00:00",
+      "hashes": {
+        "sha256": "290cd3309a0acabc28a7afe061139c49ae0f3c0c740a4a19938ed3ab8cd5c0b9",
+        "sha512": "9db9d930adbdbbdf3a30ffdd0405cfb077f7b972ef7a70ac896d2f35f2cc9403269789957eeed9c5b7dfd1f54ae11c5745c2cfd2d592b1dc5e7a6ac137ca7e0f",
+        "blake2b": "2afce365682e0b96f7ef17ee6bcd362a87341e66095e6cf6adaab6239a9b5b706a350f8006990928d5670672d496d0737396f98a11886b37cd07d78906416e24"
+      },
+      "hmac_signature": "27cf00aceb4516087264c5001ebe69e0ebba3adf32d5711ee93d767a5c6a72e0",
+      "compression_ratio": 0.2566030204244561,
+      "metadata": {
+        "creator": "Daniel Guzman",
+        "digital_signature": "a6672edf248c5eeef3054ecca057075c938af653",
+        "version": "3.0X",
+        "protection_level": "WAR_MODE",
+        "tamper_detection": "ENABLED"
+      }
+    },
+    "./server/services/arcsec-pipeline.ts": {
+      "filename": "arcsec-pipeline.ts",
+      "filepath": "/home/runner/workspace/server/services/arcsec-pipeline.ts",
+      "size": 28191,
+      "created": "2025-07-30T18:24:03.233289+00:00",
+      "modified": "2025-07-30T18:24:03.195290+00:00",
+      "fingerprinted": "2025-07-30T19:36:56.182352+00:00",
+      "hashes": {
+        "sha256": "94fde6b0e12bf8af9e2ed70a952d2e8babff1e4a93a7a3bb834909924fc04552",
+        "sha512": "9482a1e625150e347aba559f5560badf2351eaaf5796844ec18ff40a6e1485debbd35cbf6e2bf1351b885925f0ff426f27259ac46f49c21b14a4a96a91b3dcd7",
+        "blake2b": "6947d94b4ca9f51f491de2e5813c71c80630da3783eca7201b779fad8b26be2864f8be5d9e34aa24f679cb3f15fb0b63f4fc9a7bdadf45cb7d3aac1634916787"
+      },
+      "hmac_signature": "e95e71b76b688ed7772e248c2870c17edde6fafc6e262226d30d0761f95b51f7",
+      "compression_ratio": 0.20449788939732538,
+      "metadata": {
+        "creator": "Daniel Guzman",
+        "digital_signature": "a6672edf248c5eeef3054ecca057075c938af653",
+        "version": "3.0X",
+        "protection_level": "WAR_MODE",
+        "tamper_detection": "ENABLED"
+      }
+    },
+    "./server/services/arcsec-event-handler.ts": {
+      "filename": "arcsec-event-handler.ts",
+      "filepath": "/home/runner/workspace/server/services/arcsec-event-handler.ts",
+      "size": 44137,
+      "created": "2025-07-30T18:32:51.268894+00:00",
+      "modified": "2025-07-30T18:32:51.241894+00:00",
+      "fingerprinted": "2025-07-30T19:36:56.188446+00:00",
+      "hashes": {
+        "sha256": "86f82b7430d1bca8bebe5937cb7d985b4cef592b33f7f535f1578a19b2791dc1",
+        "sha512": "99c71997d78cba521f7ac28edc543e02ffd2283b093e7e46a9a64317f188e49b709a364dc295fb5e3b31c19846b769d03f45217fbbf21a0f6994deb2833a038b",
+        "blake2b": "35a0000082ef93e2e7f39db9cb136cec69a1c65a2b4f106c4ea6f20aa1f7251111cc0394266e4bca394570e9b2e9ae3871fa5ba2dbe4570c07e585c33e547abd"
+      },
+      "hmac_signature": "bcfdcfcf7d0d8d4a32badd70ba5e47bf3eb3b622f94c1234a91958d22ce8e7ac",
+      "compression_ratio": 0.22826653374719624,
+      "metadata": {
+        "creator": "Daniel Guzman",
+        "digital_signature": "a6672edf248c5eeef3054ecca057075c938af653",
+        "version": "3.0X",
+        "protection_level": "WAR_MODE",
+        "tamper_detection": "ENABLED"
+      }
+    },
+    "./server/services/arcsec-console.ts": {
+      "filename": "arcsec-console.ts",
+      "filepath": "/home/runner/workspace/server/services/arcsec-console.ts",
+      "size": 30333,
+      "created": "2025-07-30T18:37:20.186692+00:00",
+      "modified": "2025-07-30T18:37:20.166692+00:00",
+      "fingerprinted": "2025-07-30T19:36:56.193338+00:00",
+      "hashes": {
+        "sha256": "ac17ddff3fc406d529f10372b464c3cfda8efdec3ef20380127886488b91e9ee",
+        "sha512": "8846fb124bbb349777c696cc38932711f3171f84d4a57dd78baca802d5c60116384fd096df712012e62966742ab6d4e35ead862bf71eda1b71afbe102a549b3d",
+        "blake2b": "a32586e7eb4104762178b9c82363031fed8b3f40e964d222c7761f59f7ab295ea924155d3820cb877d978fcf43db125e6db0118359c8afc1c78085326f3f4834"
+      },
+      "hmac_signature": "352ff29970c2f1c05a6a654fd78562f26985fc3be6fc7111f511674f16c13408",
+      "compression_ratio": 0.23261794085649293,
+      "metadata": {
+        "creator": "Daniel Guzman",
+        "digital_signature": "a6672edf248c5eeef3054ecca057075c938af653",
+        "version": "3.0X",
+        "protection_level": "WAR_MODE",
+        "tamper_detection": "ENABLED"
+      }
+    },
+    "./server/services/arcsec-server.ts": {
+      "filename": "arcsec-server.ts",
+      "filepath": "/home/runner/workspace/server/services/arcsec-server.ts",
+      "size": 31811,
+      "created": "2025-07-30T18:42:21.541466+00:00",
+      "modified": "2025-07-30T18:42:21.512466+00:00",
+      "fingerprinted": "2025-07-30T19:36:56.197658+00:00",
+      "hashes": {
+        "sha256": "c59f25743d931a3782077efd434b8ba9f32d58cfc1892dceb6749abbe9756dff",
+        "sha512": "603058d1a84901f9a3936453e95fc90c612464836b0156da6c37352b31f64da275b95c9ebd34775299ec00c6bb49545f3808f0fe081dd3089b26c912abf54336",
+        "blake2b": "c9c5da0a0047a929f9746b313d701e869e188fae23b0680c05f87202184631388434e911b3c2766f7d390fcddf4928b13c12765eaf24f7e4f30462a2c14b7069"
+      },
+      "hmac_signature": "f411b166697ec8d2d3d9a6ed8876c0dfb72812d391f68ed5c3ff013f35d246f3",
+      "compression_ratio": 0.20037094086951054,
+      "metadata": {
+        "creator": "Daniel Guzman",
+        "digital_signature": "a6672edf248c5eeef3054ecca057075c938af653",
+        "version": "3.0X",
+        "protection_level": "WAR_MODE",
+        "tamper_detection": "ENABLED"
+      }
+    },
+    "./server/services/arcsec-environment.ts": {
+      "filename": "arcsec-environment.ts",
+      "filepath": "/home/runner/workspace/server/services/arcsec-environment.ts",
+      "size": 39309,
+      "created": "2025-07-30T18:44:38.917363+00:00",
+      "modified": "2025-07-30T18:44:38.890363+00:00",
+      "fingerprinted": "2025-07-30T19:36:56.199970+00:00",
+      "hashes": {
+        "sha256": "d6d6f0188fda39da5b76383c58af684c810c025e1f06fabdc6fe6162cd0672b4",
+        "sha512": "b0ce9dc8ab8da5e565089cf77e9c4c9e2faae3878ae8bbfea4d6f119c288d22260180772689c3cf6af4c6a5875576cfdc4c9342538f142f13cf312cc2dcc59b3",
+        "blake2b": "3fdd6fe3f77a13394974a277c1a5b6d7181523613c1b47f3b155c74aa2b6a61bae6854192176a2e8515fe2727a94d544b36bcf3970684fc24e84eb9e4ead514b"
+      },
+      "hmac_signature": "9c38fb4dc8371c030c89f8069d96fa928051abef3ddef16fc28ec96b29885489",
+      "compression_ratio": 0.1953751049378005,
+      "metadata": {
+        "creator": "Daniel Guzman",
+        "digital_signature": "a6672edf248c5eeef3054ecca057075c938af653",
+        "version": "3.0X",
+        "protection_level": "WAR_MODE",
+        "tamper_detection": "ENABLED"
+      }
+    },
+    "./server/services/arcsec-sandbox.ts": {
+      "filename": "arcsec-sandbox.ts",
+      "filepath": "/home/runner/workspace/server/services/arcsec-sandbox.ts",
+      "size": 38800,
+      "created": "2025-07-30T18:49:38.609213+00:00",
+      "modified": "2025-07-30T18:49:38.574213+00:00",
+      "fingerprinted": "2025-07-30T19:36:56.205079+00:00",
+      "hashes": {
+        "sha256": "3383044ec7e24a9240d9a0a92caceb5275fea77dac26b58a42a6ae130c179b9b",
+        "sha512": "71b022f200e1e55988170730bbcbc06dc6e631a5384b5f804a4cda36d8bdeaea566c0f3468def8abfe1b2761e20541f8bf6c6f17c6ee706d93196e71ca921b77",
+        "blake2b": "ee2d8a694ed68cfc8f9edb5c176c29ca62dab7de658c0ac89a896a37c5bd0d248a24998397531da776fce8d4221747e5c4806872624327f815bd6ba515979408"
+      },
+      "hmac_signature": "83d7dfa91605cf192acfac7393caa92c7d1591fa105bd93cd56a7a6288e0f8e8",
+      "compression_ratio": 0.22644329896907217,
+      "metadata": {
+        "creator": "Daniel Guzman",
+        "digital_signature": "a6672edf248c5eeef3054ecca057075c938af653",
+        "version": "3.0X",
+        "protection_level": "WAR_MODE",
+        "tamper_detection": "ENABLED"
+      }
+    },
+    "./server/services/arcsec-research.ts": {
+      "filename": "arcsec-research.ts",
+      "filepath": "/home/runner/workspace/server/services/arcsec-research.ts",
+      "size": 54967,
+      "created": "2025-07-30T18:55:45.243220+00:00",
+      "modified": "2025-07-30T18:55:45.215220+00:00",
+      "fingerprinted": "2025-07-30T19:36:56.209533+00:00",
+      "hashes": {
+        "sha256": "4c90c4f39c8b68b97759d442e6cb5910dc17773449e5469b9aa6784b55862a52",
+        "sha512": "756a72d053d5d1454f9b0915b4db605fb012f03b722382d6e90760108535771a1cafbb8ec30d03614770d93ca76742a156842d8ef9846ef934757c9953301155",
+        "blake2b": "e53b1944186d835b69e370cbb924357ecf0cf081c6456ae9c9c526216fa14184cf476231e1f5d90256e7ba6d2601569176ef280e80a7bb83fba20e9222e49e3b"
+      },
+      "hmac_signature": "d8fbc29d4feb979ac0b12c8e28792d61bb4490c550444b2f349555dd233a1395",
+      "compression_ratio": 0.23623264868011717,
+      "metadata": {
+        "creator": "Daniel Guzman",
+        "digital_signature": "a6672edf248c5eeef3054ecca057075c938af653",
+        "version": "3.0X",
+        "protection_level": "WAR_MODE",
+        "tamper_detection": "ENABLED"
+      }
+    },
+    "./server/services/arcsec-predicting-engine.ts": {
+      "filename": "arcsec-predicting-engine.ts",
+      "filepath": "/home/runner/workspace/server/services/arcsec-predicting-engine.ts",
+      "size": 39368,
+      "created": "2025-07-30T18:59:23.219587+00:00",
+      "modified": "2025-07-30T18:27:00.857157+00:00",
+      "fingerprinted": "2025-07-30T19:36:56.212855+00:00",
+      "hashes": {
+        "sha256": "e086cc9ae8be231b1b8dc85162cabbe34ee17257122ac93cd2fbdd3ee6b27b1c",
+        "sha512": "ad5945d7eac38a190e3736c1254f89ac17b406922f4e69d2f090a8e673b631631c1488bc8a74033f36d30a4769f1a422413064953aa417e9113ac800fe6472b5",
+        "blake2b": "31e3e7a78a160e5212aa1addf13b89e4747ace65d0efc9dfa542f45942558d927805b779fe4d9938f3f018183884a8da9b1d2a394259b2bf2e6f7a8238b8cb4a"
+      },
+      "hmac_signature": "1683516b76438271b99f25607e4573e49dd1dc25cc6d48ee2d10c489541881a5",
+      "compression_ratio": 0.22828185328185327,
+      "metadata": {
+        "creator": "Daniel Guzman",
+        "digital_signature": "a6672edf248c5eeef3054ecca057075c938af653",
+        "version": "3.0X",
+        "protection_level": "WAR_MODE",
+        "tamper_detection": "ENABLED"
+      }
+    },
+    "./server/services/arcsec-agent-service.ts": {
+      "filename": "arcsec-agent-service.ts",
+      "filepath": "/home/runner/workspace/server/services/arcsec-agent-service.ts",
+      "size": 2983,
+      "created": "2025-07-30T18:59:57.247677+00:00",
+      "modified": "2025-07-30T15:46:24.898267+00:00",
+      "fingerprinted": "2025-07-30T19:36:56.215498+00:00",
+      "hashes": {
+        "sha256": "4238ebc76a52d7cd859e2343ab5697baaa53e2a3d90f6187d15ce119e827d752",
+        "sha512": "4cbebe56515d10020a4ef0fe4e3e95e5790706f7da6a14c35fb3f18838769653c70e34cea17fffca4b4af63100fcf23b2750a9d88398db89f2cd382037e99f46",
+        "blake2b": "cfb650ac5486709b6998b6340ce59a451e867ba1329d922ef2168af5b3c92e97df6ce136f2fa23e887aa957383b8b5d2736db5c53803b6f810b85ee327ed4f1b"
+      },
+      "hmac_signature": "717c5068f9159add3e3a4f0cc581e21612e2d86ab5151c6101ad1192d02975de",
+      "compression_ratio": 0.3969158565202816,
+      "metadata": {
+        "creator": "Daniel Guzman",
+        "digital_signature": "a6672edf248c5eeef3054ecca057075c938af653",
+        "version": "3.0X",
+        "protection_level": "WAR_MODE",
+        "tamper_detection": "ENABLED"
+      }
+    },
+    "./server/services/arcsec-database-service.ts": {
+      "filename": "arcsec-database-service.ts",
+      "filepath": "/home/runner/workspace/server/services/arcsec-database-service.ts",
+      "size": 3016,
+      "created": "2025-07-30T18:59:57.958679+00:00",
+      "modified": "2025-07-30T15:46:40.325246+00:00",
+      "fingerprinted": "2025-07-30T19:36:56.217268+00:00",
+      "hashes": {
+        "sha256": "007abab2eec6b784052d22f1aec2e4b0de3458af877e8d2e4ffb1b32e1db1923",
+        "sha512": "eec3db1f04e68f6538f993c51623940f4374477127e5de903e053fa00ae5e53713262db96a02ecaac85aacdc97b6731f094a93255b84112fed830b325ccc22bd",
+        "blake2b": "cbba67827cbe60fed0dcdaa368202badd341f121516d079ae4564ed34d61d4c33920af8602059f271ad8653bc688393066cab0b161e01eb7101f62d6c3d64378"
+      },
+      "hmac_signature": "95fef2f40c0159e1dd5a24ead29ef14ea6e2fc606a0fab647e6f115c888bc9b5",
+      "compression_ratio": 0.35543766578249336,
+      "metadata": {
+        "creator": "Daniel Guzman",
+        "digital_signature": "a6672edf248c5eeef3054ecca057075c938af653",
+        "version": "3.0X",
+        "protection_level": "WAR_MODE",
+        "tamper_detection": "ENABLED"
+      }
+    },
+    "./server/services/arcsec-diagnostics-service.ts": {
+      "filename": "arcsec-diagnostics-service.ts",
+      "filepath": "/home/runner/workspace/server/services/arcsec-diagnostics-service.ts",
+      "size": 4498,
+      "created": "2025-07-30T18:59:58.292680+00:00",
+      "modified": "2025-07-30T15:45:44.209321+00:00",
+      "fingerprinted": "2025-07-30T19:36:56.218575+00:00",
+      "hashes": {
+        "sha256": "d2713100979a4fff9d2fd38a20ec5b270f1419c2fe535df9cd45906fd72f1881",
+        "sha512": "aab7a3b0b73f0d5c5673c2251c88ef2509e0209ec79c2e73873cc2879c80c07db62d2ef09ab189e205e8b1d6fbd6675baae5ba000a7c9424ef6b6b21576f8400",
+        "blake2b": "8299d7013f9931fb6343502cf73fbbd421f1184f2acbb2ae5c09aaf614570ab7b9b6d4373c4748003390d5f79073274c3298740af530e5836ad5336497ae5baa"
+      },
+      "hmac_signature": "3c0e5b85ba338263450c2445a6a9c2b808f2cfe1c2333f683e5dea749be5dbb5",
+      "compression_ratio": 0.3159181858603824,
+      "metadata": {
+        "creator": "Daniel Guzman",
+        "digital_signature": "a6672edf248c5eeef3054ecca057075c938af653",
+        "version": "3.0X",
+        "protection_level": "WAR_MODE",
+        "tamper_detection": "ENABLED"
+      }
+    },
+    "./server/services/arcsec-kmz-processor.ts": {
+      "filename": "arcsec-kmz-processor.ts",
+      "filepath": "/home/runner/workspace/server/services/arcsec-kmz-processor.ts",
+      "size": 1327,
+      "created": "2025-07-30T18:59:58.836682+00:00",
+      "modified": "2025-07-30T14:16:20.694629+00:00",
+      "fingerprinted": "2025-07-30T19:36:56.219366+00:00",
+      "hashes": {
+        "sha256": "fab20d2965cbddb88501794ddbfd1bfa5c35ab54f8dddcd796d0ea759f266b45",
+        "sha512": "d197212d044020752bfdc4046860f45e3ac2fd7fd22c5aca39ed4d953d362e72ad1a292d021300d57b36906be7aa17c56b972b841fe82edfca6c49ef5c67b391",
+        "blake2b": "fd7658739cd8c4ce9cd7b6ea1175ceb355cbff33f775b2f4dc7343972063e1223f9ea0e1a29dafb6979ae6da93b2985d06c28ad7077d4395abfcdca1e06ab6f4"
+      },
+      "hmac_signature": "e2a040f1a91ac36a1e921985d8c0e303024add709cc92cfc542b5c2d4dbd8a6a",
+      "compression_ratio": 0.4431047475508666,
+      "metadata": {
+        "creator": "Daniel Guzman",
+        "digital_signature": "a6672edf248c5eeef3054ecca057075c938af653",
+        "version": "3.0X",
+        "protection_level": "WAR_MODE",
+        "tamper_detection": "ENABLED"
+      }
+    },
+    "./server/services/arcsec-metadata-processor.ts": {
+      "filename": "arcsec-metadata-processor.ts",
+      "filepath": "/home/runner/workspace/server/services/arcsec-metadata-processor.ts",
+      "size": 2863,
+      "created": "2025-07-30T18:59:59.341683+00:00",
+      "modified": "2025-07-30T14:45:18.952329+00:00",
+      "fingerprinted": "2025-07-30T19:36:56.220667+00:00",
+      "hashes": {
+        "sha256": "e85c7084fc4f9574ab1df91a467a7d0c55ba0a6683ca6318a1204e64629541e2",
+        "sha512": "96a4d675fd42d8220a5b58224f855c6075a3f79176616e81572b668ad26796ebe9f75c6fa6dab69e24649327be433b466706076a5b07df206dfb031f7791bdc4",
+        "blake2b": "3b790a3c4db3d22d9addcfeeed5f34eecaf1f36426dd9dcf675b129092be6dfe7868f942c2604347164e54af00cfba22029faf8cd15abd72b5ad85fe0c7b7049"
+      },
+      "hmac_signature": "adc3aa5054c82ea41641cdff3805c7bb256cc6d8e5e18c74f066d6b599314c28",
+      "compression_ratio": 0.33251833740831294,
+      "metadata": {
+        "creator": "Daniel Guzman",
+        "digital_signature": "a6672edf248c5eeef3054ecca057075c938af653",
+        "version": "3.0X",
+        "protection_level": "WAR_MODE",
+        "tamper_detection": "ENABLED"
+      }
+    },
+    "./server/services/arcsec-ml-engine.ts": {
+      "filename": "arcsec-ml-engine.ts",
+      "filepath": "/home/runner/workspace/server/services/arcsec-ml-engine.ts",
+      "size": 11398,
+      "created": "2025-07-30T18:59:59.816685+00:00",
+      "modified": "2025-07-30T17:15:12.839503+00:00",
+      "fingerprinted": "2025-07-30T19:36:56.222078+00:00",
+      "hashes": {
+        "sha256": "326fecb13343497faf651bfd8376253de080f57aaecf7612b08c5d7f636b91a4",
+        "sha512": "a24da25c61b55be9212872088fffda3cda831ebc36a7dd73fb5b132237cc9d8e2658b646248d6e1ee9622c2cb30fc9ef95930c48a2c5a2db7e21c8e415be0b0a",
+        "blake2b": "9572d40a4ba97bb3ed33b71a9d15382e7ac6edbc3258858a7d5641cf1ae4da8dbe5dfaa3ca0cadd6898767808473bc398894d4f74ab89293daf7ac258c0da723"
+      },
+      "hmac_signature": "6699e4a57aa9411e85794d4e10c70be8f66ab4df0d6d00fd11662642b288a389",
+      "compression_ratio": 0.2558343569047201,
+      "metadata": {
+        "creator": "Daniel Guzman",
+        "digital_signature": "a6672edf248c5eeef3054ecca057075c938af653",
+        "version": "3.0X",
+        "protection_level": "WAR_MODE",
+        "tamper_detection": "ENABLED"
+      }
+    },
+    "./server/services/arcsec-noaa-service.ts": {
+      "filename": "arcsec-noaa-service.ts",
+      "filepath": "/home/runner/workspace/server/services/arcsec-noaa-service.ts",
+      "size": 1383,
+      "created": "2025-07-30T19:00:00.354686+00:00",
+      "modified": "2025-07-30T14:16:13.337636+00:00",
+      "fingerprinted": "2025-07-30T19:36:56.223159+00:00",
+      "hashes": {
+        "sha256": "6c324f1cb8925a4e3329bc646960a6cae6445e74ef94991dbb6011ab3b496b82",
+        "sha512": "b4f2685cf0af62cb12696ce80799505abf3d8747baaf788e9c9b46d59ccd221e49fa2de7f6458f47f032e6610ef4936af3d4b77bab1170936b2649574478ea2e",
+        "blake2b": "525373cf638b7294f1da1e150abce91cddea01d969ab66f9a633fd3fad44cf2b62f17a255972c680fa3189d14e0371297e679f8f7d5a5e5fd2bfa08e3ffea318"
+      },
+      "hmac_signature": "0f9165223bdc1abbb1827275f775ad4200ec4f45abe103a757230ecec9f98137",
+      "compression_ratio": 0.38611713665943603,
+      "metadata": {
+        "creator": "Daniel Guzman",
+        "digital_signature": "a6672edf248c5eeef3054ecca057075c938af653",
+        "version": "3.0X",
+        "protection_level": "WAR_MODE",
+        "tamper_detection": "ENABLED"
+      }
+    },
+    "./server/services/arcsec-quantum-service.ts": {
+      "filename": "arcsec-quantum-service.ts",
+      "filepath": "/home/runner/workspace/server/services/arcsec-quantum-service.ts",
+      "size": 3939,
+      "created": "2025-07-30T19:00:00.874688+00:00",
+      "modified": "2025-07-30T15:46:07.366290+00:00",
+      "fingerprinted": "2025-07-30T19:36:56.224558+00:00",
+      "hashes": {
+        "sha256": "38d0f66694c6aac7055f5354619df32cae62f28f13e71c7fa7490798b6486ec6",
+        "sha512": "fd7263fc70e0fa82c80320132d6c30144ab1c57c6840748cdb188c5a016da14b5f0aefb4939cf162268a77d626f9a89e18702b5d9279319cf00bb26c832d00fd",
+        "blake2b": "c62914592e444b6289bc22cf167c9f2a83c6337f95684064add85dd747f228f49c9d2c89552d77e8ffbefc36ac2532078e568f922ad1db3b55589a3cfda484d1"
+      },
+      "hmac_signature": "57fdd7bb93916752acb3d704c138181b051eca0268b10503fee13c124c333ced",
+      "compression_ratio": 0.3069306930693069,
+      "metadata": {
+        "creator": "Daniel Guzman",
+        "digital_signature": "a6672edf248c5eeef3054ecca057075c938af653",
+        "version": "3.0X",
+        "protection_level": "WAR_MODE",
+        "tamper_detection": "ENABLED"
+      }
+    },
+    "./server/services/arcsec-storm-data-processor.ts": {
+      "filename": "arcsec-storm-data-processor.ts",
+      "filepath": "/home/runner/workspace/server/services/arcsec-storm-data-processor.ts",
+      "size": 3213,
+      "created": "2025-07-30T19:00:01.397689+00:00",
+      "modified": "2025-07-30T14:17:19.211572+00:00",
+      "fingerprinted": "2025-07-30T19:36:56.225961+00:00",
+      "hashes": {
+        "sha256": "b3f7c5ba613add350f0ee7260ef140a279a7d84e8c621ff52be1efbdd950aa22",
+        "sha512": "3d6eeea8b98e0c692c00bfc7d008e13fca861a530b45ff9a9042e98906296f4436b8f2e72a92851248e51719dcee02b86a8e1742ccc7fc05007bfa54eddafce2",
+        "blake2b": "acc2e9ce5a94d8dd14b7d3475d6c305dce03a642fa80d54925ebf9cdaff250c2a920c45bd719397d2a3c6add250b3b5e126778a2113509df0534a7f8b6fea344"
+      },
+      "hmac_signature": "439540b2f9ed8d9916bc85f8cda111062c1928f992d1c0e84ea655e3ee012ebd",
+      "compression_ratio": 0.35076252723311546,
+      "metadata": {
+        "creator": "Daniel Guzman",
+        "digital_signature": "a6672edf248c5eeef3054ecca057075c938af653",
+        "version": "3.0X",
+        "protection_level": "WAR_MODE",
+        "tamper_detection": "ENABLED"
+      }
+    },
+    "./server/services/arcsec-triple-store-service.ts": {
+      "filename": "arcsec-triple-store-service.ts",
+      "filepath": "/home/runner/workspace/server/services/arcsec-triple-store-service.ts",
+      "size": 1830,
+      "created": "2025-07-30T19:00:01.962691+00:00",
+      "modified": "2025-07-30T14:16:31.128619+00:00",
+      "fingerprinted": "2025-07-30T19:36:56.226919+00:00",
+      "hashes": {
+        "sha256": "5cfc8018bfece12a7dedfa39863c9f7440056c0d77ef77a1ba4022e3a007275b",
+        "sha512": "983b020e89bcda029393cfdbcfc3cea986fea187d9c116bf2a69a7fc9eb1fb62bad89372cba42c427a0a6a902609d491def81788be69a540a03dae2dcbcf0764",
+        "blake2b": "0a9f60dd9def91e39d787bc60ba90482f5a42e7d8f4a780e024f5e56b272d1c03fac44e8149f20b325de6003e6a7252f2d9a5ae374042d940d5b83ef8d42c61a"
+      },
+      "hmac_signature": "ba3a4ace375be3df2757401285f4cab6decf1254374c124aad1eceb7f19b812b",
+      "compression_ratio": 0.4278688524590164,
+      "metadata": {
+        "creator": "Daniel Guzman",
+        "digital_signature": "a6672edf248c5eeef3054ecca057075c938af653",
+        "version": "3.0X",
+        "protection_level": "WAR_MODE",
+        "tamper_detection": "ENABLED"
+      }
+    },
+    "./server/services/arcsec-agent-coordinator.ts": {
+      "filename": "arcsec-agent-coordinator.ts",
+      "filepath": "/home/runner/workspace/server/services/arcsec-agent-coordinator.ts",
+      "size": 13751,
+      "created": "2025-07-30T19:02:15.138166+00:00",
+      "modified": "2025-07-30T19:02:15.058166+00:00",
+      "fingerprinted": "2025-07-30T19:36:56.231191+00:00",
+      "hashes": {
+        "sha256": "eb71f8b61c65e4d94d8519c1c93fe3915ca1985af1e6b4fed60e82701eaba800",
+        "sha512": "50313e086b8ab9f535edc35a1a93f759be44d81a03c707631bf0d311d6f3de1db70b2503aaf9124eea37ff8999f1b1a4674e47935dab0e5021b716a5aff86800",
+        "blake2b": "e916a13916d98ba2500f6aac1d9683212886c4d6650ae898096bd9b3742d2f02a48155816ea37baba9a33205706baa8485a03dbaae50a9baafbecc3d079a376f"
+      },
+      "hmac_signature": "b247ba3b7e998eb5940fe6c4d7ca482b76ede46a4aaf815792ae04ee26257f89",
+      "compression_ratio": 0.2687077303468839,
+      "metadata": {
+        "creator": "Daniel Guzman",
+        "digital_signature": "a6672edf248c5eeef3054ecca057075c938af653",
+        "version": "3.0X",
+        "protection_level": "WAR_MODE",
+        "tamper_detection": "ENABLED"
+      }
+    },
+    "./server/services/arcsec-websocket-service.ts": {
+      "filename": "arcsec-websocket-service.ts",
+      "filepath": "/home/runner/workspace/server/services/arcsec-websocket-service.ts",
+      "size": 11332,
+      "created": "2025-07-30T19:02:25.626210+00:00",
+      "modified": "2025-07-30T19:02:25.575210+00:00",
+      "fingerprinted": "2025-07-30T19:36:56.238849+00:00",
+      "hashes": {
+        "sha256": "2e6c29164e5d9dd5804f9e5381fd8e09914f5103f5967ba82329f578f3861f3b",
+        "sha512": "422b73ce8e06c890f61fc327970e981613ba691ba90336ebd401b3ee0e1e3fd86b598a319c645854dbf879a9f8a6be43f95fa6ec9512670d097fb588a41d19ac",
+        "blake2b": "7d43ee2ca22e090cdbe836b7956840e28fdc067fe61174937ffe5a33fb597002d330041d6e569c8002b43b11dd6d52baa1c2db86c45381f89b2ece040da83d6c"
+      },
+      "hmac_signature": "fd5b94e4fa15f8daa98788ded2a00af24ab8bfc6a0c4768296cea40ffa321d81",
+      "compression_ratio": 0.2600600070596541,
+      "metadata": {
+        "creator": "Daniel Guzman",
+        "digital_signature": "a6672edf248c5eeef3054ecca057075c938af653",
+        "version": "3.0X",
+        "protection_level": "WAR_MODE",
+        "tamper_detection": "ENABLED"
+      }
+    },
+    "./server/services/arcsec-master-controller.ts": {
+      "filename": "arcsec-master-controller.ts",
+      "filepath": "/home/runner/workspace/server/services/arcsec-master-controller.ts",
+      "size": 16140,
+      "created": "2025-07-30T19:02:28.341221+00:00",
+      "modified": "2025-07-30T19:02:28.335221+00:00",
+      "fingerprinted": "2025-07-30T19:36:56.242197+00:00",
+      "hashes": {
+        "sha256": "1344ce0b0808bf66d2ea947b3d3015031546592560910eea6caa48073d17caff",
+        "sha512": "d7e10bd92c6d69143dbb7cb5e83e380c6f9eef430b1c5d92e233f735a7333fd2a21e6faebcbe1c49606db10106e209c80b1e9809d73f9e9a6b8977e865a3810b",
+        "blake2b": "4a0ad26bef43aa44ed745d46c82673457adb320a557970de895e71ffc9d6d26bd2b8e10caba9b5a28a5c8243ee714b215ea830c2e1ce1ef53b5e726031055aaf"
+      },
+      "hmac_signature": "095aa2b424099056dd4939e013dd277f95c00a62e7640ee21a41549d17faf09d",
+      "compression_ratio": 0.26753407682775715,
+      "metadata": {
+        "creator": "Daniel Guzman",
+        "digital_signature": "a6672edf248c5eeef3054ecca057075c938af653",
+        "version": "3.0X",
+        "protection_level": "WAR_MODE",
+        "tamper_detection": "ENABLED"
+      }
+    },
+    "./server/services/arcsec-store.ts": {
+      "filename": "arcsec-store.ts",
+      "filepath": "/home/runner/workspace/server/services/arcsec-store.ts",
+      "size": 19654,
+      "created": "2025-07-30T19:04:56.134902+00:00",
+      "modified": "2025-07-30T19:04:56.110903+00:00",
+      "fingerprinted": "2025-07-30T19:36:56.243276+00:00",
+      "hashes": {
+        "sha256": "626ae2477f2aa835628c7210966a7c88d7c6c7544db33725884c339c46c3657c",
+        "sha512": "9ece5c0f959d3336e84c381103cd998243441c7233d6fdddeb1eac8c31f50191d666b277805b2b250163850df5c01ef352b62b3bf70711130decd395ae98984b",
+        "blake2b": "7dc63b886626145e63da34bb223d9d6c528b0110544836df44443764c6f29752fc650411e7ad856c95c141edd65ced16637444da629e88f1da7281cd0fefcfae"
+      },
+      "hmac_signature": "02dbb0c345f845d63e6229681be8a9c0ac716f2e32d7d7072785d8477bf25b23",
+      "compression_ratio": 0.22489060750992165,
+      "metadata": {
+        "creator": "Daniel Guzman",
+        "digital_signature": "a6672edf248c5eeef3054ecca057075c938af653",
+        "version": "3.0X",
+        "protection_level": "WAR_MODE",
+        "tamper_detection": "ENABLED"
+      }
+    },
+    "./server/services/arcsec-bus.ts": {
+      "filename": "arcsec-bus.ts",
+      "filepath": "/home/runner/workspace/server/services/arcsec-bus.ts",
+      "size": 23635,
+      "created": "2025-07-30T19:06:18.260319+00:00",
+      "modified": "2025-07-30T19:06:18.231319+00:00",
+      "fingerprinted": "2025-07-30T19:36:56.244465+00:00",
+      "hashes": {
+        "sha256": "b9090499c49a0b892201883a167ff802eeb2b1e94a02876e787a6eae15c6586c",
+        "sha512": "00ae4fe12d6ba621fbc55a9151205074fe37a5699805285d0bcf948752bf350a294bb7ba573b0cd9d836c64cd4151f501ae30b0db0160c3826296cf7813918a7",
+        "blake2b": "fa8dd531caea555a14c9f5b09a6ec9352a51dc09989802802130e92b137c6cf54a8da5bf7b243ee47bc3a1e62efd16d975c61c3abd2f6e5075f3520610c8db8a"
+      },
+      "hmac_signature": "b239d3562334477e4e9629c7027cdba0f3be24b784ec0f4ad1126077b7a18cb4",
+      "compression_ratio": 0.21760101544319865,
+      "metadata": {
+        "creator": "Daniel Guzman",
+        "digital_signature": "a6672edf248c5eeef3054ecca057075c938af653",
+        "version": "3.0X",
+        "protection_level": "WAR_MODE",
+        "tamper_detection": "ENABLED"
+      }
+    },
+    "./server/services/arcsec-api-management.ts": {
+      "filename": "arcsec-api-management.ts",
+      "filepath": "/home/runner/workspace/server/services/arcsec-api-management.ts",
+      "size": 26308,
+      "created": "2025-07-30T19:07:53.080823+00:00",
+      "modified": "2025-07-30T19:07:53.058823+00:00",
+      "fingerprinted": "2025-07-30T19:36:56.245853+00:00",
+      "hashes": {
+        "sha256": "914afaaa886f21c2ad6852b7479a282cade52448c0a7a6e1d4fbc94afc4302b8",
+        "sha512": "c706d469411cbc2de6d5ad975a7e0cdd47a661064212b6fe0b1422b4dfd4fd1c3680da0c378196ee3461c9f8bf5d7f7e245f9533b888cbb3048387827f3811a8",
+        "blake2b": "b1b8d6375f26615fc5c988e58281e4c299f331f4d274093b6b40786b5e335f9a11a4e8a0ec934cee0d566de17c2f290c577a27b087f0b789978908294ed515eb"
+      },
+      "hmac_signature": "a87be3af2f9eead0f90503056b68d0efa7e475ec45b2860ed9ff28c21c4ed5ab",
+      "compression_ratio": 0.22821955298768434,
+      "metadata": {
+        "creator": "Daniel Guzman",
+        "digital_signature": "a6672edf248c5eeef3054ecca057075c938af653",
+        "version": "3.0X",
+        "protection_level": "WAR_MODE",
+        "tamper_detection": "ENABLED"
+      }
+    },
+    "./server/services/arcsec-safety.ts": {
+      "filename": "arcsec-safety.ts",
+      "filepath": "/home/runner/workspace/server/services/arcsec-safety.ts",
+      "size": 32981,
+      "created": "2025-07-30T19:12:11.532265+00:00",
+      "modified": "2025-07-30T19:12:11.512265+00:00",
+      "fingerprinted": "2025-07-30T19:36:56.247415+00:00",
+      "hashes": {
+        "sha256": "6a71a43c93965ae9bd45ab129c8d474655cfd0d7d0a30f07f76fec34ae92992a",
+        "sha512": "1ea9535a96cde171d84e2dbbbd0ba2354f30c0dcd6f7c7da0623326a32fdfcaa89533c8278b783c34172507e07ddc9ffa9a91046c94323f016fca30f5f497fca",
+        "blake2b": "50079d7193a2f70489d08c27c2a03fb9331d1f0fd5ec01a3f5273b24403acd136f94f714cb4004212a8748746e4208a244d46d73a2b810b11733e25284709bef"
+      },
+      "hmac_signature": "1c8784d8e09291cd416f6a0c9139b9b18875faabb52e3be42ab896a51f40fa19",
+      "compression_ratio": 0.23001121858039478,
+      "metadata": {
+        "creator": "Daniel Guzman",
+        "digital_signature": "a6672edf248c5eeef3054ecca057075c938af653",
+        "version": "3.0X",
+        "protection_level": "WAR_MODE",
+        "tamper_detection": "ENABLED"
+      }
+    },
+    "./server/services/arcsec-routing-hub.ts": {
+      "filename": "arcsec-routing-hub.ts",
+      "filepath": "/home/runner/workspace/server/services/arcsec-routing-hub.ts",
+      "size": 42531,
+      "created": "2025-07-30T19:14:47.723700+00:00",
+      "modified": "2025-07-30T19:14:47.702700+00:00",
+      "fingerprinted": "2025-07-30T19:36:56.249025+00:00",
+      "hashes": {
+        "sha256": "45a054193e5fe27e12eec1daa25b64a8966c7d9c395fbe90aba93f53e6642f9e",
+        "sha512": "cd208c54f6b275675a1070141ff34d09c4196c2f1333015013591db1a74a7fb00d28fa537b39c1080abba63e039a2059eaf61bfd1d02c6c6d0362a7208a57ceb",
+        "blake2b": "17b83bef6a03577e3fd294f37a1491d0251bd9d5f8a0958de4e191b9a0bec90c3964cd07d8f0c0ee7141cb4b11e4b6918a954d585261072dbc18ab3d3c6b41fe"
+      },
+      "hmac_signature": "619d530bd62738a39ac98e6dc25c928fce9bef27ef07d495e776a47754204a4a",
+      "compression_ratio": 0.21069337659589477,
+      "metadata": {
+        "creator": "Daniel Guzman",
+        "digital_signature": "a6672edf248c5eeef3054ecca057075c938af653",
+        "version": "3.0X",
+        "protection_level": "WAR_MODE",
+        "tamper_detection": "ENABLED"
+      }
+    },
+    "./server/services/arcsec-audit-system.ts": {
+      "filename": "arcsec-audit-system.ts",
+      "filepath": "/home/runner/workspace/server/services/arcsec-audit-system.ts",
+      "size": 30253,
+      "created": "2025-07-30T19:17:23.806916+00:00",
+      "modified": "2025-07-30T19:17:23.762916+00:00",
+      "fingerprinted": "2025-07-30T19:36:56.250776+00:00",
+      "hashes": {
+        "sha256": "d6e722805e09423dea96220b956855da03bf810933f6340bc896a5a1d155dd43",
+        "sha512": "8c6aaae9887a5e8b23f52a857b81bbb608eb806ceaf21c5a3a5577c7e4b035b7ae3dd6252c8d457cb6cc0027ada1b465956d32bbb1fb54ab3c2a41a33f5be1a6",
+        "blake2b": "e39dbdd1554590b96182a8b42b8df211e2e6b3b442e8564fe241fbe1ab6f60aeae920330fee217d6fc0142569852af65f7fa69df09d9cfe2a64aea2316dcdeb4"
+      },
+      "hmac_signature": "81c7b97649faebc4eb7fe9c16056214d11085c3155745c01a1da03013b3b69c2",
+      "compression_ratio": 0.2492645357485208,
+      "metadata": {
+        "creator": "Daniel Guzman",
+        "digital_signature": "a6672edf248c5eeef3054ecca057075c938af653",
+        "version": "3.0X",
+        "protection_level": "WAR_MODE",
+        "tamper_detection": "ENABLED"
+      }
+    },
+    "./server/services/arcsec-local.ts": {
+      "filename": "arcsec-local.ts",
+      "filepath": "/home/runner/workspace/server/services/arcsec-local.ts",
+      "size": 40824,
+      "created": "2025-07-30T19:19:57.719227+00:00",
+      "modified": "2025-07-30T19:19:57.688227+00:00",
+      "fingerprinted": "2025-07-30T19:36:56.252457+00:00",
+      "hashes": {
+        "sha256": "4866e663d78887d7101df0ab2558229446bd1be1f0c97dd45c3e6b6b839b0d73",
+        "sha512": "2c45cb04a35dd013fa65322876e24a40aabcf12ab205925f2e140aeaf652421a0b716455d4282570efa8bcef27c2c3172ed4c27d18f29239f2559826e2b14cb1",
+        "blake2b": "d9c56503d801d264aef4b28f6b6861039990481c61dc8ae26dcdc31d8112e31cf2b9c558085d7ec746688bafc42c6004a3ccd7d98c62232aecc6489302d942d8"
+      },
+      "hmac_signature": "e79631505c05a19f51571d7059a0c1767d070538f5545a8a7ff8a4c5d3054ff9",
+      "compression_ratio": 0.22276112090926906,
+      "metadata": {
+        "creator": "Daniel Guzman",
+        "digital_signature": "a6672edf248c5eeef3054ecca057075c938af653",
+        "version": "3.0X",
+        "protection_level": "WAR_MODE",
+        "tamper_detection": "ENABLED"
+      }
+    },
+    "./server/services/arcsec-health-monitor.ts": {
+      "filename": "arcsec-health-monitor.ts",
+      "filepath": "/home/runner/workspace/server/services/arcsec-health-monitor.ts",
+      "size": 51795,
+      "created": "2025-07-30T19:23:15.558248+00:00",
+      "modified": "2025-07-30T19:23:15.529248+00:00",
+      "fingerprinted": "2025-07-30T19:36:56.254243+00:00",
+      "hashes": {
+        "sha256": "a937291fbf2c14e5538514228e66d77e846f861ae048685e0d1afd4511677eac",
+        "sha512": "bfd80265df5a6b5e2552b793a704c8ad1217483e878eddfbae9c1925f42102ae38f593c814ad6fa03620d33b632913d68ac8f64adf595c0b405abe30cfcf0e88",
+        "blake2b": "0e809fc1c5500a1956654f0bbc16855b75c8ff92d1b29cdbbab7d23fc041446a007a329865dd8d1a80fde65c833a5cc1098d467062d07272dc036892a5914f09"
+      },
+      "hmac_signature": "e3cee19368fe229d8620aa949db1d6a3f8e5775dca1650ca37acb5ae65f1463b",
+      "compression_ratio": 0.21125591273288927,
+      "metadata": {
+        "creator": "Daniel Guzman",
+        "digital_signature": "a6672edf248c5eeef3054ecca057075c938af653",
+        "version": "3.0X",
+        "protection_level": "WAR_MODE",
+        "tamper_detection": "ENABLED"
+      }
+    },
+    "./server/services/arcsec-search-engine.ts": {
+      "filename": "arcsec-search-engine.ts",
+      "filepath": "/home/runner/workspace/server/services/arcsec-search-engine.ts",
+      "size": 53716,
+      "created": "2025-07-30T19:26:31.120269+00:00",
+      "modified": "2025-07-30T19:26:31.097269+00:00",
+      "fingerprinted": "2025-07-30T19:36:56.256356+00:00",
+      "hashes": {
+        "sha256": "241544aca30eb7887930036885207bad5793864d9a87ab77b75a86795857a46a",
+        "sha512": "8471360e23ddd0575606ed16802066eac97802a6e2936b4ec4c1bc714e7ca0c8907213d9922a04c5802a292d86107a8a66fc6a5bf7ad265d8d10504b64590b18",
+        "blake2b": "90f3e95d49aa7173d83231eac50a6fdb6256e6691c1ba399e09e468149685d2a63f51c23755af13e40a0431140e3211109f28bb7e4c8ed6ddb0b46368032b07b"
+      },
+      "hmac_signature": "1bd8b9a5429e241a63bcd28afead791ab372c191540890cb11cef083c45a02b2",
+      "compression_ratio": 0.20613969766922333,
+      "metadata": {
+        "creator": "Daniel Guzman",
+        "digital_signature": "a6672edf248c5eeef3054ecca057075c938af653",
+        "version": "3.0X",
+        "protection_level": "WAR_MODE",
+        "tamper_detection": "ENABLED"
+      }
+    },
+    "./server/services/arcsec-memory-recall.ts": {
+      "filename": "arcsec-memory-recall.ts",
+      "filepath": "/home/runner/workspace/server/services/arcsec-memory-recall.ts",
+      "size": 49627,
+      "created": "2025-07-30T19:30:21.571186+00:00",
+      "modified": "2025-07-30T19:30:21.549186+00:00",
+      "fingerprinted": "2025-07-30T19:36:56.258792+00:00",
+      "hashes": {
+        "sha256": "f24afc97d1d69615b58bc1c491ca85fbb11b32a40353ae936e3d6108b7463126",
+        "sha512": "29fe2a81bda4e06b5576999e5e0d2a6173ce4a3ebc8837990db63d0aa0391cff324ec078c2de3590ed5171a7cd989ebba0137ea1bd686d8711c19dd27a3287e5",
+        "blake2b": "09ed76aaccb8a284582640fb699d1e98711a26d61a2a2f193eccd090ccc938cde515be9655af5d8b09bd83af54940a446b6a49cc6e6492f27a44430f966032e5"
+      },
+      "hmac_signature": "9282ffa499cb087c9020eee534657ed54f422de53a62be92c8f1e17aeeb521c0",
+      "compression_ratio": 0.2310838857879783,
+      "metadata": {
+        "creator": "Daniel Guzman",
+        "digital_signature": "a6672edf248c5eeef3054ecca057075c938af653",
+        "version": "3.0X",
+        "protection_level": "WAR_MODE",
+        "tamper_detection": "ENABLED"
+      }
+    },
+    "./server/services/arcsec-dev.ts": {
+      "filename": "arcsec-dev.ts",
+      "filepath": "/home/runner/workspace/server/services/arcsec-dev.ts",
+      "size": 49053,
+      "created": "2025-07-30T19:33:28.122152+00:00",
+      "modified": "2025-07-30T19:33:28.102152+00:00",
+      "fingerprinted": "2025-07-30T19:36:56.261365+00:00",
+      "hashes": {
+        "sha256": "30aeab01b7837e9c8ef59577f2cd30e0f5e93ac8dd1c3fce6e8c99e44a066bec",
+        "sha512": "a651a195cfa66ba2b862418f9b3717ad7d207f9bd1ac53863c2cb5f08f5d9191992469a15c6195ff997f1fd0f0b8eb87ad1072764bee982d6c997edc6f095d45",
+        "blake2b": "e33006bae5af7dae295c2c9d2058e09acf19b52bea3f722b6599117125203b306b3f50dc58f4632057a5442f0be8c7f4aee3bd66a50cba7052a0dcc031e97e98"
+      },
+      "hmac_signature": "76a6ff7eea63951d1ef176d1772483ed685a2ffea24ddbc0f63870c3b150fcf7",
+      "compression_ratio": 0.2266120318838807,
+      "metadata": {
+        "creator": "Daniel Guzman",
+        "digital_signature": "a6672edf248c5eeef3054ecca057075c938af653",
+        "version": "3.0X",
+        "protection_level": "WAR_MODE",
+        "tamper_detection": "ENABLED"
+      }
+    }
+  },
+  "integrity_seal": {
+    "manifest_hash": "d1ad629b8687333ad362cf5621d4f66c233dccda822bd38ba2a36e564bfb6112",
+    "integrity_seal": "cc7c7851262d73044ffa23c7a8e056429a316b369a7cf317f9f520a8a5c889ca",
+    "timestamp": "2025-07-30T19:36:56.263126+00:00",
+    "timestamp_proof": "5517dfd60d598f74b3ed637d5253c6b86b077460725567796da8a45bb1b8c15b",
+    "sealed_by": "Daniel Guzman - ARCSEC v3.0X",
+    "verification_status": "CRYPTOGRAPHICALLY_SEALED"
+  },
+  "manifest_metadata": {
+    "saved": "2025-07-30T19:36:56.263254+00:00",
+    "filename": "ARCSEC_FINGERPRINT_MANIFEST.json",
+    "format_version": "1.0",
+    "encoding": "UTF-8",
+    "compression": "none",
+    "digital_signature": "a6672edf248c5eeef3054ecca057075c938af653"
+  }
+}
