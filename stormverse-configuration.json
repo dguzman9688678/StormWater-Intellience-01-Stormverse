@@ -1,128 +1,331 @@
 {
   "stormverse_configuration": {
-    "project_name": "StormVerse Environmental Intelligence Platform",
-    "version": "3.5.0",
-    "creator": "Daniel Guzman",
-    "copyright": "© 2025 Daniel Guzman - All Rights Reserved",
-    "last_updated": "2025-01-30T17:07:00Z",
-    "security_protocol": "ARCSEC v3.0X WAR MODE",
-    "deployment_status": "FULLY OPERATIONAL",
-    
-    "system_architecture": {
-      "frontend": {
-        "framework": "React 18 with TypeScript",
-        "build_tool": "Vite 5.4.19",
-        "routing": "React Router v6",
-        "ui_library": "Radix UI with Tailwind CSS",
-        "3d_engine": "CesiumJS for globe rendering",
-        "state_management": "Zustand stores"
-      },
-      "backend": {
-        "runtime": "Node.js with Express",
-        "language": "TypeScript with ES modules",
-        "database": "PostgreSQL with Drizzle ORM",
-        "api_structure": "RESTful endpoints",
-        "security": "ARCSEC digital signatures"
-      }
+    "metadata": {
+      "version": "3.5.0",
+      "created": "2025-01-30T17:20:00Z",
+      "author": "Daniel Guzman",
+      "description": "Primary system-wide configuration file for StormVerse Environmental Intelligence Platform",
+      "protection": "ARCSEC v3.0X WAR MODE",
+      "digital_signature": "a6672edf248c5eeef3054ecca057075c938af653"
     },
-    
-    "ai_agent_network": {
+    "system_configuration": {
+      "operational_mode": "WAR_MODE",
+      "debug_enabled": false,
+      "verbose_logging": true,
+      "performance_profiling": true,
+      "security_level": "MAXIMUM",
+      "data_integrity_checks": true,
+      "immutable_mode": true
+    },
+    "module_paths": {
+      "server_root": "./server",
+      "client_root": "./client",
+      "services_directory": "./server/services",
+      "components_directory": "./client/src/components",
+      "static_assets": "./client/dist",
+      "configuration_files": ".",
+      "logs_directory": "./logs",
+      "temp_directory": "./temp",
+      "backup_directory": "./backups"
+    },
+    "agent_configuration": {
       "total_agents": 8,
-      "performance_increase": "+15% average",
-      "agents": {
+      "coordination_mode": "HIERARCHICAL",
+      "load_balancing": "DYNAMIC",
+      "failure_recovery": "AUTO_RESTART",
+      "communication_protocol": "WEBSOCKET",
+      "heartbeat_interval": 30000,
+      "timeout_threshold": 120000,
+      "agent_definitions": {
         "JARVIS": {
-          "role": "Command routing and system coordination",
-          "status": "ACTIVE",
-          "performance": "+12%"
+          "enabled": true,
+          "priority": "CRITICAL",
+          "specialization": "coordination",
+          "resource_allocation": 0.20,
+          "backup_agent": "MITO"
         },
         "STORM_CITADEL": {
-          "role": "Weather prediction and hurricane tracking", 
-          "status": "ACTIVE",
-          "performance": "+18%"
+          "enabled": true,
+          "priority": "HIGH",
+          "specialization": "weather_analysis",
+          "resource_allocation": 0.25,
+          "backup_agent": "VADER"
         },
         "ULTRON": {
-          "role": "Metadata validation and data integrity",
-          "status": "ACTIVE", 
-          "performance": "+16%"
+          "enabled": true,
+          "priority": "HIGH",
+          "specialization": "data_validation",
+          "resource_allocation": 0.15,
+          "backup_agent": "PHOENIX"
         },
         "PHOENIX": {
-          "role": "Memory management and data resurrection",
-          "status": "ACTIVE",
-          "performance": "+14%"
+          "enabled": true,
+          "priority": "MEDIUM",
+          "specialization": "memory_management",
+          "resource_allocation": 0.10,
+          "backup_agent": "ULTRON"
         },
         "ODIN": {
-          "role": "Security protocols and threat assessment",
-          "status": "ACTIVE",
-          "performance": "+17%"
+          "enabled": true,
+          "priority": "CRITICAL",
+          "specialization": "security",
+          "resource_allocation": 0.15,
+          "backup_agent": "VADER"
         },
         "ECHO": {
-          "role": "Audio/voice interface and user interaction",
-          "status": "ACTIVE",
-          "performance": "+13%"
+          "enabled": true,
+          "priority": "MEDIUM",
+          "specialization": "communication",
+          "resource_allocation": 0.05,
+          "backup_agent": "JARVIS"
         },
         "MITO": {
-          "role": "Development automation and system optimization",
-          "status": "ACTIVE",
-          "performance": "+15%"
+          "enabled": true,
+          "priority": "MEDIUM",
+          "specialization": "optimization",
+          "resource_allocation": 0.05,
+          "backup_agent": "JARVIS"
         },
         "VADER": {
-          "role": "Surveillance and network resilience",
-          "status": "ACTIVE",
-          "performance": "+19%"
+          "enabled": true,
+          "priority": "HIGH",
+          "specialization": "monitoring",
+          "resource_allocation": 0.05,
+          "backup_agent": "ODIN"
         }
       }
     },
-    
-    "quantum_engine": {
-      "version": "Enhanced 21D Processing",
-      "speedup_factor": "6x quantum acceleration",
-      "hilbert_space": "21 dimensions",
-      "qubits": "6.8 effective qubits",
-      "information_preservation": "81.3%",
-      "entanglement_pairs": "42 strongly correlated",
-      "quantum_signature": "Ψ(env,time) = Σᵢ αᵢ|stateᵢ⟩ exp(-iEᵢt/ℏ)"
+    "data_sources": {
+      "noaa_api": {
+        "enabled": true,
+        "base_url": "https://api.weather.gov",
+        "rate_limit": 1000,
+        "timeout": 30000,
+        "retry_attempts": 3,
+        "cache_duration": 300000,
+        "fallback_enabled": true
+      },
+      "hurricane_center": {
+        "enabled": true,
+        "base_url": "https://www.nhc.noaa.gov",
+        "data_format": "xml",
+        "update_frequency": 360000,
+        "archive_duration": "30_days"
+      },
+      "cesium_ion": {
+        "enabled": true,
+        "base_url": "https://api.cesium.com",
+        "asset_access": true,
+        "terrain_enabled": true,
+        "imagery_enabled": true
+      },
+      "openai_api": {
+        "enabled": true,
+        "model": "gpt-4o",
+        "max_tokens": 4096,
+        "temperature": 0.7,
+        "rate_limit": 100,
+        "timeout": 60000
+      }
     },
-    
-    "database_schema": {
-      "total_tables": 9,
-      "new_tables": [
-        "storm_predictions",
-        "quantum_states"
-      ],
-      "security_features": [
-        "Digital signature verification",
-        "SHA-256 hash validation", 
-        "Timestamp enforcement",
-        "Authorship tracking"
+    "database_configuration": {
+      "type": "postgresql",
+      "connection_pool": {
+        "min_connections": 5,
+        "max_connections": 20,
+        "connection_timeout": 30000,
+        "idle_timeout": 600000
+      },
+      "schema_version": "3.5.0",
+      "migration_strategy": "AUTO",
+      "backup_enabled": true,
+      "encryption_enabled": true,
+      "audit_logging": true,
+      "tables": [
+        "users",
+        "geo_files",
+        "noaa_data",
+        "compliance_zones",
+        "arcsec_assets",
+        "agent_activity",
+        "system_metadata"
       ]
     },
-    
-    "routing_configuration": {
-      "total_routes": 10,
-      "new_routes": [
-        "/graph - Network Graph visualization",
-        "/control - Unified control center"
-      ],
-      "route_status": "All routes operational",
-      "navigation_system": "Cyberpunk-themed with icons"
+    "security_protocols": {
+      "arcsec_mode": "WAR_MODE",
+      "encryption": {
+        "algorithm": "AES-256-GCM",
+        "key_rotation": "MONTHLY",
+        "secure_key_storage": true
+      },
+      "authentication": {
+        "session_timeout": 3600000,
+        "max_login_attempts": 3,
+        "password_policy": "STRICT",
+        "two_factor_enabled": false
+      },
+      "access_control": {
+        "role_based": true,
+        "permission_levels": ["VIEWER", "OPERATOR", "ANALYST", "ADMIN"],
+        "audit_trail": true,
+        "ip_whitelist": false
+      },
+      "threat_monitoring": {
+        "real_time_scanning": true,
+        "anomaly_detection": true,
+        "auto_quarantine": true,
+        "incident_response": "AUTOMATED"
+      }
     },
-    
-    "integration_status": {
-      "replit_apps_unified": true,
-      "performance_improvement": "3x processing speed",
-      "world_builder": "Automated deployment system",
-      "podcast_integration": "8 files with metadata catalog",
-      "diagnostics_enhancement": "Advanced loop and anomaly detection"
+    "performance_settings": {
+      "optimization_level": "MAXIMUM",
+      "caching_strategy": "AGGRESSIVE",
+      "compression_enabled": true,
+      "minification_enabled": true,
+      "load_balancing": true,
+      "resource_pooling": true,
+      "memory_management": {
+        "garbage_collection": "OPTIMIZED",
+        "memory_limit": "1GB",
+        "swap_enabled": false
+      },
+      "network_settings": {
+        "keep_alive": true,
+        "connection_pooling": true,
+        "bandwidth_throttling": false,
+        "cdn_enabled": false
+      }
     },
-    
+    "monitoring_configuration": {
+      "system_monitoring": {
+        "enabled": true,
+        "metrics_collection": true,
+        "performance_tracking": true,
+        "error_tracking": true,
+        "uptime_monitoring": true
+      },
+      "agent_monitoring": {
+        "enabled": true,
+        "workload_tracking": true,
+        "performance_metrics": true,
+        "failure_detection": true,
+        "auto_recovery": true
+      },
+      "security_monitoring": {
+        "enabled": true,
+        "intrusion_detection": true,
+        "vulnerability_scanning": true,
+        "compliance_checking": true,
+        "incident_logging": true
+      },
+      "alert_configuration": {
+        "email_alerts": false,
+        "webhook_alerts": true,
+        "sms_alerts": false,
+        "console_alerts": true,
+        "alert_levels": ["INFO", "WARNING", "ERROR", "CRITICAL"]
+      }
+    },
+    "integration_settings": {
+      "websocket_server": {
+        "enabled": true,
+        "port": 5000,
+        "cors_enabled": true,
+        "compression": true,
+        "heartbeat_interval": 30000
+      },
+      "rest_api": {
+        "enabled": true,
+        "version": "v1",
+        "rate_limiting": true,
+        "authentication_required": false,
+        "documentation_enabled": false
+      },
+      "webhook_support": {
+        "enabled": true,
+        "supported_sources": ["noaa", "github", "weather", "emergency"],
+        "signature_verification": true,
+        "retry_mechanism": true
+      },
+      "external_apis": {
+        "timeout": 30000,
+        "retry_attempts": 3,
+        "circuit_breaker": true,
+        "fallback_enabled": true
+      }
+    },
+    "development_settings": {
+      "hot_reload": true,
+      "source_maps": true,
+      "development_server": {
+        "port": 5000,
+        "host": "0.0.0.0",
+        "auto_restart": true
+      },
+      "build_settings": {
+        "target": "ES2020",
+        "module": "ESNext",
+        "strict_mode": true,
+        "optimization": true
+      },
+      "testing": {
+        "unit_tests": false,
+        "integration_tests": false,
+        "load_tests": false,
+        "test_coverage": false
+      }
+    },
     "deployment_configuration": {
-      "server_type": "Unified binary with ARCSEC headers",
-      "port": 5000,
-      "host": "0.0.0.0",
-      "static_serving": "dist/ directory",
-      "fallback_routing": "SPA client-side routing",
-      "build_command": "npm run build",
-      "dev_command": "npm run dev"
+      "environment": "production",
+      "build_optimization": true,
+      "asset_optimization": true,
+      "error_handling": "GRACEFUL",
+      "logging_level": "INFO",
+      "health_checks": {
+        "enabled": true,
+        "endpoint": "/health",
+        "interval": 30000,
+        "timeout": 10000
+      },
+      "graceful_shutdown": {
+        "enabled": true,
+        "timeout": 30000,
+        "cleanup_tasks": true
+      }
+    },
+    "feature_flags": {
+      "quantum_processing": true,
+      "machine_learning": true,
+      "real_time_updates": true,
+      "3d_visualization": true,
+      "audio_processing": true,
+      "advanced_analytics": true,
+      "predictive_modeling": true,
+      "anomaly_detection": true,
+      "automated_responses": true,
+      "multi_agent_coordination": true
+    },
+    "licensing": {
+      "software_license": "Proprietary",
+      "author": "Daniel Guzman",
+      "copyright": "© 2025 Daniel Guzman - All Rights Reserved",
+      "terms_of_use": "RESTRICTED",
+      "distribution": "PROHIBITED",
+      "modification": "PROHIBITED",
+      "commercial_use": "PROHIBITED"
+    },
+    "version_information": {
+      "current_version": "3.5.0",
+      "build_number": 47,
+      "release_date": "2025-01-30",
+      "next_version": "4.0.0",
+      "update_channel": "STABLE",
+      "auto_update": false,
+      "compatibility": {
+        "node_version": ">=18.0.0",
+        "npm_version": ">=8.0.0",
+        "browser_support": ["Chrome 90+", "Firefox 88+", "Safari 14+", "Edge 90+"]
+      }
     }
   }
 }

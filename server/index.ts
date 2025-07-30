@@ -1,5 +1,6 @@
 import express, { type Request, Response, NextFunction } from "express";
 import { registerRoutes } from "./routes";
+import { arcsecHandler } from "./services/arcsec-universal-handler.js";
 // Simple logging function
 function log(message: string) {
   const formattedTime = new Date().toLocaleTimeString("en-US", {

@@ -1,6 +1,9 @@
 import { storage } from "./storage";
 import type { Express } from "express";
 import { createServer, type Server } from "http";
+import { Server as SocketServer } from "socket.io";
+import rateLimit from "express-rate-limit";
+import axios from "axios";
 import { NOAAService } from "./services/noaa-service";
 import { KMZProcessor } from "./services/kmz-processor";
 import { TripleStoreService } from "./services/triple-store-service";
@@ -11,16 +14,313 @@ import { diagnosticsService } from "./services/diagnostics-service";
 import { quantumService } from "./services/quantum-service";
 import { agentService } from "./services/agent-service";
 import { databaseService } from "./services/database-service";
+import { mlEngine } from "./services/ml-engine.js";
+import { agentCoordinator } from "./services/agent-coordinator.js";
+import { arcsecHandler } from "./services/arcsec-universal-handler.js";
 
 const noaaService = new NOAAService();
 const kmzProcessor = new KMZProcessor();
 const tripleStoreService = new TripleStoreService();
 const arcsecService = new ARCSECService();
 
+// Rate limiting middleware
+const apiLimiter = rateLimit({
+  windowMs: 15 * 60 * 1000, // 15 minutes
+  max: 100, // limit each IP to 100 requests per windowMs
+  message: { error: 'Too many requests from this IP, please try again later.' }
+});
+
+const strictLimiter = rateLimit({
+  windowMs: 15 * 60 * 1000, // 15 minutes
+  max: 10, // limit each IP to 10 requests per windowMs for ML endpoints
+  message: { error: 'Rate limit exceeded for ML operations.' }
+});
+
 export async function registerRoutes(app: Express): Promise<Server> {
+  const server = createServer(app);
+  
+  // Initialize WebSocket service
+  const { initializeWebSocketService } = await import('./services/websocket-service.js');
+  const wsService = initializeWebSocketService(server);
+
+  // Apply rate limiting to API routes
+  app.use('/api', apiLimiter);
+  app.use('/api/ml', strictLimiter);
+  app.use('/api/webhook', strictLimiter);
+
   // Health check route
   app.get('/health', (req, res) => {
-    res.json({ status: 'ok', timestamp: new Date().toISOString() });
+    res.json({ 
+      status: 'ok', 
+      timestamp: new Date().toISOString(),
+      connectedClients: wsService.getConnectedClients(),
+      webhookStats: wsService.getWebhookStats()
+    });
+  });
+
+  // Machine Learning API Routes
+  app.get('/api/ml/models', async (req, res) => {
+    try {
+      const models = mlEngine.getAllModels();
+      const modelArray = Array.from(models.entries()).map(([id, config]) => ({
+        agentId: id,
+        ...config
+      }));
+      res.json({ models: modelArray, timestamp: new Date() });
+    } catch (error) {
+      res.status(500).json({ error: error.message });
+    }
+  });
+
+  app.get('/api/ml/system-status', async (req, res) => {
+    try {
+      const status = mlEngine.getSystemStatus();
+      res.json({ status, timestamp: new Date() });
+    } catch (error) {
+      res.status(500).json({ error: error.message });
+    }
+  });
+
+  app.get('/api/ml/agent/:agentId/metrics', async (req, res) => {
+    try {
+      const { agentId } = req.params;
+      const metrics = await mlEngine.getModelMetrics(agentId);
+      res.json({ metrics, timestamp: new Date() });
+    } catch (error) {
+      res.status(500).json({ error: error.message });
+    }
+  });
+
+  app.post('/api/ml/agent/:agentId/train', async (req, res) => {
+    try {
+      const { agentId } = req.params;
+      const { trainingData } = req.body;
+      
+      if (!trainingData) {
+        return res.status(400).json({ error: 'Training data is required' });
+      }
+
+      const result = await mlEngine.trainAgent(agentId, trainingData);
+      res.json({ success: result, agentId, timestamp: new Date() });
+    } catch (error) {
+      res.status(500).json({ error: error.message });
+    }
+  });
+
+  app.post('/api/ml/agent/:agentId/predict', async (req, res) => {
+    try {
+      const { agentId } = req.params;
+      const { input } = req.body;
+      
+      if (!input) {
+        return res.status(400).json({ error: 'Input data is required' });
+      }
+
+      const prediction = await mlEngine.predict(agentId, input);
+      res.json({ prediction, timestamp: new Date() });
+    } catch (error) {
+      res.status(500).json({ error: error.message });
+    }
+  });
+
+  app.post('/api/ml/agent/:agentId/optimize', async (req, res) => {
+    try {
+      const { agentId } = req.params;
+      const result = await mlEngine.optimizeModel(agentId);
+      res.json({ optimized: result, agentId, timestamp: new Date() });
+    } catch (error) {
+      res.status(500).json({ error: error.message });
+    }
+  });
+
+  // Agent Coordination API Routes
+  app.get('/api/agents/overview', async (req, res) => {
+    try {
+      const overview = await agentCoordinator.getSystemOverview();
+      res.json({ overview, timestamp: new Date() });
+    } catch (error) {
+      res.status(500).json({ error: error.message });
+    }
+  });
+
+  app.get('/api/agents/:agentId/workload', async (req, res) => {
+    try {
+      const { agentId } = req.params;
+      const workload = await agentCoordinator.getAgentWorkload(agentId);
+      res.json({ workload, timestamp: new Date() });
+    } catch (error) {
+      res.status(500).json({ error: error.message });
+    }
+  });
+
+  app.post('/api/agents/task', async (req, res) => {
+    try {
+      const { type, priority, payload } = req.body;
+      
+      if (!type || !payload) {
+        return res.status(400).json({ error: 'Task type and payload are required' });
+      }
+
+      const taskId = `task_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+      const assignedAgent = await agentCoordinator.assignTask({
+        id: taskId,
+        type,
+        priority: priority || 'medium',
+        payload,
+        status: 'pending',
+        createdAt: new Date()
+      });
+
+      res.json({ taskId, assignedAgent, timestamp: new Date() });
+    } catch (error) {
+      res.status(500).json({ error: error.message });
+    }
+  });
+
+  app.get('/api/agents/task/:taskId', async (req, res) => {
+    try {
+      const { taskId } = req.params;
+      const task = await agentCoordinator.getTaskStatus(taskId);
+      
+      if (!task) {
+        return res.status(404).json({ error: 'Task not found' });
+      }
+
+      res.json({ task, timestamp: new Date() });
+    } catch (error) {
+      res.status(500).json({ error: error.message });
+    }
+  });
+
+  // Webhook endpoints
+  app.post('/api/webhook/:source', async (req, res) => {
+    try {
+      const { source } = req.params;
+      const webhookData = {
+        id: `webhook_${Date.now()}`,
+        source,
+        event: req.headers['x-event-type'] || 'unknown',
+        payload: req.body,
+        timestamp: new Date(),
+        headers: req.headers
+      };
+
+      wsService.handleWebhook(webhookData);
+      res.json({ received: true, webhookId: webhookData.id, timestamp: new Date() });
+    } catch (error) {
+      res.status(500).json({ error: error.message });
+    }
+  });
+
+  // Dynamic data fetching endpoint
+  app.post('/api/fetch', async (req, res) => {
+    try {
+      const { url, options } = req.body;
+      
+      if (!url) {
+        return res.status(400).json({ error: 'URL is required' });
+      }
+
+      const data = await wsService.fetchDynamicData(url, options);
+      res.json({ data, timestamp: new Date() });
+    } catch (error) {
+      res.status(500).json({ error: error.message });
+    }
+  });
+
+  // ARCSEC Security API Routes
+  app.get('/api/arcsec/status', async (req, res) => {
+    try {
+      const status = arcsecHandler.getSystemStatus();
+      res.json({ status, timestamp: new Date() });
+    } catch (error) {
+      res.status(500).json({ error: error.message });
+    }
+  });
+
+  app.get('/api/arcsec/protected-files', async (req, res) => {
+    try {
+      const files = arcsecHandler.getProtectedFiles();
+      const fileList = Array.from(files.entries()).map(([path, file]) => ({
+        filepath: path,
+        protectionLevel: file.protectionLevel,
+        lastModified: file.lastModified,
+        immutable: file.immutable,
+        signature: file.signature
+      }));
+      res.json({ protectedFiles: fileList, timestamp: new Date() });
+    } catch (error) {
+      res.status(500).json({ error: error.message });
+    }
+  });
+
+  app.post('/api/arcsec/protect-file', async (req, res) => {
+    try {
+      const { filepath, protectionLevel } = req.body;
+      
+      if (!filepath) {
+        return res.status(400).json({ error: 'Filepath is required' });
+      }
+
+      const protectedFile = await arcsecHandler.protectFile(filepath, protectionLevel || 'WAR_MODE');
+      res.json({ 
+        success: true, 
+        protectedFile: {
+          filepath: protectedFile.filepath,
+          protectionLevel: protectedFile.protectionLevel,
+          signature: protectedFile.signature
+        },
+        timestamp: new Date() 
+      });
+    } catch (error) {
+      res.status(500).json({ error: error.message });
+    }
+  });
+
+  app.post('/api/arcsec/verify-file/:filepath(*)', async (req, res) => {
+    try {
+      const { filepath } = req.params;
+      const isValid = await arcsecHandler.verifyFile(filepath);
+      res.json({ filepath, isValid, timestamp: new Date() });
+    } catch (error) {
+      res.status(500).json({ error: error.message });
+    }
+  });
+
+  app.post('/api/arcsec/verify-system', async (req, res) => {
+    try {
+      const systemState = await arcsecHandler.verifySystemIntegrity();
+      res.json({ systemState, timestamp: new Date() });
+    } catch (error) {
+      res.status(500).json({ error: error.message });
+    }
+  });
+
+  app.post('/api/arcsec/emergency-lockdown', async (req, res) => {
+    try {
+      await arcsecHandler.emergencyLockdown();
+      res.json({ lockdownCompleted: true, timestamp: new Date() });
+    } catch (error) {
+      res.status(500).json({ error: error.message });
+    }
+  });
+
+  app.get('/api/arcsec/compliance-report', async (req, res) => {
+    try {
+      const report = await arcsecHandler.generateComplianceReport();
+      res.json({ report, timestamp: new Date() });
+    } catch (error) {
+      res.status(500).json({ error: error.message });
+    }
+  });
+
+  app.post('/api/arcsec/create-snapshot', async (req, res) => {
+    try {
+      const snapshotPath = await arcsecHandler.createSystemSnapshot();
+      res.json({ snapshotPath, timestamp: new Date() });
+    } catch (error) {
+      res.status(500).json({ error: error.message });
+    }
   });
 
   // Weather data routes
