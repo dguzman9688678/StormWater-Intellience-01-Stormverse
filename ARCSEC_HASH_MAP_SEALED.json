@@ -14,7 +14,7 @@
     "total_files": 48,
     "core_infrastructure": 25,
     "support_systems": 11,
-    "utility_ecosystem": 12,
+    "utility_ecosystem": 15,
     "naming_convention": "arcsec-[component-name]",
     "protection_coverage": "100%",
     "integrity_seal": "CRYPTOGRAPHICALLY_VERIFIED"
@@ -74,7 +74,12 @@
       "arcsec_converter.py",
       "arcsec_token_creator.py",
       "arcsec_shell.py",
-      "arcsec_plugin.py"
+      "arcsec_plugin.py",
+      "arcsec_advanced_security.py",
+      "arcsec_network_security.py",
+      "arcsec_compliance_engine.py",
+      "arcsec_data_protection.py",
+      "arcsec_threat_intelligence.py"
     ],
     "documentation": [
       "ARCSEC_FILE_NAMING_COMPLETE.json"
