@@ -1,39 +1,55 @@
-import { users, type User, type InsertUser } from "@shared/schema";
+import { drizzle } from "drizzle-orm/neon-serverless";
+import { neon } from "@neondatabase/serverless";
+import * as schema from "../shared/schema";
 
-// modify the interface with any CRUD methods
-// you might need
+// Initialize database connection
+const getDatabaseUrl = () => {
+  return process.env.DATABASE_URL || "";
+};
 
-export interface IStorage {
-  getUser(id: number): Promise<User | undefined>;
-  getUserByUsername(username: string): Promise<User | undefined>;
-  createUser(user: InsertUser): Promise<User>;
+// Create database instance
+const createDatabase = () => {
+  const databaseUrl = getDatabaseUrl();
+  
+  if (!databaseUrl) {
+    console.warn("No DATABASE_URL found, using in-memory storage");
+    return null;
+  }
+  
+  try {
+    const client = neon(databaseUrl);
+    return drizzle(client, { schema });
+  } catch (error) {
+    console.error("Failed to connect to database:", error);
+    return null;
+  }
+};
+
+// In-memory storage fallback
+class MemStorage {
+  private data: Map<string, any> = new Map();
+  
+  async get(key: string): Promise<any> {
+    return this.data.get(key);
+  }
+  
+  async set(key: string, value: any): Promise<void> {
+    this.data.set(key, value);
+  }
+  
+  async delete(key: string): Promise<void> {
+    this.data.delete(key);
+  }
+  
+  async has(key: string): Promise<boolean> {
+    return this.data.has(key);
+  }
+  
+  async clear(): Promise<void> {
+    this.data.clear();
+  }
 }
 
-export class MemStorage implements IStorage {
-  private users: Map<number, User>;
-  currentId: number;
-
-  constructor() {
-    this.users = new Map();
-    this.currentId = 1;
-  }
-
-  async getUser(id: number): Promise<User | undefined> {
-    return this.users.get(id);
-  }
-
-  async getUserByUsername(username: string): Promise<User | undefined> {
-    return Array.from(this.users.values()).find(
-      (user) => user.username === username,
-    );
-  }
-
-  async createUser(insertUser: InsertUser): Promise<User> {
-    const id = this.currentId++;
-    const user: User = { ...insertUser, id };
-    this.users.set(id, user);
-    return user;
-  }
-}
-
+// Export storage interface
+export const db = createDatabase();
 export const storage = new MemStorage();

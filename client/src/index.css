@@ -106,3 +106,37 @@ canvas {
   text-align: center;
   padding: 10px;
 }
+
+/* Analysis Panel */
+.analysis-panel {
+  font-family: 'Courier New', monospace;
+}
+
+.analysis-content {
+  max-height: 100%;
+  overflow-y: auto;
+}
+
+.category-filter select {
+  font-size: 11px;
+  font-family: 'Courier New', monospace;
+}
+
+.document-item {
+  background: rgba(0, 20, 20, 0.5);
+  backdrop-filter: blur(5px);
+}
+
+.document-item:hover {
+  background: rgba(0, 50, 50, 0.5);
+}
+
+.document-details {
+  background: rgba(0, 0, 0, 0.3);
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.includes-list ul {
+  margin-left: 0;
+}

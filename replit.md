@@ -1,38 +1,8 @@
-# StormVerse - Environmental Intelligence Platform
+# StormVerse Environmental Intelligence Platform
 
 ## Overview
 
-StormVerse is a professional environmental intelligence platform that combines 3D globe visualization with AI-powered weather analysis. The system integrates CesiumJS for 3D mapping, real-time NOAA weather data, KMZ file processing, and semantic data management through triple stores and ARCSEC security protocols.
-
-**Latest Update (January 30, 2025)**: Completed comprehensive StormVerse Environmental Intelligence Platform:
-
-## Core Implementation Complete
-1. **WebGL UI Components**: storm_layer_loader.js, quantum_arc_renderer.js, stats_overlay.js integrated with index.html
-2. **KMZ/GeoJSON Data Pipeline**: /data/ directory with NOAA GIS data processing and ARCSEC verification
-3. **AI Overlay Data**: Triple store with viewer_config.json managing 8-agent architecture (MITO, ULTRON, JARVIS, PHOENIX, ECHO, ODIN, VADER, STORM_CITADEL)
-4. **Agent Network Mapping**: Each agent positioned with specific zones, orbital visualization, and real-time status monitoring
-5. **ARCSEC Security**: Embedded metadata with source, timestamp, authorship, and integrity_hash in all data overlays
-
-## Interactive Components Added
-6. **Interactive Agent Globe**: Full 3D agent network with orbital positioning, click interactions, and real-time communication visualization
-7. **Agent Deployment Shell**: Terminal-style interface for direct agent command execution with real-time metrics and status monitoring
-8. **Complete Documentation Suite**: Professional-grade technical documentation including system blueprint, deployment guides, and security protocols
-
-## Technical Infrastructure
-- Real NOAA API integration with authentication and error handling
-- Professional cyberpunk-themed interface with full accessibility
-- Complete ARCSEC security framework implementation
-- Scalable deployment architecture for development, staging, and production environments
-
-The platform demonstrates professional environmental intelligence capabilities suitable for emergency management, research institutions, and commercial applications.
-
-## StormWater Intelligence Platform Integration
-**Added January 30, 2025**: Full integration with StormWater Intelligence Platform v3.4
-- Copyright (c) 2025 Daniel Guzman - All Rights Reserved
-- 443 integrated files with comprehensive security auditing
-- Unified credential management system on Replit
-- Complete environmental configuration mapping
-- Professional attribution and metadata tracking
+StormVerse is a sophisticated environmental intelligence platform that combines 3D globe visualization, AI-powered weather analysis, real-time data processing, and advanced security protocols. The system provides hurricane tracking, storm prediction, and environmental monitoring through an immersive cyberpunk-themed interface powered by CesiumJS.
 
 ## User Preferences
 
@@ -41,124 +11,127 @@ Preferred communication style: Simple, everyday language.
 ## System Architecture
 
 ### Frontend Architecture
-- **Framework**: React with TypeScript and Vite
-- **3D Visualization**: CesiumJS globe with cyberpunk-themed styling
-- **UI Components**: Radix UI components with custom cyberpunk design system
-- **State Management**: Zustand stores for different application domains
-- **Styling**: Tailwind CSS with custom CSS variables for theming
-- **Asset Pipeline**: Vite with support for GLSL shaders, 3D models, and audio files
+- **Framework**: React with TypeScript
+- **3D Visualization**: CesiumJS for globe rendering and geospatial data
+- **UI Library**: Radix UI components with custom cyberpunk styling
+- **State Management**: Zustand stores for weather data, agent management, and system state
+- **Styling**: Tailwind CSS with custom cyberpunk theme variables
 
 ### Backend Architecture
-- **Runtime**: Node.js with Express.js server
-- **Language**: TypeScript with ES modules
-- **API Design**: RESTful endpoints for weather data, KMZ processing, and system management
-- **Development Server**: Vite middleware integration for hot module replacement
+- **Server**: Express.js with TypeScript
+- **Database**: Drizzle ORM with PostgreSQL (in-memory fallback for development)
+- **API Structure**: RESTful endpoints for weather data, hurricane tracking, and KMZ processing
+- **Module System**: ES modules throughout the codebase
 
-### Data Storage Solutions
-- **Database**: PostgreSQL with Drizzle ORM
-- **Configuration**: Configured for Neon serverless database
-- **Schema**: User management with extensible structure
-- **In-Memory Storage**: Fallback MemStorage implementation for development
+### Database Schema (Updated 2025-01-30)
+The platform uses a comprehensive 7-table PostgreSQL schema:
+
+1. **users**: Role-based access control (admin, operator, viewer, analyst)
+2. **geo_files**: KMZ/KML file tracking with ARCSEC signatures
+3. **noaa_data**: Live weather data storage (radar, satellite, hurricane)
+4. **compliance_zones**: EPA/FEMA regulatory compliance tracking
+5. **arcsec_assets**: Protected assets with SHA-256 hash verification
+6. **agent_activity**: AI agent operation logs and audit trails
+7. **system_metadata**: Global configuration key-value store
+
+All tables include ARCSEC v3.0X WAR MODE security integration with:
+- Digital signature verification
+- SHA-256 hash validation
+- Timestamp enforcement
+- Authorship tracking
+
+### AI Agent Network
+The platform operates through an 8-agent AI system with specialized roles:
+- **STORM_CITADEL**: Weather prediction and hurricane tracking
+- **ULTRON**: Metadata validation and data integrity
+- **JARVIS**: Command routing and system coordination
+- **PHOENIX**: Memory management and data resurrection
+- **ODIN**: Security protocols and threat assessment
+- **ECHO**: Audio/voice interface and user interaction
+- **MITO**: Development automation and system optimization
+- **VADER**: Surveillance and network resilience
 
 ## Key Components
 
-### 3D Globe System
-- **Globe Renderer**: CesiumJS-based 3D earth visualization with cyberpunk theming
-- **Weather Overlays**: Hurricane tracking, pressure systems, and weather alerts
-- **Agent Network**: 8 AI agents positioned around the globe with orbital visualization
-- **Quantum Arc Renderer**: Probability cone visualization for weather predictions with confidence-based sizing
-- **KMZ Loader**: Support for uploading and visualizing KMZ/KML files with ARCSEC verification
-- **Storm Layer Loader**: Professional data import system for NOAA GIS data, hurricane tracks, and custom GeoJSON
-- **Stats Overlay**: Real-time monitoring of agent performance, weather intelligence, and system metrics
+### Data Processing Pipeline
+1. **NOAA Integration**: Real-time weather data from National Weather Service API
+2. **KMZ/GeoJSON Processing**: Spatial data import and conversion using JSZip and xml2js
+3. **Triple Store Service**: Semantic data storage using RDF and JSON-LD
+4. **ARCSEC Security**: Digital signature verification and audit trail tracking
 
-### AI Agent Network
-Eight specialized AI agents with distinct roles:
-- **STORM CITADEL**: Forecast logic and weather prediction
-- **CODEX TEMPLE**: Metadata validation (ULTRON)
-- **SKYWALL**: Development automation (MITO)
-- **MIRRORFIELD**: Memory and data resurrection (PHOENIX)
-- **WATERSHED REALMS**: Command routing (JARVIS)
-- **SANCTUM OF SELF**: Audio/voice interface (ECHO)
-- **ARCSEC CITADEL**: Security protocols (ODIN)
-- **PHOENIX CORE**: Surveillance and system resilience (VADER)
+### Visualization Components
+- **CesiumGlobe**: Main 3D Earth interface with custom cyberpunk styling
+- **QuantumArcRenderer**: AI-generated probability cones for weather predictions
+- **StormLayerLoader**: NOAA GIS data and KMZ file loading
+- **AgentNetwork**: Interactive orbital positioning of AI agents around the globe
 
-### Weather Data Integration
-- **NOAA API Integration**: Real-time hurricane tracking and weather alerts
-- **Data Processing**: Hurricane track analysis and pressure system mapping
-- **Mock Data System**: Fallback data for development and demonstration
-- **Real-time Updates**: 5-minute refresh intervals for weather data
-
-### Security and Data Integrity (ARCSEC)
-- **Data Integrity**: Hash-based verification system
-- **Authorship Tracking**: Digital signatures and provenance tracking
-- **Audit Trail**: Comprehensive logging of data access and modifications
-- **Verification System**: Multi-method data validation with confidence scoring
+### Real-time Monitoring
+- **SystemMonitor**: API status and performance metrics
+- **WeatherOverlay**: Live hurricane and storm data visualization
+- **StatsOverlay**: Agent status and system statistics dashboard
 
 ## Data Flow
 
-### Weather Data Pipeline
-1. NOAA API integration fetches real-time weather data
-2. Data processed and validated through ARCSEC security layer
-3. Hurricane and weather alert data stored in triple store format
-4. 3D visualization updates with new data every 5 minutes
-5. Probability calculations rendered as quantum arcs on globe
-
-### KMZ File Processing
-1. User uploads KMZ file through web interface
-2. Server extracts and parses KML data from archive
-3. Geometric data converted to Cesium-compatible format
-4. Metadata extracted and stored in semantic triple format
-5. Visualization added to globe with cyberpunk styling
+### Weather Data Processing
+1. NOAA API requests → NOAAService → Weather data normalization
+2. KMZ file uploads → KMZProcessor → Spatial data extraction
+3. Storm data → StormDataProcessor → Intelligence platform integration
+4. All data → ARCSECService → Security verification and audit logging
 
 ### Agent Communication
-1. Agents positioned at fixed orbital coordinates around globe
-2. Inter-agent communication through semantic triple store
-3. Activity status updates reflected in real-time visualization
-4. Command routing through JARVIS agent coordination
+1. User input → JARVIS (command router) → Specialized agents
+2. Agent responses → JARVIS → Output coordination
+3. Security monitoring → ODIN → ARCSEC protocol enforcement
+4. All communications → Audit trail logging
+
+### 3D Visualization Pipeline
+1. Cesium viewer initialization → Globe configuration
+2. Weather data → Layer rendering (hurricanes, pressure systems, alerts)
+3. AI predictions → Quantum arc rendering (probability cones)
+4. Agent positions → Orbital node placement around globe
 
 ## External Dependencies
 
-### Core Libraries
-- **CesiumJS 1.118**: 3D globe visualization and geospatial rendering with local fallback
-- **React Three Fiber**: 3D graphics integration (supplementary to Cesium)
-- **Drizzle ORM**: Type-safe database operations
-- **TanStack Query**: Data fetching and caching
-- **Radix UI**: Accessible component primitives
-- **Custom WebGL Modules**: Storm Layer Loader, Quantum Arc Renderer, Stats Overlay integrated with viewer_config.json
-
 ### Weather Data Sources
-- **NOAA Weather API**: Real-time weather alerts and forecasts
-- **ArcGIS Services**: Satellite imagery and mapping data
+- **NOAA API**: National Weather Service for alerts and current conditions
+- **National Hurricane Center**: Hurricane tracking and forecast data
+- **NEXRAD Radar**: Weather radar imagery and precipitation data
+
+### 3D Visualization
+- **CesiumJS**: 3D globe rendering and geospatial visualization
 - **Cesium Ion**: Terrain and imagery services
+- **WebGL**: Hardware-accelerated graphics rendering
 
 ### Development Tools
 - **Vite**: Build tool and development server
+- **ESBuild**: Production bundling
 - **TypeScript**: Type safety and development experience
-- **Tailwind CSS**: Utility-first styling framework
-- **ESBuild**: Production bundling for server code
+- **Drizzle Kit**: Database schema management
 
 ## Deployment Strategy
 
 ### Development Environment
-- Vite development server with hot module replacement
-- Express server with middleware integration
-- Service worker for offline capability and asset caching
-- Memory-based storage for rapid development iteration
+- **Local Setup**: Node.js 18+ with npm/yarn for dependency management
+- **Dev Server**: Vite development server with hot module replacement
+- **Database**: In-memory storage for rapid development iteration
 
-### Production Build
-- Client-side: Vite build to static assets
-- Server-side: ESBuild bundling with external package handling
-- Database: PostgreSQL with Drizzle migrations
-- Environment variables for API keys and database connections
+### Production Deployment
+- **Build Process**: Vite frontend build + ESBuild server bundling
+- **Server**: Node.js Express server with production optimizations
+- **Database**: PostgreSQL with Drizzle ORM (configurable via DATABASE_URL)
+- **Assets**: Static file serving with proper caching headers
 
-### Asset Management
-- CDN fallbacks for Cesium library
-- Local asset caching through service worker
-- Preloading of critical resources for performance
-- Support for large 3D models and audio files
+### Environment Configuration
+Required environment variables:
+- `DATABASE_URL`: PostgreSQL connection string
+- `CESIUM_ION_TOKEN`: Cesium access token for 3D rendering
+- `NOAA_API_KEY`: Weather data API access (optional)
+- `NODE_ENV`: Environment mode (development/production)
 
-### Performance Optimizations
-- Lazy loading of non-critical components
-- Query client with intelligent caching strategies
-- Cesium viewer optimizations for mobile devices
-- Progressive enhancement for offline scenarios
+### Security Considerations
+- ARCSEC protocol implementation for data integrity
+- Digital signature verification for all external data sources
+- Audit trail logging for all system interactions
+- Rate limiting and API abuse protection
+
+The platform is designed for scalability with modular architecture allowing for easy extension of AI agents, data sources, and visualization capabilities.

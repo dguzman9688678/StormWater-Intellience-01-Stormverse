@@ -1,0 +1,102 @@
+-- 1. USERS + PERMISSIONS
+CREATE TABLE users (
+  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  name TEXT NOT NULL,
+  email TEXT UNIQUE NOT NULL,
+  role TEXT CHECK (role IN ('admin', 'operator', 'viewer')) DEFAULT 'analyst',
+  created_at TIMESTAMP DEFAULT NOW()
+);
+
+-- 2. KMZ/KML FILE INGESTION + METADATA TRACKING
+CREATE TABLE geo_files (
+  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  user_id UUID REFERENCES users(id),
+  filename TEXT NOT NULL,
+  filepath TEXT NOT NULL,
+  upload_time TIMESTAMP DEFAULT NOW(),
+  area_covered GEOGRAPHY(POLYGON, 4326),
+  arcsec_signature TEXT NOT NULL,
+  status TEXT CHECK (status IN ('unverified', 'verified', 'invalid')) DEFAULT 'unverified'
+);
+
+-- Trigger: Auto-verify KMZ files if ARCSEC signature matches
+CREATE OR REPLACE FUNCTION verify_kmz_file()
+RETURNS TRIGGER AS $$
+BEGIN
+  IF NEW.arcsec_signature IS NOT NULL AND LENGTH(NEW.arcsec_signature) > 20 THEN
+    NEW.status := 'verified';
+  END IF;
+  RETURN NEW;
+END;
+$$ LANGUAGE plpgsql;
+
+CREATE TRIGGER trg_verify_kmz
+BEFORE INSERT OR UPDATE ON geo_files
+FOR EACH ROW EXECUTE FUNCTION verify_kmz_file();
+
+-- 3. NOAA LIVE DATA STREAMING
+CREATE TABLE noaa_data (
+  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  data_type TEXT CHECK (data_type IN ('radar', 'satellite', 'hurricane')),
+  timestamp TIMESTAMP NOT NULL,
+  data JSONB NOT NULL,
+  source_url TEXT,
+  agent_triggered_by TEXT
+);
+
+-- 4. EPA/FEMA COMPLIANCE ZONES
+CREATE TABLE compliance_zones (
+  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  geo_id UUID REFERENCES geo_files(id),
+  zone_name TEXT NOT NULL,
+  epa_code TEXT,
+  fema_risk_level TEXT,
+  compliance_status TEXT CHECK (compliance_status IN ('compliant', 'violation', 'pending')),
+  last_checked TIMESTAMP DEFAULT NOW(),
+  notes TEXT
+);
+
+-- 5. ARCSEC PROTECTED ASSETS
+CREATE TABLE arcsec_assets (
+  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  asset_type TEXT,
+  filename TEXT,
+  created_by UUID REFERENCES users(id),
+  created_at TIMESTAMP DEFAULT NOW(),
+  hash_sha256 TEXT NOT NULL,
+  digital_witness TEXT NOT NULL,
+  verified BOOLEAN DEFAULT false
+);
+
+-- Trigger: Enforce ARCSEC Validation Logic
+CREATE OR REPLACE FUNCTION enforce_arcsec_validation()
+RETURNS TRIGGER AS $$
+BEGIN
+  IF LENGTH(NEW.hash_sha256) != 64 THEN
+    RAISE EXCEPTION 'Invalid ARCSEC hash';
+  END IF;
+  RETURN NEW;
+END;
+$$ LANGUAGE plpgsql;
+
+CREATE TRIGGER trg_validate_arcsec
+BEFORE INSERT ON arcsec_assets
+FOR EACH ROW EXECUTE FUNCTION enforce_arcsec_validation();
+
+-- 6. AI AGENT OPERATIONS LOG
+CREATE TABLE agent_activity (
+  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  agent_name TEXT CHECK (agent_name IN ('STORM', 'ULTRON', 'JARVIS', 'PHOENIX', 'ODIN', 'ECHO', 'MITO', 'VADER')),
+  timestamp TIMESTAMP DEFAULT NOW(),
+  action TEXT,
+  target_resource TEXT,
+  input_data JSONB,
+  output_data JSONB,
+  status TEXT CHECK (status IN ('success', 'failure', 'pending'))
+);
+
+-- 7. SYSTEM-WIDE METADATA CONTROL
+CREATE TABLE system_metadata (
+  key TEXT PRIMARY KEY,
+  value TEXT
+);

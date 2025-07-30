@@ -8,6 +8,8 @@ import InteractiveAgentGlobe from "./InteractiveAgentGlobe";
 import AgentDeploymentShell from "./AgentDeploymentShell";
 import SystemMonitor from "./SystemMonitor";
 import StormDataPanel from "./StormDataPanel";
+import AnalysisPanel from "./AnalysisPanel";
+import DatabasePanel from "./DatabasePanel";
 import AttributionFooter from "./AttributionFooter";
 import CyberpunkPanel from "./ui/cyberpunk-panel";
 import { useStormVerse } from "../lib/stores/useStormVerse";
@@ -113,6 +115,12 @@ export default function StormVerse() {
       
       {/* Storm Data Integration */}
       <StormDataPanel />
+      
+      {/* Analysis Documents */}
+      <AnalysisPanel />
+      
+      {/* Database Schema */}
+      <DatabasePanel />
       
       {/* Control Panels */}
       <div className="control-panels">
