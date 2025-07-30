@@ -6,6 +6,7 @@ import WeatherOverlay from "./WeatherOverlay";
 import KMZLoader from "./KMZLoader";
 import InteractiveAgentGlobe from "./InteractiveAgentGlobe";
 import AgentDeploymentShell from "./AgentDeploymentShell";
+import SystemMonitor from "./SystemMonitor";
 import CyberpunkPanel from "./ui/cyberpunk-panel";
 import { useStormVerse } from "../lib/stores/useStormVerse";
 import { useWeatherData } from "../lib/stores/useWeatherData";
@@ -90,6 +91,9 @@ export default function StormVerse() {
       
       {/* Agent Deployment Shell */}
       <AgentDeploymentShell />
+      
+      {/* System Monitoring */}
+      <SystemMonitor />
       
       {/* Control Panels */}
       <div className="control-panels">
