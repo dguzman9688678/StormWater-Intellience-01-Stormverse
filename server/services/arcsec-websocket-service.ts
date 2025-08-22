@@ -2,6 +2,7 @@ import { Server as SocketServer } from 'socket.io';
 import { Server } from 'http';
 import { mlEngine } from './arcsec-ml-engine.js';
 import { agentCoordinator } from './arcsec-agent-coordinator.js';
+import { getErrorMessage } from './error-utils';
 
 export interface WebSocketMessage {
   type: 'agent_prediction' | 'task_update' | 'system_status' | 'ml_training' | 'webhook_data';
@@ -77,7 +78,7 @@ export class WebSocketService {
           // Monitor task progress
           this.monitorTask(taskId, socket.id);
         } catch (error) {
-          socket.emit('task_error', { error: error.message, timestamp: new Date() });
+          socket.emit('task_error', { error: getErrorMessage(error), timestamp: new Date() });
         }
       });
 
@@ -91,10 +92,10 @@ export class WebSocketService {
             timestamp: new Date() 
           });
         } catch (error) {
-          socket.emit('training_error', { 
-            agentId: trainingData.agentId, 
-            error: error.message, 
-            timestamp: new Date() 
+          socket.emit('training_error', {
+            agentId: trainingData.agentId,
+            error: getErrorMessage(error),
+            timestamp: new Date()
           });
         }
       });
@@ -111,7 +112,7 @@ export class WebSocketService {
         } catch (error) {
           socket.emit('prediction_error', {
             agentId: predictionData.agentId,
-            error: error.message,
+            error: getErrorMessage(error),
             timestamp: new Date()
           });
         }
@@ -355,8 +356,8 @@ export class WebSocketService {
     return this.connectedClients.size;
   }
 
-  public getWebhookStats(): any {
-    const stats = {};
+  public getWebhookStats(): Record<string, { totalWebhooks: number; lastWebhook: Date | null }> {
+    const stats: Record<string, { totalWebhooks: number; lastWebhook: Date | null }> = {};
     for (const [source, webhooks] of this.webhooks.entries()) {
       stats[source] = {
         totalWebhooks: webhooks.length,

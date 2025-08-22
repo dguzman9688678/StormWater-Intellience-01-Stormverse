@@ -7,6 +7,7 @@
 
 import { EventEmitter } from 'events';
 import { arcsecMasterLogController } from './arcsec-master-log-controller';
+import { getErrorMessage } from './error-utils';
 
 export interface StoreEntry {
   id: string;
@@ -224,7 +225,7 @@ export class ARCSECStore extends EventEmitter {
         category: 'SYSTEM',
         source: 'Store',
         message: 'Error during cleanup process',
-        metadata: { error: error.message }
+        metadata: { error: getErrorMessage(error) }
       });
     }
   }
@@ -256,7 +257,7 @@ export class ARCSECStore extends EventEmitter {
         category: 'REPLICATION',
         source: 'Store',
         message: 'Error during replication process',
-        metadata: { error: error.message }
+        metadata: { error: getErrorMessage(error) }
       });
     }
   }
@@ -282,7 +283,7 @@ export class ARCSECStore extends EventEmitter {
         category: 'MONITORING',
         source: 'Store',
         message: 'Error updating performance metrics',
-        metadata: { error: error.message }
+        metadata: { error: getErrorMessage(error) }
       });
     }
   }
@@ -377,10 +378,10 @@ export class ARCSECStore extends EventEmitter {
         category: 'STORAGE',
         source: 'Store',
         message: `Error storing entry: ${key}`,
-        metadata: { key, error: error.message }
+        metadata: { key, error: getErrorMessage(error) }
       });
 
-      return { success: false, message: error.message };
+      return { success: false, message: getErrorMessage(error) };
     }
   }
 
@@ -419,7 +420,7 @@ export class ARCSECStore extends EventEmitter {
         category: 'STORAGE',
         source: 'Store',
         message: `Error retrieving entry: ${key}`,
-        metadata: { key, error: error.message }
+        metadata: { key, error: getErrorMessage(error) }
       });
 
       return { found: false };
@@ -454,10 +455,10 @@ export class ARCSECStore extends EventEmitter {
         category: 'STORAGE',
         source: 'Store',
         message: `Error deleting entry: ${key}`,
-        metadata: { key, error: error.message }
+        metadata: { key, error: getErrorMessage(error) }
       });
 
-      return { success: false, message: error.message };
+      return { success: false, message: getErrorMessage(error) };
     }
   }
 
@@ -507,7 +508,7 @@ export class ARCSECStore extends EventEmitter {
         category: 'STORAGE',
         source: 'Store',
         message: 'Error clearing store',
-        metadata: { error: error.message, options }
+        metadata: { error: getErrorMessage(error), options }
       });
 
       return { success: false, cleared: 0 };
@@ -542,7 +543,7 @@ export class ARCSECStore extends EventEmitter {
         category: 'STORAGE',
         source: 'Store',
         message: 'Error getting keys',
-        metadata: { error: error.message, options }
+        metadata: { error: getErrorMessage(error), options }
       });
 
       return [];

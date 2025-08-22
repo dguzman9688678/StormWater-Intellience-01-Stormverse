@@ -1,5 +1,4 @@
 import { drizzle } from "drizzle-orm/neon-serverless";
-import { neon } from "@neondatabase/serverless";
 import * as schema from "../shared/schema";
 
 // Initialize database connection
@@ -17,8 +16,7 @@ const createDatabase = () => {
   }
   
   try {
-    const client = neon(databaseUrl);
-    return drizzle(client, { schema });
+    return drizzle(databaseUrl, { schema });
   } catch (error) {
     console.error("Failed to connect to database:", error);
     return null;
