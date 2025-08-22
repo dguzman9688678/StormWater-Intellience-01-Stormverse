@@ -12,6 +12,7 @@ import { promises as fs } from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import { dirname } from 'path';
+import { getErrorMessage } from './error-utils';
 
 export interface ARCSECSignature {
   hash: string;
@@ -102,7 +103,7 @@ export class ARCSECUniversalHandler {
           await this.protectFile(file, 'WAR_MODE');
         }
       } catch (error) {
-        console.error(`⚠️  Failed to protect ${file}:`, error.message);
+        console.error(`⚠️  Failed to protect ${file}:`, getErrorMessage(error));
       }
     }
   }
@@ -136,7 +137,7 @@ export class ARCSECUniversalHandler {
       console.log(`🔐 Protected: ${filepath} [${protectionLevel}]`);
       return protectedFile;
     } catch (error) {
-      console.error(`❌ Protection failed for ${filepath}:`, error.message);
+      console.error(`❌ Protection failed for ${filepath}:`, getErrorMessage(error));
       throw error;
     }
   }
@@ -189,7 +190,7 @@ export class ARCSECUniversalHandler {
       
       return isValid;
     } catch (error) {
-      console.error(`❌ Verification failed for ${filepath}:`, error.message);
+      console.error(`❌ Verification failed for ${filepath}:`, getErrorMessage(error));
       return false;
     }
   }
@@ -202,7 +203,7 @@ export class ARCSECUniversalHandler {
       await fs.writeFile(filepath, protectedFile.content, 'utf-8');
       console.log(`🔧 RESTORED: ${filepath} from ARCSEC backup`);
     } catch (error) {
-      console.error(`❌ Restoration failed for ${filepath}:`, error.message);
+      console.error(`❌ Restoration failed for ${filepath}:`, getErrorMessage(error));
     }
   }
 

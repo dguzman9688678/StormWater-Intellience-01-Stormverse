@@ -13,8 +13,8 @@ import { join } from 'path';
 export interface LogEntry {
   id: string;
   timestamp: Date;
-  level: 'DEBUG' | 'INFO' | 'WARN' | 'ERROR' | 'CRITICAL' | 'SECURITY';
-  category: 'SYSTEM' | 'SECURITY' | 'AGENT' | 'API' | 'LOGIC' | 'PERFORMANCE' | 'USER';
+  level: string;
+  category: string;
   source: string;
   message: string;
   metadata?: any;
