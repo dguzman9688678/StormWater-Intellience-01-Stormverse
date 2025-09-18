@@ -37,7 +37,15 @@ export class StormDataProcessor {
   async processStormData(): Promise<ProcessedStormData | null> {
     try {
       const fileContent = await fs.readFile(this.dataPath, 'utf-8');
-      const stormData = JSON.parse(fileContent);
+      
+      // Find the start of JSON content (skip any header text)
+      const jsonStart = fileContent.indexOf('{');
+      if (jsonStart === -1) {
+        throw new Error('No valid JSON found in storm data file');
+      }
+      
+      const jsonContent = jsonStart > 0 ? fileContent.substring(jsonStart) : fileContent;
+      const stormData = JSON.parse(jsonContent);
       
       // Extract metadata
       const metadata: StormDataMetadata = stormData.metadata || {
