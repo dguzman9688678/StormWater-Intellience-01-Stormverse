@@ -31,7 +31,7 @@ export class StormDataProcessor {
   private dataPath: string;
   
   constructor() {
-    this.dataPath = path.join(process.cwd(), 'attached_assets', 'storm_1753881712940.json');
+    this.dataPath = path.join(process.cwd(), 'client', 'public', 'fonts', 'attached_assets', 'storm_1753881712940.json');
   }
   
   async processStormData(): Promise<ProcessedStormData | null> {

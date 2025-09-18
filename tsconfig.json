@@ -10,7 +10,8 @@
     "skipLibCheck": true,
     "resolveJsonModule": true,
     "noEmit": true,
-    "useUnknownInCatchVariables": false
+    "useUnknownInCatchVariables": false,
+    "allowSyntheticDefaultImports": true
   },
-  "include": ["server/**/*.ts", "shared/**/*.ts", "*.ts"]
+  "include": ["server/**/*.ts", "shared/**/*.ts", "*.ts", "arcsec/**/*.ts", "client/src/**/*.ts"]
 }
