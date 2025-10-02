@@ -1,27 +1,55 @@
+/**
+ * StormVerse - Main Application Component
+ * 
+ * This is the root component of the StormVerse Environmental Intelligence Platform.
+ * It orchestrates all major subsystems including:
+ * - 3D Globe visualization (CesiumJS)
+ * - 8-Agent AI network
+ * - Real-time weather data integration
+ * - Hurricane tracking and probability visualization
+ * - System monitoring and diagnostics
+ * - ARCSEC security protocol enforcement
+ * 
+ * @author Daniel Guzman
+ * @version 1.0.0
+ */
+
 import React, { useEffect, useRef, useState } from "react";
+
+// 3D Visualization Components
 import CesiumGlobe from "./CesiumGlobe";
-import AgentNetwork from "./AgentNetwork";
+import InteractiveAgentGlobe from "./InteractiveAgentGlobe";
 import QuantumArcRenderer from "./QuantumArcRenderer";
+
+// AI Agent System Components
+import AgentNetwork from "./AgentNetwork";
+import AgentDeploymentShell from "./AgentDeploymentShell";
+
+// Weather and Data Components
 import WeatherOverlay from "./WeatherOverlay";
 import KMZLoader from "./KMZLoader";
-import InteractiveAgentGlobe from "./InteractiveAgentGlobe";
-import AgentDeploymentShell from "./AgentDeploymentShell";
-import SystemMonitor from "./SystemMonitor";
 import StormDataPanel from "./StormDataPanel";
+
+// System Monitoring and Analysis
+import SystemMonitor from "./SystemMonitor";
 import AnalysisPanel from "./AnalysisPanel";
 import DatabasePanel from "./DatabasePanel";
 import MetadataPanel from "./MetadataPanel";
 import QuantumAnalysisPanel from "./QuantumAnalysisPanel";
 import DiagnosticsPanel from "./DiagnosticsPanel";
-import AttributionFooter from "./AttributionFooter";
+
+// UI Components
 import CyberpunkPanel from "./ui/cyberpunk-panel";
 import WorldStatus from "./WorldStatus";
 import PodcastPlayer from "./PodcastPlayer";
+import AttributionFooter from "./AttributionFooter";
+
+// State Management
 import { useStormVerse } from "../lib/stores/useStormVerse";
 import { useWeatherData } from "../lib/stores/useWeatherData";
 import { useAgents } from "../lib/stores/useAgents";
 
-// TypeScript declarations for WebGL modules
+// TypeScript declarations for WebGL modules loaded from /public/js/
 declare global {
   interface Window {
     StormLayerLoader: any;

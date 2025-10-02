@@ -2,7 +2,10 @@ import { mlEngine, MLPrediction } from './arcsec-ml-engine.js';
 import OpenAI from "openai";
 
 // the newest OpenAI model is "gpt-4o" which was released May 13, 2024. do not change this unless explicitly requested by the user
-const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
+// Make OpenAI optional - the app can run without it using demo data
+const openai = process.env.OPENAI_API_KEY 
+  ? new OpenAI({ apiKey: process.env.OPENAI_API_KEY })
+  : null;
 
 export interface AgentTask {
   id: string;
@@ -76,16 +79,19 @@ export class AgentCoordinator {
   }
 
   private async findBestAgent(task: AgentTask): Promise<string> {
-    const taskAnalysis = await openai.chat.completions.create({
-      model: "gpt-4o",
-      messages: [
-        {
-          role: "system",
-          content: "You are JARVIS, the coordinator of the StormVerse AI agent network. Analyze tasks and assign them to the most suitable agent based on their specializations."
-        },
-        {
-          role: "user",
-          content: `Analyze this task and recommend the best agent:
+    let analysis: any = {};
+    
+    if (openai) {
+      const taskAnalysis = await openai.chat.completions.create({
+        model: "gpt-4o",
+        messages: [
+          {
+            role: "system",
+            content: "You are JARVIS, the coordinator of the StormVerse AI agent network. Analyze tasks and assign them to the most suitable agent based on their specializations."
+          },
+          {
+            role: "user",
+            content: `Analyze this task and recommend the best agent:
 Task Type: ${task.type}
 Priority: ${task.priority}
 Payload: ${JSON.stringify(task.payload)}
@@ -96,12 +102,30 @@ ${Array.from(this.agentSpecializations.entries()).map(([agent, specs]) =>
 ).join('\n')}
 
 Respond with JSON: {"recommendedAgent": "AGENT_NAME", "reasoning": "explanation", "confidence": 0.95}`
-        }
-      ],
-      response_format: { type: "json_object" }
-    });
+          }
+        ],
+        response_format: { type: "json_object" }
+      });
 
-    const analysis = JSON.parse(taskAnalysis.choices[0].message.content || '{}');
+      analysis = JSON.parse(taskAnalysis.choices[0].message.content || '{}');
+    } else {
+      // Fallback to simple routing based on task type when OpenAI is not available
+      const taskTypeMap: Record<string, string> = {
+        'weather_analysis': 'STORM_CITADEL',
+        'security_scan': 'ODIN',
+        'data_validation': 'ULTRON',
+        'prediction': 'STORM_CITADEL',
+        'optimization': 'MITO',
+        'communication': 'ECHO',
+        'monitoring': 'VADER'
+      };
+      analysis = {
+        recommendedAgent: taskTypeMap[task.type] || 'JARVIS',
+        reasoning: 'Demo mode - OpenAI not configured',
+        confidence: 0.7
+      };
+    }
+    
     return analysis.recommendedAgent || 'JARVIS';
   }
 
@@ -288,16 +312,19 @@ Respond with JSON: {"recommendedAgent": "AGENT_NAME", "reasoning": "explanation"
       confidence: prediction.confidence
     }));
 
-    const synthesis = await openai.chat.completions.create({
-      model: "gpt-4o",
-      messages: [
-        {
-          role: "system",
-          content: `You are JARVIS, synthesizing results from multiple AI agents. Combine their analyses into a coherent final result for task type: ${collaboration.task.type}`
-        },
-        {
-          role: "user",
-          content: `Synthesize these agent results:
+    let synthesizedResult: any = {};
+    
+    if (openai) {
+      const synthesis = await openai.chat.completions.create({
+        model: "gpt-4o",
+        messages: [
+          {
+            role: "system",
+            content: `You are JARVIS, synthesizing results from multiple AI agents. Combine their analyses into a coherent final result for task type: ${collaboration.task.type}`
+          },
+          {
+            role: "user",
+            content: `Synthesize these agent results:
 ${JSON.stringify(allResults, null, 2)}
 
 Provide a comprehensive analysis that:
@@ -307,12 +334,22 @@ Provide a comprehensive analysis that:
 4. Highlights any areas needing attention
 
 Respond in JSON format.`
-        }
-      ],
-      response_format: { type: "json_object" }
-    });
+          }
+        ],
+        response_format: { type: "json_object" }
+      });
 
-    const synthesizedResult = JSON.parse(synthesis.choices[0].message.content || '{}');
+      synthesizedResult = JSON.parse(synthesis.choices[0].message.content || '{}');
+    } else {
+      // Fallback to simple synthesis when OpenAI is not available
+      const avgConfidence = allResults.reduce((sum, r) => sum + r.confidence, 0) / allResults.length;
+      synthesizedResult = {
+        synthesis: 'Demo mode - OpenAI not configured',
+        confidence: avgConfidence,
+        agentContributions: allResults.length,
+        recommendation: 'Multiple agents analyzed the task successfully'
+      };
+    }
     
     return {
       taskId: collaboration.task.id,

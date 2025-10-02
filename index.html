@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="StormVerse - Professional Environmental Intelligence Platform with 3D visualization, AI-powered weather analysis, and real-time NOAA data integration.">
+    <meta name="keywords" content="weather, AI, environmental intelligence, stormwater, hurricane tracking, 3D visualization, CesiumJS">
+    <meta name="author" content="Daniel Guzman">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="StormVerse - Environmental Intelligence Platform">
+    <meta property="og:description" content="Professional 3D environmental intelligence platform combining real-time weather data, AI-powered analytics, and quantum probability modeling.">
+    <meta property="og:type" content="website">
+    
+    <title>StormVerse - Environmental Intelligence Platform | Daniel Guzman</title>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --primary-color: #00ffff;
+            --secondary-color: #ff00ff;
+            --bg-dark: #0a0a0f;
+            --bg-card: #1a1a2e;
+            --text-primary: #ffffff;
+            --text-secondary: #a0a0a0;
+            --accent-blue: #47C2E8;
+            --accent-green: #4ade80;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, var(--bg-dark) 0%, #1a1a2e 100%);
+            color: var(--text-primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        /* Animated background */
+        .bg-animation {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: 0.1;
+            background: 
+                radial-gradient(circle at 20% 50%, var(--primary-color) 0%, transparent 50%),
+                radial-gradient(circle at 80% 50%, var(--secondary-color) 0%, transparent 50%);
+            animation: pulse 8s ease-in-out infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { opacity: 0.1; }
+            50% { opacity: 0.2; }
+        }
+        
+        /* Header */
+        header {
+            padding: 2rem 5%;
+            background: rgba(26, 26, 46, 0.8);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(0, 255, 255, 0.2);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .header-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        
+        .logo {
+            font-size: 2rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-shadow: 0 0 30px rgba(0, 255, 255, 0.5);
+        }
+        
+        nav {
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+        
+        nav a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: color 0.3s;
+            font-weight: 500;
+        }
+        
+        nav a:hover {
+            color: var(--primary-color);
+        }
+        
+        /* Hero Section */
+        .hero {
+            padding: 6rem 5% 4rem;
+            text-align: center;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-blue));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1.2;
+        }
+        
+        .hero .subtitle {
+            font-size: 1.5rem;
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+        }
+        
+        .hero .description {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            max-width: 800px;
+            margin: 0 auto 3rem;
+            line-height: 1.8;
+        }
+        
+        /* Badge Container */
+        .badges {
+            display: flex;
+            justify-content: center;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            margin-bottom: 3rem;
+        }
+        
+        .badges img {
+            height: 20px;
+        }
+        
+        /* CTA Buttons */
+        .cta-buttons {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 4rem;
+        }
+        
+        .btn {
+            padding: 1rem 2.5rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-blue));
+            color: var(--bg-dark);
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(0, 255, 255, 0.3);
+        }
+        
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.1);
+            color: var(--text-primary);
+            border: 2px solid var(--primary-color);
+        }
+        
+        .btn-secondary:hover {
+            background: rgba(0, 255, 255, 0.1);
+            transform: translateY(-2px);
+        }
+        
+        /* Feature Grid */
+        .features {
+            padding: 4rem 5%;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 3rem;
+            color: var(--primary-color);
+        }
+        
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+        
+        .feature-card {
+            background: var(--bg-card);
+            padding: 2rem;
+            border-radius: 12px;
+            border: 1px solid rgba(0, 255, 255, 0.2);
+            transition: all 0.3s;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary-color);
+            box-shadow: 0 10px 30px rgba(0, 255, 255, 0.2);
+        }
+        
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .feature-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+        
+        .feature-card p {
+            color: var(--text-secondary);
+            line-height: 1.8;
+        }
+        
+        /* Tech Stack */
+        .tech-stack {
+            padding: 4rem 5%;
+            background: rgba(26, 26, 46, 0.5);
+        }
+        
+        .tech-grid {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+        
+        .tech-category h4 {
+            color: var(--primary-color);
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+        
+        .tech-category ul {
+            list-style: none;
+        }
+        
+        .tech-category li {
+            padding: 0.5rem 0;
+            color: var(--text-secondary);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .tech-category li:before {
+            content: "▹";
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+        
+        /* Demo Section */
+        .demo-section {
+            padding: 4rem 5%;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .demo-container {
+            background: var(--bg-card);
+            border-radius: 12px;
+            padding: 2rem;
+            border: 1px solid rgba(0, 255, 255, 0.2);
+            text-align: center;
+        }
+        
+        .demo-placeholder {
+            background: rgba(0, 255, 255, 0.05);
+            border: 2px dashed var(--primary-color);
+            border-radius: 8px;
+            padding: 4rem 2rem;
+            margin: 2rem 0;
+        }
+        
+        .demo-placeholder p {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+        }
+        
+        /* Agent Network */
+        .agents {
+            padding: 4rem 5%;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .agent-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .agent-card {
+            background: var(--bg-card);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid var(--primary-color);
+            transition: all 0.3s;
+        }
+        
+        .agent-card:hover {
+            transform: translateX(5px);
+            border-left-color: var(--accent-green);
+        }
+        
+        .agent-name {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+        
+        .agent-role {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .agent-description {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+        
+        /* Stats Section */
+        .stats {
+            padding: 4rem 5%;
+            background: rgba(26, 26, 46, 0.5);
+        }
+        
+        .stats-grid {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            text-align: center;
+        }
+        
+        .stat-item {
+            padding: 2rem;
+        }
+        
+        .stat-value {
+            font-size: 3rem;
+            font-weight: 800;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+        
+        .stat-label {
+            color: var(--text-secondary);
+            font-size: 1rem;
+        }
+        
+        /* Footer */
+        footer {
+            padding: 3rem 5%;
+            background: var(--bg-card);
+            border-top: 1px solid rgba(0, 255, 255, 0.2);
+        }
+        
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+        }
+        
+        .footer-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-links a:hover {
+            color: var(--primary-color);
+        }
+        
+        .copyright {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero .subtitle {
+                font-size: 1.2rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            nav {
+                gap: 1rem;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+            }
+            
+            .btn {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-animation"></div>
+    
+    <!-- Header -->
+    <header>
+        <div class="header-content">
+            <div class="logo">🌊 StormVerse</div>
+            <nav>
+                <a href="#features">Features</a>
+                <a href="#agents">AI Agents</a>
+                <a href="#tech">Technology</a>
+                <a href="#demo">Demo</a>
+                <a href="https://github.com/dguzman9688678/StormWater-Intellience-01-Stormverse" target="_blank">GitHub</a>
+            </nav>
+        </div>
+    </header>
+    
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>StormVerse</h1>
+        <div class="subtitle">Environmental Intelligence Platform</div>
+        <p class="description">
+            Professional 3D environmental intelligence platform combining real-time weather data, 
+            AI-powered analytics, and quantum probability modeling for advanced weather prediction 
+            and stormwater management.
+        </p>
+        
+        <div class="badges">
+            <img src="https://img.shields.io/badge/license-ARCSEC-blue.svg" alt="License">
+            <img src="https://img.shields.io/badge/Node.js-18+-green?logo=node.js" alt="Node.js">
+            <img src="https://img.shields.io/badge/React-18+-61DAFB?logo=react" alt="React">
+            <img src="https://img.shields.io/badge/TypeScript-5+-3178C6?logo=typescript" alt="TypeScript">
+            <img src="https://img.shields.io/badge/CesiumJS-1.118-47C2E8" alt="CesiumJS">
+            <img src="https://img.shields.io/badge/status-Production_Ready-brightgreen" alt="Status">
+        </div>
+        
+        <div class="cta-buttons">
+            <a href="http://localhost:5000" class="btn btn-primary">🚀 Launch Application</a>
+            <a href="https://github.com/dguzman9688678/StormWater-Intellience-01-Stormverse" class="btn btn-secondary" target="_blank">📖 View on GitHub</a>
+        </div>
+    </section>
+    
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="stats-grid">
+            <div class="stat-item">
+                <div class="stat-value">8</div>
+                <div class="stat-label">AI Agents</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-value">3D</div>
+                <div class="stat-label">Globe Visualization</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-value">Real-time</div>
+                <div class="stat-label">NOAA Data</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-value">100%</div>
+                <div class="stat-label">Offline Capable</div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <h2 class="section-title">✨ Key Features</h2>
+        <div class="feature-grid">
+            <div class="feature-card">
+                <div class="feature-icon">🌍</div>
+                <h3>3D Globe Visualization</h3>
+                <p>Interactive CesiumJS-powered earth with smooth navigation, real-time weather overlays, and support for KMZ/GeoJSON data formats.</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">🤖</div>
+                <h3>AI Agent Network</h3>
+                <p>Eight specialized AI agents working in concert for weather prediction, data validation, system coordination, and security monitoring.</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">🌪️</div>
+                <h3>Hurricane Tracking</h3>
+                <p>Advanced hurricane tracking with quantum probability cones, confidence visualization, and real-time National Hurricane Center data.</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">📊</div>
+                <h3>Real-time Weather Data</h3>
+                <p>Live NOAA weather feeds with intelligent fallback to scientifically accurate demonstration data when APIs are unavailable.</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">🔒</div>
+                <h3>ARCSEC Security</h3>
+                <p>Complete data provenance and integrity verification through custom ARCSEC protocol with digital signatures and authorship tracking.</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">💼</div>
+                <h3>Professional Interface</h3>
+                <p>Cyberpunk-themed UI with comprehensive monitoring, real-time system stats, and agent activity tracking for enterprise use.</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- AI Agents Section -->
+    <section class="agents" id="agents">
+        <h2 class="section-title">🤖 AI Agent Network</h2>
+        <div class="agent-grid">
+            <div class="agent-card">
+                <div class="agent-name">🏰 STORM_CITADEL</div>
+                <div class="agent-role">Weather Prediction</div>
+                <p class="agent-description">Hurricane tracking, forecast modeling, and storm system analysis with quantum probability calculations.</p>
+            </div>
+            
+            <div class="agent-card">
+                <div class="agent-name">🔍 ULTRON</div>
+                <div class="agent-role">Metadata Validation</div>
+                <p class="agent-description">Data integrity verification, quality assurance, and real-time validation of all incoming data sources.</p>
+            </div>
+            
+            <div class="agent-card">
+                <div class="agent-name">🎯 JARVIS</div>
+                <div class="agent-role">Command Routing</div>
+                <p class="agent-description">System coordination, task distribution, and intelligent routing of commands across the agent network.</p>
+            </div>
+            
+            <div class="agent-card">
+                <div class="agent-name">🔥 PHOENIX</div>
+                <div class="agent-role">Data Recovery</div>
+                <p class="agent-description">Historical data analysis, pattern recognition, and intelligent data recovery from multiple sources.</p>
+            </div>
+            
+            <div class="agent-card">
+                <div class="agent-name">⚔️ ODIN</div>
+                <div class="agent-role">Security Protocols</div>
+                <p class="agent-description">ARCSEC enforcement, access control, and comprehensive security monitoring across the platform.</p>
+            </div>
+            
+            <div class="agent-card">
+                <div class="agent-name">🎤 ECHO</div>
+                <div class="agent-role">Human Interface</div>
+                <p class="agent-description">Audio interface, voice interaction, and natural language processing for user communication.</p>
+            </div>
+            
+            <div class="agent-card">
+                <div class="agent-name">🔧 MITO</div>
+                <div class="agent-role">Development</div>
+                <p class="agent-description">System updates, development automation, and continuous improvement of platform capabilities.</p>
+            </div>
+            
+            <div class="agent-card">
+                <div class="agent-name">👁️ VADER</div>
+                <div class="agent-role">Surveillance</div>
+                <p class="agent-description">System monitoring, resilience testing, and proactive identification of potential issues.</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Tech Stack Section -->
+    <section class="tech-stack" id="tech">
+        <h2 class="section-title">🛠️ Technology Stack</h2>
+        <div class="tech-grid">
+            <div class="tech-category">
+                <h4>Frontend</h4>
+                <ul>
+                    <li>React 18 + TypeScript</li>
+                    <li>CesiumJS 1.118 (3D Globe)</li>
+                    <li>Vite Build Tool</li>
+                    <li>Tailwind CSS</li>
+                    <li>Zustand State Management</li>
+                    <li>Radix UI Components</li>
+                </ul>
+            </div>
+            
+            <div class="tech-category">
+                <h4>Backend</h4>
+                <ul>
+                    <li>Node.js 18+ / Express</li>
+                    <li>PostgreSQL Database</li>
+                    <li>Drizzle ORM</li>
+                    <li>WebSocket (Socket.io)</li>
+                    <li>RESTful APIs</li>
+                    <li>TypeScript Validation</li>
+                </ul>
+            </div>
+            
+            <div class="tech-category">
+                <h4>Data & APIs</h4>
+                <ul>
+                    <li>NOAA Weather Service</li>
+                    <li>National Hurricane Center</li>
+                    <li>OpenAI Integration</li>
+                    <li>KMZ/GeoJSON/KML Support</li>
+                    <li>Custom ARCSEC Protocol</li>
+                    <li>Real-time Data Streams</li>
+                </ul>
+            </div>
+            
+            <div class="tech-category">
+                <h4>DevOps & Tools</h4>
+                <ul>
+                    <li>Git Version Control</li>
+                    <li>NPM Package Manager</li>
+                    <li>TypeScript Type Safety</li>
+                    <li>ESBuild Bundling</li>
+                    <li>Service Worker Caching</li>
+                    <li>Offline-First Architecture</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Demo Section -->
+    <section class="demo-section" id="demo">
+        <h2 class="section-title">🎮 Interactive Demo</h2>
+        <div class="demo-container">
+            <div class="demo-placeholder">
+                <p>🚀 <strong>Application Running Locally</strong></p>
+                <p>Start the development server with <code>npm run dev</code> to access the full 3D interactive experience.</p>
+                <p style="margin-top: 1.5rem; font-size: 0.95rem;">
+                    The application features a fully interactive CesiumJS globe with real-time weather data, 
+                    AI agent monitoring, hurricane tracking, and comprehensive environmental intelligence tools.
+                </p>
+            </div>
+            <div class="cta-buttons">
+                <a href="http://localhost:5000" class="btn btn-primary">🌍 Open Application</a>
+                <a href="https://github.com/dguzman9688678/StormWater-Intellience-01-Stormverse#-quick-start" class="btn btn-secondary" target="_blank">📖 Setup Guide</a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="https://github.com/dguzman9688678/StormWater-Intellience-01-Stormverse" target="_blank">GitHub Repository</a>
+                <a href="https://github.com/dguzman9688678/StormWater-Intellience-01-Stormverse#-documentation">Documentation</a>
+                <a href="https://github.com/dguzman9688678/StormWater-Intellience-01-Stormverse/blob/main/client/src/lib/LICENSE.md" target="_blank">License (ARCSEC)</a>
+                <a href="https://github.com/dguzman9688678/StormWater-Intellience-01-Stormverse#-support--contact">Contact</a>
+            </div>
+            <p class="copyright">
+                © 2024 StormVerse - Environmental Intelligence Platform<br>
+                Created with ❤️ by <strong>Daniel Guzman</strong><br>
+                Powered by advanced AI agents and quantum weather modeling
+            </p>
+        </div>
+    </footer>
+</body>
+</html>

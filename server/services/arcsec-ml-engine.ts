@@ -1,7 +1,10 @@
 import OpenAI from "openai";
 
 // the newest OpenAI model is "gpt-4o" which was released May 13, 2024. do not change this unless explicitly requested by the user
-const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
+// Make OpenAI optional - the app can run without it using demo data
+const openai = process.env.OPENAI_API_KEY 
+  ? new OpenAI({ apiKey: process.env.OPENAI_API_KEY })
+  : null;
 
 export interface MLModelConfig {
   agentId: string;
@@ -112,23 +115,34 @@ export class MLEngine {
     }
 
     try {
-      // Use OpenAI for advanced training analysis
-      const trainingAnalysis = await openai.chat.completions.create({
-        model: "gpt-4o",
-        messages: [
-          {
-            role: "system",
-            content: `You are an advanced ML training coordinator for agent ${agentId} specializing in ${model.specialization}. Analyze the training data and provide optimization recommendations.`
-          },
-          {
-            role: "user",
-            content: `Analyze this training data for model type ${model.modelType}: ${JSON.stringify(trainingData)}`
-          }
-        ],
-        response_format: { type: "json_object" }
-      });
+      let analysis: any = {};
+      
+      // Use OpenAI for advanced training analysis if available
+      if (openai) {
+        const trainingAnalysis = await openai.chat.completions.create({
+          model: "gpt-4o",
+          messages: [
+            {
+              role: "system",
+              content: `You are an advanced ML training coordinator for agent ${agentId} specializing in ${model.specialization}. Analyze the training data and provide optimization recommendations.`
+            },
+            {
+              role: "user",
+              content: `Analyze this training data for model type ${model.modelType}: ${JSON.stringify(trainingData)}`
+            }
+          ],
+          response_format: { type: "json_object" }
+        });
 
-      const analysis = JSON.parse(trainingAnalysis.choices[0].message.content || '{}');
+        analysis = JSON.parse(trainingAnalysis.choices[0].message.content || '{}');
+      } else {
+        // Fallback to basic analysis when OpenAI is not available
+        analysis = {
+          status: 'demo_mode',
+          recommendations: 'OpenAI integration not configured. Using demo training data.',
+          confidence: 0.7
+        };
+      }
       
       // Store training data with analysis
       const history = this.trainingHistory.get(agentId) || [];
@@ -162,22 +176,32 @@ export class MLEngine {
     try {
       const predictionPrompt = this.buildPredictionPrompt(model, input);
       
-      const response = await openai.chat.completions.create({
-        model: "gpt-4o",
-        messages: [
-          {
-            role: "system",
-            content: `You are ${agentId}, an AI agent specializing in ${model.specialization}. Your model type is ${model.modelType}. Provide predictions with confidence scores.`
-          },
-          {
-            role: "user",
-            content: predictionPrompt
-          }
-        ],
-        response_format: { type: "json_object" }
-      });
+      let result: any = {};
+      
+      if (openai) {
+        const response = await openai.chat.completions.create({
+          model: "gpt-4o",
+          messages: [
+            {
+              role: "system",
+              content: `You are ${agentId}, an AI agent specializing in ${model.specialization}. Your model type is ${model.modelType}. Provide predictions with confidence scores.`
+            },
+            {
+              role: "user",
+              content: predictionPrompt
+            }
+          ],
+          response_format: { type: "json_object" }
+        });
 
-      const result = JSON.parse(response.choices[0].message.content || '{}');
+        result = JSON.parse(response.choices[0].message.content || '{}');
+      } else {
+        // Fallback to demo prediction when OpenAI is not available
+        result = {
+          prediction: `Demo prediction for ${agentId} - OpenAI not configured`,
+          confidence: 0.7
+        };
+      }
       
       const prediction: MLPrediction = {
         agentId,
@@ -283,22 +307,32 @@ Please provide your response in JSON format with:
     if (!model) return false;
 
     try {
-      const optimization = await openai.chat.completions.create({
-        model: "gpt-4o",
-        messages: [
-          {
-            role: "system",
-            content: "You are an ML optimization expert. Analyze model performance and suggest improvements."
-          },
-          {
-            role: "user",
-            content: `Optimize this model configuration: ${JSON.stringify(metrics)}`
-          }
-        ],
-        response_format: { type: "json_object" }
-      });
+      let optimizations: any = {};
+      
+      if (openai) {
+        const optimization = await openai.chat.completions.create({
+          model: "gpt-4o",
+          messages: [
+            {
+              role: "system",
+              content: "You are an ML optimization expert. Analyze model performance and suggest improvements."
+            },
+            {
+              role: "user",
+              content: `Optimize this model configuration: ${JSON.stringify(metrics)}`
+            }
+          ],
+          response_format: { type: "json_object" }
+        });
 
-      const optimizations = JSON.parse(optimization.choices[0].message.content || '{}');
+        optimizations = JSON.parse(optimization.choices[0].message.content || '{}');
+      } else {
+        // Fallback to basic optimization when OpenAI is not available
+        optimizations = {
+          status: 'demo_mode',
+          message: 'OpenAI not configured. Using default optimization.'
+        };
+      }
       
       // Apply optimizations
       if (optimizations.learningRate) {
