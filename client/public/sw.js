@@ -1,5 +1,23 @@
+/**
+ * StormVerse Service Worker
+ * 
+ * Provides offline support and intelligent caching for the StormVerse platform.
+ * This enables the application to function without internet connectivity while
+ * maintaining performance through strategic resource caching.
+ * 
+ * Caching Strategy:
+ * - Static assets (HTML, CSS, JS, images): Cache-first with network fallback
+ * - Weather API data: Network-first with cache fallback for offline mode
+ * - CesiumJS resources: Cache-first for performance
+ * 
+ * @author Daniel Guzman
+ * @version 1.0.0
+ */
+
 // StormVerse Service Worker for caching and offline support
 const CACHE_NAME = 'stormverse-v1.0.0';
+
+// Static assets to cache for offline functionality
 const STATIC_CACHE_URLS = [
   '/',
   '/src/main.tsx',

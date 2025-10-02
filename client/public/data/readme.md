@@ -2,6 +2,8 @@
 
 This directory contains weather data files, KMZ uploads, and GeoJSON data for the StormVerse Environmental Intelligence Platform.
 
+> **⚠️ DEMO DATA NOTICE**: Files in this directory are demonstration/sample data for development and testing purposes. In production, replace with real NOAA data feeds and authenticated sources.
+
 ## File Types Supported
 
 ### Hurricane and Weather Data
